@@ -1,0 +1,325 @@
+---
+
+import { Image } from 'astro:assets';
+// import logo from '../../assets/logo-hinic.webp'
+import HamburgerBtn from './HamburgerBtn.astro';
+---
+
+<header>
+  <nav class="'nav-container'">
+    <a class='logo-link-desktop' href='/'>
+      <div>
+        <img class='logo' src='/' alt='logo-icon' />
+      </div>
+    </a>
+
+    <a class='logo-link-mobile' href='/'>
+      <div>
+        <img class="logo" src='/' alt='logo-icon' />
+      </div>
+    </a>
+    <div class='contact-wrapper'>
+      <a
+        class='contact-icon'
+        href='mailto:office@hinic.eu'
+        aria-label='Link to email'
+      >
+        <i class='fa-solid fa-envelope'></i>
+      </a>
+      <a class='contact-icon' href='tel:+48888433188' aria-label='phone-link'>
+        <i class='fa-solid fa-phone'></i>
+      </a>
+    </div>
+    <div class='nav-links'>
+      <a class='link' href='/'>
+        O mnie
+      </a>
+      <a class='link' href='/'>
+        Produkty
+      </a>
+      <a class='link' href='/'>
+        Kontakt
+      </a>
+      <!-- <a class='link' href=#contact>{t('navbar.contact')}</a> -->
+    </div>
+    <HamburgerBtn />
+    <div class='nav-links-mobile'>
+      <a class='link-mobile' href='/'
+        >O mnie</a
+      >
+      <a class='link-mobile' href='/'>
+        Produkty</a
+      >
+      <a class='link-mobile' href='/'>
+        Kontakt</a
+      >
+      <!-- <a class='link-mobile' href=#contact> {t('navbar.contact')}</a> -->
+    </div>
+  </nav>
+</header>
+
+<style>
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    min-height: 114px;
+    padding: 10px;
+    z-index: 1000;
+    background-color: rgb(214, 39, 39);
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: row;
+    position: fixed;
+    width: 100%;
+    min-height: 114px;
+    padding: 10px;
+    z-index: 1000;
+    background-color: white;
+    /* backdrop-filter: blur(18px);
+  background-color: rgb(255, 255, 255, .6); */
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-links :last-child {
+    font-weight: 500;
+    box-shadow: 3px 2px 9px -5px rgba(0, 0, 0, 1);
+    border: none;
+  }
+  .nav-links-mobile {
+    position: fixed;
+    top: 114px;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    background: greenyellow;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+    gap: 50px;
+    flex-direction: column;
+    z-index: 9;
+    transform: translateX(-150%);
+    transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  .nav-links-mobile a:last-child {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+  }
+  .active {
+    transform: translateX(0);
+  }
+
+  .contact-wrapper {
+    display: flex;
+    margin-left: auto;
+  }
+  .contact-icon {
+    color: var(--font-blue);
+    padding: 2.5px;
+  }
+  .fa-solid {
+    margin: 7px;
+  }
+  .link,
+  .link-mobile {
+    font-family: var(--main-font);
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: var(--font-blue);
+    min-width: 110px;
+    font-weight: 500;
+    padding: 0 5px;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.1s all ease;
+  }
+  .link:after,
+  .link-mobile:after {
+    position: absolute;
+    content: '';
+    width: 0%;
+    background-color: var(--font-blue);
+    height: 3px;
+    left: 0;
+    bottom: -7px;
+    transition: 0.2s all ease;
+  }
+  .link:hover:after,
+  .link:focus {
+    width: 100%;
+    opacity: 0.8;
+  }
+  .link:hover {
+    opacity: 0.8;
+  }
+  .link-mobile {
+    color: var(--bg-black);
+  }
+  .link-mobile:hover {
+    opacity: 0.8;
+  }
+  .logo-link-desktop {
+    display: none;
+  }
+  .logo-link-mobile {
+    display: block;
+    max-width: 80px;
+    padding-inline: 5px;
+  }
+  logo {
+    height: auto;
+  }
+  .logo-link-mobile img {
+    width: 100%;
+    object-fit: contain;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 7px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+  }
+  .burger-line {
+    background-color: var(--bg-black);
+  }
+  .burger-line:nth-child(1) {
+    width: 34px;
+    height: 2px;
+    display: block;
+  }
+  .burger-line:nth-child(2) {
+    width: 32px;
+    height: 2px;
+    display: block;
+  }
+  .burger-line:nth-child(3) {
+    width: 30px;
+    height: 2px;
+    display: block;
+  }
+  .my-select-class {
+    border: none;
+    padding: 3px;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    font-weight: 300;
+    color: var(--font-blue);
+    font-family: var(--main-font);
+    margin-left: auto;
+  }
+  @media (max-width: 315px) {
+    .nav-container {
+      justify-content: center;
+    }
+    .hamburger {
+      padding: 0;
+    }
+  }
+  @media (max-width: 1300px) {
+    .nav-links {
+      gap: 20px;
+    }
+    .link,
+    .link-mobile {
+      font-size: 0.9rem;
+    }
+  }
+  @media (min-width: 900px) {
+    nav {
+      display: flex;
+      position: static;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 100px;
+      padding-right: 80px;
+    }
+
+    .logo-link-desktop {
+      display: block;
+      max-width: 120px;
+      padding: 10px;
+    }
+    .logo-link-mobile {
+      display: none;
+    }
+    .logo {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      align-items: center;
+    }
+    .nav-links-mobile {
+      display: none;
+    }
+    .nav-links a:last-child {
+      padding: 10px 10px;
+      background-color: var(--font-blue);
+      color: var(--bg-white);
+      border-radius: 20px;
+      transition: .2s all ease;
+    }
+    .nav-links a:last-child:hover {
+      background-color: var(--logo-blue);
+    }
+    .nav-links a:last-child::after {
+      width: 0;
+    }
+    .hamburger {
+      display: none;
+    }
+    .contact-wrapper {
+      margin-left: 20px;
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const hamburgerBtn = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-links-mobile');
+  const navLinks = document.querySelectorAll('.link-mobile');
+
+  const toggleHamburger = () => {
+    hamburgerBtn!.classList.toggle('is-active');
+    navList!.classList.toggle('active');
+    document.body.classList.toggle('sticky-body');
+  };
+
+  const removeSticky = () => {
+    document.body.classList.remove('sticky-body');
+    navList!.classList.remove('active');
+    hamburgerBtn!.classList.remove('is-active');
+  };
+
+  hamburgerBtn!.addEventListener('click', toggleHamburger);
+
+  navLinks.forEach((links) => {
+    links.addEventListener('click', removeSticky);
+  });
+</script>
