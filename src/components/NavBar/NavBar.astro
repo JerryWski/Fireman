@@ -1,6 +1,6 @@
 ---
-
 import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 // import logo from '../../assets/logo-hinic.webp'
 import HamburgerBtn from './HamburgerBtn.astro';
 ---
@@ -15,44 +15,37 @@ import HamburgerBtn from './HamburgerBtn.astro';
 
     <a class='logo-link-mobile' href='/'>
       <div>
-        <img class="logo" src='/' alt='logo-icon' />
+        <img class='logo' src='/' alt='logo-icon' />
       </div>
     </a>
+
+    <div aria-label='primary nav' class='nav-links'>
+      <a class='link' href='/'> O mnie</a>
+      <a class='link' href='/'> Oferta</a>
+      <a class='link' href='/'> Cennik</a>
+      <a class='link' href='/'> Kontakt</a>
+      <!-- <a class='link' href=#contact>{t('navbar.contact')}</a> -->
+    </div>
     <div class='contact-wrapper'>
+      <!-- <p class="contact-text">Kontakt do Nas: </p> -->
+      <a class='contact-icon' href='tel:+48888433188' aria-label='phone-link'>
+        <span>mr-poz@wp.pl</span>
+        <!-- <Icon name='phone' width={24} height={24} /> -->
+      </a>|
       <a
         class='contact-icon'
-        href='mailto:office@hinic.eu'
+        href='mailto:mr-poz@wp.pl'
         aria-label='Link to email'
-      >ss
-        <i class='fa-solid fa-envelope'></i>
+        ><span>666-305-512</span>
+        <!-- <Icon name="mail" width={24} height={24}/> -->
       </a>
-      <a class='contact-icon' href='tel:+48888433188' aria-label='phone-link'>ss
-        <i class='fa-solid fa-phone'></i>
-      </a>
-    </div>
-    <div aria-label="primary nav" class='nav-links'>
-      <a class='link' href='/'>
-        O mnie
-      </a>
-      <a class='link' href='/'>
-        Produkty
-      </a>
-      <a class='link' href='/'>
-        Kontakt
-      </a>
-      <!-- <a class='link' href=#contact>{t('navbar.contact')}</a> -->
     </div>
     <HamburgerBtn />
     <div class='nav-links-mobile'>
-      <a class='link-mobile' href='/'
-        >O mnie</a
-      >
-      <a class='link-mobile' href='/'>
-        Produkty</a
-      >
-      <a class='link-mobile' href='/'>
-        Kontakt</a
-      >
+      <a class='link-mobile' href='/'>O mnie</a>
+      <a class='link-mobile' href='/'> Oferta</a>
+      <a class='link-mobile' href='/'> Cennik</a>
+      <a class='link-mobile' href='/'> Kontakt</a>
     </div>
   </nav>
 </header>
@@ -66,7 +59,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
     flex-direction: row;
     position: fixed;
     width: 100%;
-    min-height: 114px;
+    /* min-height: 114px; */
     padding: 10px;
     z-index: 1000;
     background-color: rgb(214, 39, 39);
@@ -75,11 +68,10 @@ import HamburgerBtn from './HamburgerBtn.astro';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+
     flex-direction: row;
     position: fixed;
     width: 100%;
-    min-height: 114px;
     padding: 10px;
     z-index: 1000;
     background-color: white;
@@ -89,14 +81,14 @@ import HamburgerBtn from './HamburgerBtn.astro';
   .nav-links {
     display: none;
   }
-  .nav-links :last-child {
+  /* .nav-links :last-child {
     font-weight: 500;
     box-shadow: 3px 2px 9px -5px rgba(0, 0, 0, 1);
     border: none;
-  }
+  } */
   .nav-links-mobile {
     position: fixed;
-    top: 114px;
+    top: 64px;
     left: 0;
     width: 50%;
     height: 100vh;
@@ -105,29 +97,36 @@ import HamburgerBtn from './HamburgerBtn.astro';
     justify-content: center;
     align-items: center;
     font-family: var(--main-font);
-    gap: 50px;
+    gap: 40px;
     flex-direction: column;
     z-index: 9;
     transform: translateX(-150%);
     transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
-  .nav-links-mobile a:last-child {
+  /* .nav-links-mobile a:last-child {
     padding: 10px 10px;
     background-color: black;
     color: white;
     border-radius: 20px;
-  }
+  } */
   .active {
     transform: translateX(0);
   }
 
   .contact-wrapper {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: clamp(0.6rem, 1vw, 1rem);
     margin-left: auto;
   }
+  .contact-text {
+    display: none;
+  }
   .contact-icon {
-    color: var(--font-blue);
-    padding: 2.5px;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+    color: black;
   }
   .fa-solid {
     margin: 7px;
@@ -153,7 +152,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
     position: absolute;
     content: '';
     width: 0%;
-    background-color: var(--font-blue);
+    /* background-color: var(--font-blue); */
     height: 3px;
     left: 0;
     bottom: -7px;
@@ -237,22 +236,24 @@ import HamburgerBtn from './HamburgerBtn.astro';
     }
   }
   @media (max-width: 1300px) {
-    .nav-links {
-      gap: 20px;
+    .contact-text {
+      display: none;
     }
     .link,
-    .link-mobile {
-      font-size: 0.9rem;
+    .link-mobile,
+    .contact-text {
+      font-size: clamp(0.8rem, 1vw, 1rem);
     }
   }
+
   @media (min-width: 900px) {
     nav {
       display: flex;
       position: static;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
-      padding-left: 100px;
-      padding-right: 80px;
+      padding-left: 20px;
+      padding-right: 70px;
     }
 
     .logo-link-desktop {
@@ -270,7 +271,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
     }
     .nav-links {
       display: flex;
-      gap: 35px;
+      gap: 20px;
       align-items: center;
     }
     .nav-links-mobile {
@@ -281,7 +282,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
       background-color: var(--font-blue);
       color: var(--bg-white);
       border-radius: 20px;
-      transition: .2s all ease;
+      transition: 0.2s all ease;
     }
     .nav-links a:last-child:hover {
       background-color: var(--logo-blue);
@@ -289,12 +290,19 @@ import HamburgerBtn from './HamburgerBtn.astro';
     .nav-links a:last-child::after {
       width: 0;
     }
+    .contact-wrapper {
+      font-size: 1.1rem;
+    }
+    .contact-text {
+      display: inline-block;
+    }
     .hamburger {
       display: none;
     }
-    .contact-wrapper {
-      margin-left: 20px;
-      display: none;
+  }
+  @media (min-width: 1200px) {
+    .nav-links {
+      gap: 40px;
     }
   }
 </style>
