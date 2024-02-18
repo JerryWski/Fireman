@@ -1,5 +1,7 @@
 ---
 import NavBar from '../components/NavBar/NavBar.astro';
+import '../utils/CustomFonts.css';
+
 interface Props {
   title: string;
 }
@@ -31,6 +33,8 @@ const { title } = Astro.props;
     box-sizing: border-box;
   }
   :root {
+    --main-font: 'Noto Sans', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
   }
   html {
     min-height: 100vh;

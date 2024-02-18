@@ -9,7 +9,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
   <nav class="'nav-container'">
     <a class='logo-link-desktop' href='/'>
       <div>
-        <img class='logo' src='/' alt='logo-icon' />
+        <img class='logo' src='/' alt='LOGO' />
       </div>
     </a>
 
@@ -24,20 +24,19 @@ import HamburgerBtn from './HamburgerBtn.astro';
       <a class='link' href='/'> Oferta</a>
       <a class='link' href='/'> Cennik</a>
       <a class='link' href='/'> Kontakt</a>
-      <!-- <a class='link' href=#contact>{t('navbar.contact')}</a> -->
     </div>
     <div class='contact-wrapper'>
       <!-- <p class="contact-text">Kontakt do Nas: </p> -->
       <a class='contact-icon' href='tel:+48888433188' aria-label='phone-link'>
         <span>mr-poz@wp.pl</span>
-        <!-- <Icon name='phone' width={24} height={24} /> -->
+        <Icon class='icon' name='phone' width={24} height={24} />
       </a>|
       <a
         class='contact-icon'
         href='mailto:mr-poz@wp.pl'
         aria-label='Link to email'
         ><span>666-305-512</span>
-        <!-- <Icon name="mail" width={24} height={24}/> -->
+        <Icon class='icon' name='mail' width={24} height={24} />
       </a>
     </div>
     <HamburgerBtn />
@@ -57,35 +56,26 @@ import HamburgerBtn from './HamburgerBtn.astro';
     justify-content: space-between;
     gap: 20px;
     flex-direction: row;
-    position: fixed;
     width: 100%;
-    /* min-height: 114px; */
-    padding: 10px;
+    border: 1px solid red;
+        padding: 10px;
     z-index: 1000;
-    background-color: rgb(214, 39, 39);
+ 
   }
   .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     flex-direction: row;
     position: fixed;
     width: 100%;
     padding: 10px;
     z-index: 1000;
     background-color: white;
-    /* backdrop-filter: blur(18px);
-  background-color: rgb(255, 255, 255, .6); */
   }
   .nav-links {
     display: none;
   }
-  /* .nav-links :last-child {
-    font-weight: 500;
-    box-shadow: 3px 2px 9px -5px rgba(0, 0, 0, 1);
-    border: none;
-  } */
   .nav-links-mobile {
     position: fixed;
     top: 64px;
@@ -103,12 +93,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
     transform: translateX(-150%);
     transition: transform 0.8s cubic-bezier(0.65, 0.05, 0.36, 1);
   }
-  /* .nav-links-mobile a:last-child {
-    padding: 10px 10px;
-    background-color: black;
-    color: white;
-    border-radius: 20px;
-  } */
   .active {
     transform: translateX(0);
   }
@@ -128,20 +112,25 @@ import HamburgerBtn from './HamburgerBtn.astro';
     font-size: clamp(0.7rem, 1vw, 1rem);
     color: black;
   }
+  .contact-icon .icon {
+    display: block;
+  }
+  .contact-icon span {
+    display: none;
+  }
   .fa-solid {
     margin: 7px;
   }
   .link,
   .link-mobile {
-    font-family: var(--main-font);
-    font-weight: 300;
+    font-family: var(--roboto-font);
     text-align: center;
     text-decoration: none;
     border: none;
     outline: none;
     color: var(--font-blue);
     min-width: 110px;
-    font-weight: 500;
+    font-weight: 400;
     padding: 0 5px;
     font-size: 1.1rem;
     position: relative;
@@ -152,7 +141,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
     position: absolute;
     content: '';
     width: 0%;
-    /* background-color: var(--font-blue); */
     height: 3px;
     left: 0;
     bottom: -7px;
@@ -295,6 +283,13 @@ import HamburgerBtn from './HamburgerBtn.astro';
     }
     .contact-text {
       display: inline-block;
+    }
+    .contact-icon .icon {
+      display: none;
+    }
+    .contact-icon span {
+      display: block;
+      font-family: var(--roboto-font);
     }
     .hamburger {
       display: none;
