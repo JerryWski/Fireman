@@ -16,41 +16,44 @@
       <button class='button contact-us'>Skontaktuj się</button>
     </div>
   </div>
-  <div class='service-image'>
+  <!-- <div class='service-image'>
     <img
-      src='https://cdn.builder.io/api/v1/image/assets/TEMP/30e7c37ae593096118d857c33cc472ae44ad44dd24fedf1e9c488fe4bae83a45?apiKey=6e6f4c0794f94e708a81bd10e9901803'
+      src='../src/assets/hero-fireman2.webp'
       alt='Relevant description of the image'
       class='image'
     />
-  </div>
+  </div> -->
 </section>
 
 <style>
   .service-container {
-    background-color: #fff;
+    background-color: rgb(206, 110, 102);
+    background-image: url('../../assets/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
     gap: 20px;
   }
 
   .service-title {
-    font-size: clamp(2.3rem, 2vw, 3.5rem);
-    color: #000;
+    font-size: clamp(2.3rem, 2.5vw, 3rem);
+    color: var(--base-wh);
     font-family: var(--main-font);
     margin-bottom: 24px;
   }
   .service-header {
     margin: 40px 4px 0;
   }
-  .service-image {
-    margin: 40px 0 0;
-  }
- 
+
   .service-description {
-    color: #000;
+    color: var(--base-wh);
     font-family: var(--roboto-font);
     line-height: 27px;
   }
@@ -64,32 +67,45 @@
 
   .button {
     font-family: var(--roboto-font);
-    border: 1px solid #000;
+    border: none;
     padding: 12px 24px;
     cursor: pointer;
   }
 
   .about-us {
-    background-color: #000;
+    background-color:var(--base-gold);
+    outline: none;
     color: #fff;
   }
 
   .contact-us {
     color: #000;
   }
+  .service-image {
+    margin: 40px 0 0;
+  }
   .image {
     width: 100%;
-    aspect-ratio: 0.96;
     object-fit: contain;
   }
 
   @media (min-width: 900px) {
     .service-container {
       flex-direction: row;
-      padding: 50px;
+      padding: 70px 50px 70px 50px;
+      background-position: center -150px;
+      background-image: url('../../assets/hero-fireman2.webp');
     }
     .service-title {
       font-size: 3.5rem;
+    }
+    .service-header {
+      max-width: 1000px;
+    }
+  }
+  @media (max-width: 425px) {
+    .service-container {
+      background-position: -190px;
     }
   }
 </style>
