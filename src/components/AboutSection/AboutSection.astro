@@ -1,3 +1,133 @@
 ---
+import { Image } from 'astro:assets';
+import fireman from '../../assets/hero-fireman.webp';
+import extinguisher from '../../assets/gasnica2.webp';
 ---
 
+<section class='about-container'>
+  <div class='about-header'>
+    <h3>Niezawodność</h3>
+    <h1 class='about-title'>
+      Jesteśmy zawsze gotowi aby wesprzeć Cię naszym doświadczeniem!
+    </h1>
+    <p class='about-description'>
+      Oferujemy szeroki zakres usług związanych z ochroną przeciwpożarową oraz
+      bezpieczeństwem i higieną pracy. Nasza firma zapewnia fachową pomoc i
+      profesjonalne doradztwo, aby spełnić aktualne wymagania przepisów
+      przeciwpożarowych i BHP.
+    </p>
+    <div class='about-navigation'>
+      <a class='link about-us'>Cennik</a>
+      <a class='link contact-us'>Skontaktuj się</a>
+    </div>
+  </div>
+  <div class='about-image'>
+    <Image src={extinguisher} alt='fireman' class='image one' />
+    <Image src={fireman} alt='fireman' class='image two' />
+  </div>
+</section>
+
+<style>
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    gap: 20px;
+  }
+  .about-header {
+    margin: 40px 4px 0;
+  }
+  .about-header h3 {
+    padding-bottom: 20px;
+    color: var(--base-gold);
+  }
+  .about-title {
+    font-size: clamp(1.7rem, 2vw, 3rem);
+    color: var(--base-black);
+    font-family: var(--main-font);
+    margin-bottom: 24px;
+  }
+  .about-description {
+    color: var(--sub-black);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+    font-size: clamp();
+  }
+
+  .about-navigation {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+    margin-top: 24px;
+  }
+
+  .link {
+    font-family: var(--roboto-font);
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+  }
+
+  .about-us {
+    background-color: var(--base-wh);
+    outline: 1px solid var(--base-gold);
+    color: var(--base-black);
+    transition: all 0.2s ease-in;
+  }
+  .about-us:hover {
+    color: var(--base-wh);
+    background-color: var(--base-red);
+    outline: none;
+  }
+
+  .contact-us {
+    color: var(--base-wh);
+    background-color: var(--base-red);
+    transition: all 0.2s ease-in;
+  }
+  .contact-us:hover {
+    background-color: var(--base-gold);
+    color: var(--base-wh);
+  }
+  .about-image {
+    margin: 40px 0 0;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  @media (min-width: 900px) {
+    .about-container {
+      flex-direction: row;
+      padding: 70px 50px 70px 50px;
+      gap: 40px;
+    }
+    .about-header {
+      max-width: 830px;
+      order: 2;
+    }
+    .about-header h3 {
+      font-size: clamp(1rem, 1.5vw, 2rem);
+      font-family: var(--main-font);
+      letter-spacing: 2px;
+    }
+    .about-image {
+      display: flex;
+      min-width: 560px;
+      max-width: 800px;
+      gap: 20px;
+    }
+  }
+  @media (max-width: 425px) {
+    .about-container {
+      background-position: -190px;
+    }
+  }
+</style>

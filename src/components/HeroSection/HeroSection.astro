@@ -1,32 +1,26 @@
 ---
-
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
 ---
 
-<section class='service-container'>
-  <div class='service-header'>
-    <h1 class='service-title'>Profesjonalna ochrona przeciwpożarowa i BHP</h1>
-    <p class='service-description'>
+<section class='welcome-container'>
+  <div class='welcome-header'>
+    <HeadingsForSection heading="Profesjonalna ochrona przeciwpożarowa i BHP"/>
+    <!-- <h1 class='welcome-title'>Profesjonalna ochrona przeciwpożarowa i BHP</h1> -->
+    <p class='welcome-description'>
       Zaufaj naszej firmie MR - POŻ i zyskaj fachową pomoc w zakresie ochrony
       przeciwpożarowej oraz bezpieczeństwa i higieny pracy. Nasze usługi są
       zgodne z aktualnymi przepisami i gwarantują rzetelność oraz terminowość
       realizacji.
     </p>
-    <div class='service-navigation'>
-      <button class='button about-us'>O Nas</button>
-      <button class='button contact-us'>Skontaktuj się</button>
+    <div class='welcome-navigation'>
+      <a class='link about-us'>O Nas</a>
+      <a class='link contact-us'>Skontaktuj się</a>
     </div>
   </div>
-  <!-- <div class='service-image'>
-    <img
-      src='../src/assets/hero-fireman2.webp'
-      alt='Relevant description of the image'
-      class='image'
-    />
-  </div> -->
 </section>
 
 <style>
-  .service-container {
+  .welcome-container {
     background-color: rgb(206, 110, 102);
     background-image: url('../../assets/hero-fireman2-mb.webp');
     background-blend-mode: multiply;
@@ -41,35 +35,35 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
     gap: 20px;
   }
-
-  .service-title {
+  /* .welcome-title {
     font-size: clamp(2.3rem, 2.5vw, 3rem);
     color: var(--base-wh);
     font-family: var(--main-font);
     margin-bottom: 24px;
-  }
-  .service-header {
+  } */
+  .welcome-header {
     margin: 40px 4px 0;
   }
 
-  .service-description {
+  .welcome-description {
     color: var(--base-wh);
     font-family: var(--roboto-font);
     line-height: 27px;
   }
 
-  .service-navigation {
+  .welcome-navigation {
     display: flex;
     gap: 16px;
     font-size: 16px;
     margin-top: 24px;
   }
 
-  .button {
+  .link {
     font-family: var(--roboto-font);
     border: none;
     padding: 12px 24px;
     cursor: pointer;
+    color: var(--base-wh);
   }
 
   .about-us {
@@ -85,13 +79,14 @@
 
   .contact-us {
     color: var(--base-black);
+    background-color: var(--base-wh);
     transition: all .2s ease-in;
   }
   .contact-us:hover {
     background-color:var(--base-gold);
     color: var(--base-wh);
   }
-  .service-image {
+  .welcome-image {
     margin: 40px 0 0;
   }
   .image {
@@ -100,21 +95,21 @@
   }
 
   @media (min-width: 900px) {
-    .service-container {
+    .welcome-container {
       flex-direction: row;
       padding: 70px 50px 70px 50px;
       background-position: center -150px;
       background-image: url('../../assets/hero-fireman2.webp');
     }
-    .service-title {
+    .welcome-title {
       font-size: 3.5rem;
     }
-    .service-header {
+    .welcome-header {
       max-width: 1000px;
     }
   }
   @media (max-width: 425px) {
-    .service-container {
+    .welcome-container {
       background-position: -190px;
     }
   }
