@@ -1,5 +1,5 @@
 ---
-
+import { Icon } from "astro-icon/components"
 ---
 
 <section class='container'>
@@ -7,53 +7,42 @@
   <div class='offer-section'>
     <!-- Repeated structure for each offer, example of one offer -->
     <div class='offer'>
-      <img
-        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
-        alt='Our strengths icon'
-      />
+      <Icon name='hydrant' width={66} height={66}/>
       <h3 class='offer-title'>Nasze atuty</h3>
       <p class='offer-desc'>
         Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
-        przeciwpożarowych oraz BHP
+        przeciwpożarowych
       </p>
       <a class='more-info' href='/'> Dowiedz się więcej ></a>
     </div>
 
     <div class='offer'>
-      <img
-        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
-        alt='Our strengths icon'
-      />
-      <h3 class='offer-title'>Nasze atuty</h3>
+      <Icon name='timer' width={66} height={66}/>
+      <h3 class='offer-title'>Szybka i terminowa realizacja</h3>
       <p class='offer-desc'>
-        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
-        przeciwpożarowych oraz BHP
+        Zadbamy o to, aby zlecane nam zadania były wykonane szybko i terminowo
       </p>
       <a class='more-info' href='/'> Dowiedz się więcej ></a>
     </div>
 
     <div class='offer'>
-      <img
-        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
-        alt='Our strengths icon'
-      />
-      <h3 class='offer-title'>Nasze atuty</h3>
+      <Icon name='hands' width={66} height={66}/>
+      <h3 class='offer-title'>Długoterminowa współpraca</h3>
       <p class='offer-desc'>
-        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
-        przeciwpożarowych oraz BHP
+        Nasi klienci cenią naszą rzetelność i profesjonalizm, dlatego
+        współpracują z nami przez wiele lat
       </p>
       <a class='more-info' href='/'> Dowiedz się więcej ></a>
     </div>
 
     <div class='offer'>
-      <img
-        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
-        alt='Our strengths icon'
-      />
-      <h3 class='offer-title'>Nasze atuty</h3>
+      <Icon name='people' width={66} height={66}/>
+      <h3 class='offer-title'>
+        Innowacyjne rozwiązania 
+      </h3>
       <p class='offer-desc'>
-        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
-        przeciwpożarowych oraz BHP
+        Stale poszukujemy nowych rozwiązań i technologii, aby sprostać
+        wymaganiom naszych klientów
       </p>
       <a class='more-info' href='/'> Dowiedz się więcej ></a>
     </div>
@@ -67,8 +56,15 @@
     padding: 20px;
     display: flex;
     margin-top: 100px;
-    color: var(--base-wh);
-    background-image: linear-gradient(to right top, #460816, #5d071b, #75051e, #8d0320, #a50321);
+    color: var(--base-gold);
+    background-image: linear-gradient(
+      to right top,
+      #460816,
+      #5d071b,
+      #75051e,
+      #8d0320,
+      #a50321
+    );
     flex-direction: column;
     align-items: center;
   }
@@ -84,14 +80,17 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    margin-bottom: 50px;
   }
   .offer {
-    background-color: rgb(194, 43, 43);
+    background-color: var(--base-wh);
     padding: 20px;
+    font-family: var(--roboto-font);
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
-    border-radius: 8px;
+    word-break: break-word;
+    /* box-shadow: -1px 3px 13px -3px rgba(0, 0, 0, 1); */
   }
   .offer img {
     width: 48px;
@@ -99,11 +98,13 @@
     margin-bottom: 24px;
   }
   .offer-title {
-    font-size: 24px;
+    color: var(--base-black);
+    font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 16px;
   }
   .offer-desc {
+    color: var(--sub-black);
     margin-bottom: 32px;
     line-height: 1.5;
   }
@@ -112,17 +113,13 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    color: var(--base-gold);
     font-weight: 700;
     cursor: pointer;
   }
   .more-info img {
     width: 24px;
     height: auto;
-  }
-  .offer-section {
-    flex: column;
-    align-items: stretch;
-    margin-bottom: 50px;
   }
 
   @media (min-width: 900px) {
