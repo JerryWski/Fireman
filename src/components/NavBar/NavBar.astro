@@ -12,13 +12,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
         <Image class='logo' src={logo} alt='logo-icon' />
       </div>
     </a>
-
-    <!-- <a class='logo-link-mobile' href='/'>
-      <div>
-        <Image class='logo' src={logo} alt='logo-icon' />
-      </div>
-    </a> -->
-
     <div aria-label='primary nav' class='nav-links'>
       <a class='link' href='/'> O mnie</a>
       <a class='link' href='/'> Oferta</a>
@@ -143,7 +136,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
   }
   .contact-icon {
     font-size: clamp(0.7rem, 1vw, 1rem);
-    color: black;
+    color: var(--base-red);
   }
   .contact-icon .icon {
     display: block;
@@ -205,13 +198,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
     max-width: 120px;
     padding-inline: 5px;
   }
-  /* .logo-link-mobile {
-    display: block;
-    height: auto;
-    max-width: 80px;
-    padding-inline: 5px;
-  } */
-
   .logo {
     width: 100%;
     height: 100%;
@@ -228,7 +214,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
     z-index: 100;
   }
   .burger-line {
-    background-color: var(--bg-black);
+    background-color: var(--base-black);
   }
   .burger-line:nth-child(1) {
     width: 34px;
@@ -244,18 +230,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
     width: 30px;
     height: 2px;
     display: block;
-  }
-  .my-select-class {
-    border: none;
-    padding: 3px;
-    border-radius: 7px;
-    outline: none;
-    cursor: pointer;
-    background: transparent;
-    font-weight: 300;
-    color: var(--font-blue);
-    font-family: var(--main-font);
-    margin-left: auto;
   }
   @media (max-width: 315px) {
     .nav-container {
@@ -284,7 +258,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
       position: static;
       justify-content: flex-start;
       align-items: center;
-      /* padding-top: 35px; */
       padding-left: 25px;
       padding-right: 70px;
     }
@@ -299,19 +272,6 @@ import HamburgerBtn from './HamburgerBtn.astro';
     }
     .nav-links-mobile {
       display: none;
-    }
-    .nav-links a:last-child {
-      padding: 10px 10px;
-      /* background-color: var(--font-blue); */
-      color: var(--bg-white);
-      border-radius: 20px;
-      transition: 0.2s all ease;
-    }
-    .nav-links a:last-child:hover {
-      /* background-color: var(--logo-blue); */
-    }
-    .nav-links a:last-child::after {
-      width: 0;
     }
     .contact-wrapper {
       font-size: 1.1rem;

@@ -75,11 +75,21 @@
   .about-us {
     background-color:var(--base-gold);
     outline: none;
-    color: #fff;
+    color: var(--base-wh);
+    transition: all .2s ease-in;
+  }
+  .about-us:hover {
+    color: var(--base-black);
+    background-color: var(--base-wh);
   }
 
   .contact-us {
-    color: #000;
+    color: var(--base-black);
+    transition: all .2s ease-in;
+  }
+  .contact-us:hover {
+    background-color:var(--base-gold);
+    color: var(--base-wh);
   }
   .service-image {
     margin: 40px 0 0;
