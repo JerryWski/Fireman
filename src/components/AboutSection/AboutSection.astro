@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 import fireman from '../../assets/hero-fireman.webp';
 import extinguisher from '../../assets/gasnica2.webp';
 ---
@@ -10,20 +11,44 @@ import extinguisher from '../../assets/gasnica2.webp';
     <h1 class='about-title'>
       Jesteśmy zawsze gotowi aby wesprzeć Cię naszym doświadczeniem!
     </h1>
-    <p class='about-description'>
+    <div class='about-services-container'>
+      <div class='about-service about-protection'>
+        <Icon class='about-icon' name='shield' width={35} height={35} />
+        <p>
+          Oferujemy usługi dla firm wymagających najwyższego poziomu ochrony
+        </p>
+      </div>
+      <div class='about-service about-extinger'>
+        <Icon class='about-icon' name='extinger' width={35} height={35} />
+        <p>Zapewniamy kompleksowe usługi przeciwpożarowe</p>
+      </div>
+      <div class='about-service about-safety'>
+        <Icon class='about-icon' name='worker' width={35} height={35} />
+        <p>
+          Naszą misją jest stworzyć bezpieczne środowisko dla Twoich
+          pracowników.
+        </p>
+      </div>
+    </div>
+    <!-- <p class='about-description'>
       Oferujemy szeroki zakres usług związanych z ochroną przeciwpożarową oraz
       bezpieczeństwem i higieną pracy. Nasza firma zapewnia fachową pomoc i
       profesjonalne doradztwo, aby spełnić aktualne wymagania przepisów
       przeciwpożarowych i BHP.
-    </p>
+    </p> -->
     <div class='about-navigation'>
       <a class='link about-us'>Cennik</a>
-      <a class='link contact-us'>Skontaktuj się</a>
+      <a class='link contact-us'>Oferta</a>
     </div>
   </div>
   <div class='about-image'>
     <Image src={extinguisher} alt='fireman' class='image one' />
     <Image src={fireman} alt='fireman' class='image two' />
+    <div class='info-box'>
+      <p class='text-one'>Ponad</p>
+      <p class='text-two'>30 +</p>
+      <span>Zaufanych Klientów</span>
+    </div>
   </div>
 </section>
 
@@ -51,12 +76,44 @@ import extinguisher from '../../assets/gasnica2.webp';
     font-family: var(--main-font);
     margin-bottom: 24px;
   }
-  .about-description {
+  .about-services-container {
+    margin-block: 35px;
+    font-family: var(--roboto-font);
+  }
+  .about-service {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .about-service p {
+    font-size: clamp(0.7rem, 1vw, 1.3rem);
+    color: var(--sub-black);
+  }
+  .about-icon {
+    background-color: var(--base-gold);
+    color: var(--base-wh);
+    padding: 2px;
+    min-width: 35px;
+  }
+  .about-service.about-protection .about-icon {
+    background-color: var(--base-black);
+  }
+  .about-service.about-extinger .about-icon {
+    background-color: var(--base-red);
+  }
+  .about-service.about-safety .about-icon {
+    background-color: var(--base-wh);
+    color: var(--base-black);
+    outline: 1px solid var(--base-black);
+  }
+  /* .about-description {
     color: var(--sub-black);
     font-family: var(--roboto-font);
     line-height: 27px;
     font-size: clamp();
-  }
+  } */
 
   .about-navigation {
     display: flex;
@@ -94,15 +151,45 @@ import extinguisher from '../../assets/gasnica2.webp';
     color: var(--base-wh);
   }
   .about-image {
+    position: relative;
     margin: 40px 0 0;
   }
-
+  .info-box {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px 11px 24px -11px rgba(0, 0, 0, 1);
+    left: 10%;
+    min-width: 80%;
+    height: 150px;
+    background-color: rgb(245, 240, 240, 0.9);
+  }
+  .info-box span {
+    font-family: var(--main-font);
+    font-weight: 700;
+  }
+  .text-one,
+  .text-two {
+    font-family: var(--roboto-font);
+    font-weight: 700;
+  }
+  .text-one {
+    font-size: 2rem;
+  }
+  .text-two {
+    font-size: 2.5rem;
+  }
   .image {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
-
+  .image.two {
+    display: none;
+  }
   @media (min-width: 900px) {
     .about-container {
       flex-direction: row;
@@ -118,11 +205,25 @@ import extinguisher from '../../assets/gasnica2.webp';
       font-family: var(--main-font);
       letter-spacing: 2px;
     }
+    .about-service {
+      gap: 20px;
+    }
+    .about-icon {
+      min-width: 46px;
+      min-height: 46px;
+      padding: 10px;
+    }
     .about-image {
       display: flex;
       min-width: 560px;
       max-width: 800px;
       gap: 20px;
+    }
+    .image.two {
+      display: block;
+    }
+    .info-box {
+      min-width: 60%;
     }
   }
   @media (max-width: 425px) {
