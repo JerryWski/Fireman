@@ -1,0 +1,137 @@
+---
+
+---
+
+<section class='container'>
+  <h2 class='heading'>Co nas wyróżnia na tle konkurencji?</h2>
+  <div class='offer-section'>
+    <!-- Repeated structure for each offer, example of one offer -->
+    <div class='offer'>
+      <img
+        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
+        alt='Our strengths icon'
+      />
+      <h3 class='offer-title'>Nasze atuty</h3>
+      <p class='offer-desc'>
+        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
+        przeciwpożarowych oraz BHP
+      </p>
+      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+    </div>
+
+    <div class='offer'>
+      <img
+        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
+        alt='Our strengths icon'
+      />
+      <h3 class='offer-title'>Nasze atuty</h3>
+      <p class='offer-desc'>
+        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
+        przeciwpożarowych oraz BHP
+      </p>
+      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+    </div>
+
+    <div class='offer'>
+      <img
+        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
+        alt='Our strengths icon'
+      />
+      <h3 class='offer-title'>Nasze atuty</h3>
+      <p class='offer-desc'>
+        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
+        przeciwpożarowych oraz BHP
+      </p>
+      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+    </div>
+
+    <div class='offer'>
+      <img
+        src='https://cdn.builder.io/api/v1/image/assets/TEMP/baefec471ad1f9d1dbf03cd25ce6b917cb4169d465f9501418236a02f8d1308a?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
+        alt='Our strengths icon'
+      />
+      <h3 class='offer-title'>Nasze atuty</h3>
+      <p class='offer-desc'>
+        Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
+        przeciwpożarowych oraz BHP
+      </p>
+      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+    </div>
+    <!-- Repeat this structure for other offers following the same pattern -->
+  </div>
+</section>
+
+<style>
+  .container {
+    clip-path: polygon(78% 3%, 100% 0, 100% 100%, 0 100%, 0 0%);
+    padding: 20px;
+    display: flex;
+    margin-top: 100px;
+    color: var(--base-wh);
+    background-image: linear-gradient(to right top, #460816, #5d071b, #75051e, #8d0320, #a50321);
+    flex-direction: column;
+    align-items: center;
+  }
+  .heading {
+    font-size: clamp(2rem, 2vw, 3rem);
+    color: var(--base-wh);
+    font-family: var(--main-font);
+    margin-top: 100px;
+    margin-bottom: 64px;
+  }
+  .offer-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .offer {
+    background-color: rgb(194, 43, 43);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  .offer img {
+    width: 48px;
+    height: auto;
+    margin-bottom: 24px;
+  }
+  .offer-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .offer-desc {
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  .more-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .more-info img {
+    width: 24px;
+    height: auto;
+  }
+  .offer-section {
+    flex: column;
+    align-items: stretch;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 900px) {
+    .container {
+      clip-path: polygon(78% 13%, 100% 0, 100% 100%, 0 100%, 0 0%);
+      padding: 50px;
+    }
+    .offer {
+      width: calc(25% - 20px);
+    }
+  }
+</style>
