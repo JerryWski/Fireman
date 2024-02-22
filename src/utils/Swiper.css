@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
 }
 .swiper-slide {
   position: relative;
@@ -29,7 +30,9 @@
   margin-top: 30px;
   margin-bottom: 0px;
 }
-
+.img-wrapper img {
+  border-radius: 50%;
+}
 .swiper-slide img {
   display: block;
   width: 70%;
@@ -77,13 +80,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width:500px !important;
   }
+  
   .swiper-container {
     width: 400px;
   }
   .swiper-text {
     font-size: 0.8rem;
     margin-top: 10px;
-    
   }
 }

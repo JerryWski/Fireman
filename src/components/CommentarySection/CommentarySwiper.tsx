@@ -7,6 +7,8 @@ import 'swiper/css/pagination';
 import { clients } from '../../utils/commentaryList';
 
 const CommentarySwiper = () => {
+
+
   return (
     <Swiper
       autoplay={{
@@ -32,7 +34,7 @@ const CommentarySwiper = () => {
         <SwiperSlide key={client.id}>
           <div className='swiper-container'>
             <div className='img-wrapper'>
-              <img src={client.image} alt='man-photo' />
+              <img src={client.image} alt={client.alt} />
             </div>
             <h2 className='swiper-header'>{client.header}</h2>
             {/* <h3 className='swiper-subheader'>{client.subheader}</h3> */}
