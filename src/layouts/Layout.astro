@@ -1,4 +1,5 @@
 ---
+import ContactSection from '../components/ContactSection/ContactSection.astro';
 import NavBar from '../components/NavBar/NavBar.astro';
 import '../utils/CustomFonts.css';
 
@@ -27,6 +28,7 @@ const {
   <body>
     <NavBar />
     <slot />
+    <ContactSection />
   </body>
 </html>
 <style is:global>

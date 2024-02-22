@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../../assets/logo2.webp';
+import { Icon } from 'astro-icon/components';
+---
+
+<section class='contact-container'>
+  <div class="contact-logo">
+    <Image class='logo' src={logo} alt={'logo-icon'}/>
+  </div>
+  <ul class="contact-links">
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">O firmie</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Oferta</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Cennik</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Kontakt</a></li>
+  </ul>
+  <div class="contact-socials-wrapper">
+    <Icon name="facebook" class='icon' width={40} height={40}/>
+  </div>
+</section>
+
+<style>
+  .contact-container {
+    clip-path: polygon(65% 0, 100% 6%, 100% 100%, 0 100%, 0 10%);
+    display: flex;
+    background-color: rgb(38, 41, 66);
+    background-image: url('../../assets/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    padding: 80px 20px 80px 20px;
+    position: relative;
+    gap: 20px;
+  }
+  .contact-logo {
+    margin-top: 20px;
+    width: 200px;
+  }
+  .contact-logo .logo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+  }
+  .contact-links {
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: flex-start;
+  }
+  .icon {
+    color: var(--base-gold);
+  }
+  .contact-links li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+  .contact-links li a {
+    color: var(--base-wh);
+   
+  }
+  @media(min-width:900px) {
+    .contact-container {
+        background-position: center -150px;
+    }
+  }
+</style>

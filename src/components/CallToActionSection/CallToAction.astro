@@ -6,6 +6,13 @@
   <h2 class='action-heading'>
     Skontaktuj się znami w celu poznania szczegółów oferty
   </h2>
+  <h3 class='action-subheading'>
+    Zapraszamy do kontaktu w celu uzyskania szczegółowych informacji na temat
+    naszej oferty lub rozpoczęcia współpracy.
+  </h3>
+  <div class='action-links'>
+    <a class='link' href='/'>Kontakt</a>
+  </div>
 </section>
 
 <style>
@@ -18,15 +25,46 @@
     align-items: center;
   }
   .action-heading {
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: clamp(2rem, 2.5vw, 3rem);
     color: var(--base-black);
     font-family: var(--main-font);
     margin-top: 10px;
-    margin-bottom: 64px;
+    margin-bottom: 34px;
   }
-  @media(min-width:900px) {
+  .action-subheading {
+    font-family: var(--roboto-font);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-weight: 300;
+    color: var(--sub-black);
+    line-height: 24px;
+  }
+  .action-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  .link {
+    font-family: var(--roboto-font);
+    border: none;
+    padding: 12px 64px;
+    background-color: var(--base-red);
+    cursor: pointer;
+    color: var(--base-wh);
+    border: none;
+    transition: .2s all ease-in;
+  }
+  .link:hover {
+    background-color: var(--base-gold);
+
+  }
+  @media (min-width: 900px) {
     .action-heading {
       margin-top: 50px;
+    }
+    .action-links {
+      justify-content: center;
     }
   }
 </style>
