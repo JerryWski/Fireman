@@ -80,7 +80,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width:500px !important;
+    /* width:500px !important; */
+  }
+  .swiper-slide.swiper-slide-active,.swiper-slide.swiper-slide-next  {
+    width: 500px !important;
   }
   
   .swiper-container {
