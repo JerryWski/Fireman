@@ -20,7 +20,7 @@ const FooterSection: React.FC = () => {
           <a href="">
           </a>
         </p>
-        <a className='privacy' href="">Polityka Prywatności</a>
+        <a className='privacy' href="/">Polityka Prywatności</a>
       </div>
     </>
   );
