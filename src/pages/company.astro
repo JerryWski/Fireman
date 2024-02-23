@@ -14,14 +14,20 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
         </p>
       </div>
     </div>
-    <div class='company-intro'>
-      <div class='intro-left'>
-        <h3>
-          Działamy na rynku ochrony przeciwpożarowej i BHP, zapewniając fachową
+    <div class='company-info'>
+      <div class='info-left'>
+        <h2 class='info-header'>
+          Działamy na rynku ochrony przeciwpożarowej od ponad 2 lat, zapewniając fachową
           pomoc i terminową realizację zleceń.
-        </h3>
+        </h2>
+        <p>
+          Firma MR - POŻ specjalizuje się w usługach z zakresu ochrony
+          przeciwpożarowej, bezpieczeństwa i higieny pracy. Nasze doświadczenie
+          oraz zaangażowanie w zapewnianie bezpieczeństwa przeciwpożarowego są
+          gwarancją rzetelnie wykonanej usługi.
+        </p>
       </div>
-      <div class='intro-right'></div>
+      <div class='info-right'></div>
     </div>
   </section>
 </Layout>
@@ -47,6 +53,28 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     font-family: var(--roboto-font);
     line-height: 27px;
   }
+  .company-info {
+    padding: 30px 20px 70px 20px;
+    margin-block: 50px;
+    display: flex;
+    width: 100%;
+  }
+  .info-left {
+    width: 100%;
+  }
+  .info-left p {
+    font-family: var(--roboto-font);
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-weight: 300;
+    color: var(--sub-black);
+    line-height: 24px;
+  }
+  .info-header {
+    font-size: clamp(1.5rem, 1.8vw, 2.8rem);
+    color: var(--base-black);
+    font-family: var(--main-font);
+    margin-bottom: 24px;
+  }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
@@ -54,5 +82,13 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
       background-position: center -150px;
       background-image: url('../../src/assets/hero-fireman2.webp');
     }
+    .company-info {
+      margin-block: 100px;
+      padding: 70px 50px 70px 50px;
+    }
+    .info-left {
+      max-width: 50%;
+    }
+
   }
 </style>

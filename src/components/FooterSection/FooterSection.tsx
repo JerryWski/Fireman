@@ -9,7 +9,7 @@ const FooterSection: React.FC = () => {
         <span className='footer_overline'></span>
       <div className='footer'>
         <p className='footer_year'>
-        ©{currentYear()} 
+        ©{currentYear()} &nbsp;
           <a
             className='footer_link'
             href='https://jerrywski.github.io/Portfolio-Site/'
