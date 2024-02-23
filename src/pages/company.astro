@@ -17,8 +17,8 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     <div class='company-info'>
       <div class='info-left'>
         <h2 class='info-header'>
-          Działamy na rynku ochrony przeciwpożarowej od ponad 2 lat, zapewniając fachową
-          pomoc i terminową realizację zleceń.
+          Działamy na rynku ochrony przeciwpożarowej od ponad 2 lat, zapewniając
+          fachową pomoc i terminową realizację zleceń.
         </h2>
         <p>
           Firma MR - POŻ specjalizuje się w usługach z zakresu ochrony
@@ -27,7 +27,14 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
           gwarancją rzetelnie wykonanej usługi.
         </p>
       </div>
-      <div class='info-right'></div>
+      <div class='info-right'>
+        <img
+          loading='lazy'
+          src='https://cdn.builder.io/api/v1/image/assets/TEMP/695e35fe9375ed813e9267c48b6e6e0ed2c5303c0a4eb46842040dcb8370ac1e?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
+          class='responsive-img'
+          alt='Firma MR-POŻ symbol'
+        />
+      </div>
     </div>
   </section>
 </Layout>
@@ -57,6 +64,10 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     padding: 30px 20px 70px 20px;
     margin-block: 50px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
     width: 100%;
   }
   .info-left {
@@ -75,6 +86,13 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     font-family: var(--main-font);
     margin-bottom: 24px;
   }
+  .info-right {
+    width: fit-content;
+
+  }
+  .info-right img {
+    width: 100%;
+  }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
@@ -84,11 +102,15 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     }
     .company-info {
       margin-block: 100px;
-      padding: 70px 50px 70px 50px;
+      flex-direction: row;
+      gap: 80px;
+      padding: 0px 50px 70px 50px;
     }
     .info-left {
       max-width: 50%;
     }
-
+    .info-right img {
+      max-height: 500px;
+    }
   }
 </style>
