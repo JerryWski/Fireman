@@ -1,7 +1,9 @@
 ---
 import { Image } from 'astro:assets';
+import FooterSection from '../FooterSection/FooterSection';
 import logo from '../../assets/logo2.webp';
 import { Icon } from 'astro-icon/components';
+
 ---
 
 <section class='contact-container'>
@@ -9,14 +11,20 @@ import { Icon } from 'astro-icon/components';
     <Image class='logo' src={logo} alt={'logo-icon'}/>
   </div>
   <ul class="contact-links">
-    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">O firmie</a></li>
-    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Oferta</a></li>
-    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Cennik</a></li>
-    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="#">Kontakt</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="/">O firmie</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="/">Oferta</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="/">Cennik</a></li>
+    <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="/">Kontakt</a></li>
   </ul>
   <div class="contact-socials-wrapper">
-    <Icon name="facebook" class='icon' width={40} height={40}/>
+    <a href="/">
+      <Icon name="facebook" class='icon' width={40} height={40}/>
+    </a>
+    <a href="/">
+      <Icon name="linkedin" class='icon' width={45} height={45}/>
+    </a>
   </div>
+  <FooterSection client:load/>
 </section>
 
 <style>
@@ -32,7 +40,7 @@ import { Icon } from 'astro-icon/components';
     justify-content: center;
     align-items: center;
     margin-top: 100px;
-    padding: 80px 20px 80px 20px;
+    padding: 80px 20px 20px 20px;
     position: relative;
     gap: 20px;
   }
@@ -62,7 +70,17 @@ import { Icon } from 'astro-icon/components';
   }
   .contact-links li a {
     color: var(--base-wh);
-   
+  }
+  .contact-links li a:hover {
+    opacity: .8;
+  }
+  .contact-socials-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    min-width: 200px;
+    gap: 20px;
   }
   @media(min-width:900px) {
     .contact-container {
