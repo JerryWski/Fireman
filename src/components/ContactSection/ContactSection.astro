@@ -6,7 +6,7 @@ import { Icon } from 'astro-icon/components';
 
 ---
 
-<section class='contact-container'>
+<footer class='contact-container'>
   <div>
     <div class="contact-logo">
       <Image class='logo' src={logo} alt={'logo-icon'}/>
@@ -25,12 +25,12 @@ import { Icon } from 'astro-icon/components';
         <Icon name="linkedin" class='icon' width={45} height={45}/>
       </a>
       <a aria-label="google map icon" href="https://www.google.com/maps?cid=2077120573691676647">
-        <Icon name="google-map" class='icon' width={45} height={45}/>
+        <Icon name="google-map" class='icon' width={35} height={35}/>
       </a>
     </div>
   </div>
   <FooterSection client:load/>
-</section>
+</footer>
 
 <style>
   .contact-container {
@@ -98,6 +98,7 @@ import { Icon } from 'astro-icon/components';
   @media(min-width:900px) {
     .contact-container {
         background-position: center -150px;
+        background-image: url('../../assets/hero-fireman2.webp');
     }
     .contact-container div {
       display: flex;

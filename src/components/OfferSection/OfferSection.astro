@@ -5,7 +5,7 @@ import { Icon } from "astro-icon/components"
 <section class='container'>
   <h2 class='heading'>Co nas wyróżnia na tle konkurencji?</h2>
   <div class='offer-section'>
-    <!-- Repeated structure for each offer, example of one offer -->
+
     <div class='offer'>
       <Icon name='hydrant' width={66} height={66}/>
       <h3 class='offer-title'>Nasze atuty</h3>
@@ -46,13 +46,13 @@ import { Icon } from "astro-icon/components"
       </p>
       <a class='more-info' href='/'> Dowiedz się więcej ></a>
     </div>
-    <!-- Repeat this structure for other offers following the same pattern -->
+    <h2 class='heading'>Sprawdź naszą <a href="/">OFERTĘ!</a></h2>
   </div>
 </section>
 
 <style>
   .container {
-    /* clip-path: polygon(78% 3%, 100% 0, 100% 100%, 0 100%, 0 0%); */
+    
     padding: 20px;
     display: flex;
     margin-top: 100px;
@@ -74,6 +74,22 @@ import { Icon } from "astro-icon/components"
     font-family: var(--main-font);
     margin-top: 70px;
     margin-bottom: 64px;
+  }
+  .heading a {
+    margin-left: 5px;
+    font-size: clamp(2rem, 2vw, 3rem);;
+    color: var(--base-gold);
+    /* border-bottom: 3px solid var(--base-gold); */
+    font-weight: 800;
+    transition: .2s all ease-in;
+  }
+  h2.heading:nth-child(5) {
+    border: 3px solid white;
+    text-align: center;
+    padding: 10px 20px;
+  }
+  .heading a:hover {
+    color: var(--base-wh);
   }
   .offer-section {
     display: flex;

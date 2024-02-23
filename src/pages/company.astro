@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+---
+
+<Layout title='Informacje o naszej firmie'>
+  <section>
+    <div class='company-welcome'>
+      <div>
+        <HeadingsForSection heading='Nasza Misja' />
+        <p class='company-description'>
+          Twoje bezpieczeństwo naszą misją: instrukcje, szkolenia i nadzór
+          pożarowy.
+        </p>
+      </div>
+    </div>
+    <div class='company-intro'>
+      <div class='intro-left'>
+        <h3>
+          Działamy na rynku ochrony przeciwpożarowej i BHP, zapewniając fachową
+          pomoc i terminową realizację zleceń.
+        </h3>
+      </div>
+      <div class='intro-right'></div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .company-welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('../../src/assets/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .company-description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .company-welcome {
+      flex-direction: row;
+      padding: 70px 50px 70px 50px;
+      background-position: center -150px;
+      background-image: url('../../src/assets/hero-fireman2.webp');
+    }
+  }
+</style>
