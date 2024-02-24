@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import fireman from '../assets/fireman3.webp'
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 ---
@@ -88,14 +90,13 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
       </div>
 
       <div class='info-right'>
-        <img
-          loading='lazy'
-          src='https://cdn.builder.io/api/v1/image/assets/TEMP/695e35fe9375ed813e9267c48b6e6e0ed2c5303c0a4eb46842040dcb8370ac1e?apiKey=6e6f4c0794f94e708a81bd10e9901803&'
-          class='responsive-img'
+        <Image
+          src={fireman}
+          class='info-img'
           alt='Firma MR-POŻ symbol'
         />
         <div class='info-box'>
-          <p class='text-one'>Sprawdź pozostałe</p>
+          <p class='text-one'> <Icon name="double-arrow" />Sprawdź pozostałe<Icon name="double-arrow-left" /></p>
           <a href="/" class='text-two'><Icon name="hand"/>Usługi</a>
         </div>
       </div>
@@ -178,10 +179,11 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
   }
   .info-right img {
     width: 100%;
+    margin-top: 30px;
   }
   .info-box {
     position: absolute;
-    bottom: -30px;
+    top: -10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,10 +213,16 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
   }
   .text-one {
     font-size: 1.6rem;
+    display: flex;
+    align-items: center;
   }
   .text-two {
     color: var(--base-gold);
     font-size: 2rem;
+  }
+  .info-img {
+    object-fit: contain;
+    height: auto;
   }
  
   @media (min-width: 900px) {
@@ -239,7 +247,11 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
     .info-box {
       min-width: 80%;
       left: -17%;
+      top: 83%;
       bottom: -30px;
     }
+    .info-img {
+    object-fit: cover;
+  }
   }
 </style>
