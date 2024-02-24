@@ -366,17 +366,23 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     color: var(--sub-black);
     padding: 20px 40px;
     width: fit-content;
-    font-family: var(--main-font);
+    font-family: var(--tilium-regular);
     text-transform: uppercase;
     background-color: var(--base-wh);
+    transition: .2s all ease-in;
+  }
+  .contact-container a:hover {
+    color: var(--base-wh);
+    background-color: var(--base-red);
   }
   .contact-container div p {
-    font-family: var(--main-font);
+    font-family: var(--tilium-regular);
     color: var(--base-wh);
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 2.3rem;
   }
   .contact-container div p:nth-of-type(2) {
+    font-family: var(--tilium-bold);
+    letter-spacing: 1px;
       font-size: 2.5rem;
     }
   @media (min-width: 900px) {

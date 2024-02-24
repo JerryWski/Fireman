@@ -36,4 +36,22 @@
   font-weight: 400;
   src: url('/fonts/noto-sans-v35-latin_latin-ext-regular.woff2') format('woff2'); 
 }
+/*tilium bold*/
+@font-face {
+  font-family: 'titillium_webblack';
+  src: url('/fonts/titilliumweb-black-webfont.woff2') format('woff2'),
+       url('/fonts/titilliumweb-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
+}
+
+/*tilium regular*/
+@font-face {
+  font-family: 'titillium_webregular';
+  src: url('/fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
+       url('/fonts/titilliumweb-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
