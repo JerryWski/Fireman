@@ -106,6 +106,16 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
       <!-- <OfferSection /> -->
     </div>
 
+    
+
+    <div class="contact-container">
+      <div>
+        <p>Jesteśmy dostępni w godzinach 09-18. Zadzwoń!</p>
+        <p>666 305 512</p>
+      </div>
+      <a href="/">Skontaktuj się z nami</a>
+    </div>
+
     <div class='company-quality'>
       <div class='quality-up'>
         <div class='quality-titles-wrapper'>
@@ -144,6 +154,7 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
         </div>
       </div>
     </div>
+
   </section>
 </Layout>
 
@@ -339,6 +350,35 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     font-family: var(--main-font);
     font-weight: 700;
   }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 80px 20px 80px 20px;
+    background-color: rgb(165, 92, 3);
+    background-image: url('/pattern.webp');
+    background-position: center -10px;
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact-container a {
+    color: var(--sub-black);
+    padding: 20px 40px;
+    width: fit-content;
+    font-family: var(--main-font);
+    text-transform: uppercase;
+    background-color: var(--base-wh);
+  }
+  .contact-container div p {
+    font-family: var(--main-font);
+    color: var(--base-wh);
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  .contact-container div p:nth-of-type(2) {
+      font-size: 2.5rem;
+    }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
@@ -351,6 +391,16 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
       flex-direction: row;
       gap: 80px;
       padding: 0px 50px 70px 50px;
+    }
+    .contact-container {
+      flex-direction: row;
+      gap: 166px;
+      justify-content: center;
+      align-items: center;
+      padding: 120px 150px 120px 50px;
+    }
+    .contact-container div p:nth-of-type(2) {
+      font-size: 2.5rem;
     }
     .quality-up {
       padding: 50px 100px 50px 100px;
