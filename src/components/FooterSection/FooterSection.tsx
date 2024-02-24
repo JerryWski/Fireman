@@ -10,17 +10,15 @@ const FooterSection: React.FC = () => {
       <div className='footer'>
         <p className='footer_year'>
         ©{currentYear()} &nbsp;
-          <a
+          <a aria-label='link to portfolio site'
             className='footer_link'
             href='https://jerrywski.github.io/Portfolio-Site/'
           >
             Jerry_Wski.
           </a>
           &nbsp; Wszelkie prawa zastrzeżone
-          <a href="">
-          </a>
         </p>
-        <a className='privacy' href="/">Polityka Prywatności</a>
+        <a aria-label='privacy policy' className='privacy' href="/">Polityka Prywatności</a>
       </div>
     </>
   );

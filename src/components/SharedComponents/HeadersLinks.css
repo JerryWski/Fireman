@@ -1,0 +1,9 @@
+.headers-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.headers-links a {
+    font-family: var(--main-font);
+    color: var(--base-wh);
+}

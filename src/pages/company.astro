@@ -1,12 +1,20 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Icon } from 'astro-icon/components';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 ---
 
 <Layout title='Informacje o naszej firmie'>
   <section>
     <div class='company-welcome'>
       <div>
+        <HeadersLinks
+          href1='/'
+          title1='Strona Główna'
+          href2='/company'
+          title2='O firmie'
+        />
         <HeadingsForSection heading='Nasza Misja' />
         <p class='company-description'>
           Twoje bezpieczeństwo naszą misją: instrukcje, szkolenia i nadzór
@@ -17,7 +25,7 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     <div class='company-info'>
       <div class='info-left'>
         <h2 class='info-header'>
-          Działamy na rynku ochrony przeciwpożarowej od ponad 2 lat, zapewniając
+          Działamy na rynku ochrony przeciwpożarowej od wielu lat, zapewniając
           fachową pomoc i terminową realizację zleceń.
         </h2>
         <p>
@@ -26,7 +34,59 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
           oraz zaangażowanie w zapewnianie bezpieczeństwa przeciwpożarowego są
           gwarancją rzetelnie wykonanej usługi.
         </p>
+        <div class='info-services-container'>
+          <h3>Specjalizujemy się m.in w usługach:</h3>
+          <div class='services'>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>Opracowanie Instrukcji Bezpieczeństwa Pożarowego</p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} /><p>
+                Opracowanie Instrukcji Postępowania w przypadku powstania pożaru
+                lub innego miejscowego zagrożenia w miejscu i w czasie imprezy
+                masowej
+              </p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>Szkolenia z zakresu ochrony przeciwpożarowej</p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>
+                Przygotowanie obiektów do odbiorów i kontroli przeprowadzanych
+                przez PSP
+              </p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>Przegląd i konserwację gaśnic</p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>
+                Przegląd i konserwację hydrantów wewnętrznych i węży
+                hydrantowych
+              </p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego</p>
+            </div>
+            <div class='services-text'>
+              <Icon name='arrow-right' width={24} height={24} />
+              <p>Opracowanie planów ewakuacyjnych</p>
+            </div>
+          </div>
+          <!-- <div class='info-box'>
+            <p class='text-one'>Ponad</p>
+            <p class='text-two'>30 +</p>
+            <span>Zaufanych Klientów</span>
+          </div> -->
+        </div>
       </div>
+
       <div class='info-right'>
         <img
           loading='lazy'
@@ -34,7 +94,12 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
           class='responsive-img'
           alt='Firma MR-POŻ symbol'
         />
+        <div class='info-box'>
+          <p class='text-one'>Sprawdź pozostałe</p>
+          <a href="/" class='text-two'><Icon name="hand"/>Usługi</a>
+        </div>
       </div>
+
     </div>
   </section>
 </Layout>
@@ -72,6 +137,7 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
   }
   .info-left {
     width: 100%;
+    position: relative;
   }
   .info-left p {
     font-family: var(--roboto-font);
@@ -86,17 +152,75 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     font-family: var(--main-font);
     margin-bottom: 24px;
   }
+  .info-services-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .info-services-container h3 {
+    margin-top: 20px;
+    color: var(--base-red);
+    margin-bottom: 10px;
+    font-family: var(--roboto-font);
+  }
+  .services-text {
+    display: flex;
+    align-items: flex-start;
+  }
+  .services p {
+    outline-color: var(--sub-black);
+    font-size: clamp(0.9rem, 1vw, 1.1rem);
+    line-height: 26px;
+    flex: 1;
+  }
   .info-right {
     width: fit-content;
-
+    position: relative;
   }
   .info-right img {
     width: 100%;
   }
+  .info-box {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: 20px;
+    flex-direction: column;
+    box-shadow: 1px 11px 24px -11px rgba(0, 0, 0, 1);
+    left: 10%;
+    min-width: 80%;
+    
+    background-color: rgb(245, 240, 240, 1);
+  }
+  .info-box a {
+    margin-top: 5px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: .2s all ease-in;
+  }
+  .info-box a:hover {
+    gap: 10px;
+  }
+  .text-one,
+  .text-two {
+    font-family: var(--roboto-font);
+    font-weight: 700;
+  }
+  .text-one {
+    font-size: 1.6rem;
+  }
+  .text-two {
+    color: var(--base-gold);
+    font-size: 2rem;
+  }
+ 
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
-      padding: 70px 50px 70px 50px;
+      padding: 120px 50px 120px 50px;
       background-position: center -150px;
       background-image: url('../../src/assets/hero-fireman2.webp');
     }
@@ -111,6 +235,11 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     }
     .info-right img {
       max-height: 500px;
+    }
+    .info-box {
+      min-width: 80%;
+      left: -17%;
+      bottom: -30px;
     }
   }
 </style>
