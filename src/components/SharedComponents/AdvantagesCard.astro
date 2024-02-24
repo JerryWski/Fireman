@@ -34,7 +34,7 @@ import advantagesList from '../../utils/advantagesList.json';
     padding: 20px;
     font-family: var(--roboto-font);
     text-align: center;
-    width: 80%;
+    width: 95%;
     border: none;
     word-break: break-word;
   }
@@ -44,14 +44,16 @@ import advantagesList from '../../utils/advantagesList.json';
     font-size: 1.2rem;
     font-weight: 700;
     margin-top: 10px;
-    margin-bottom: 16px;
+    max-width: 250px;
+    margin-bottom: 15px;
+    flex: 1;
   }
   .offer-desc {
     color: var(--base-wh);
-    margin-bottom: 32px;
     line-height: 1.5;
     font-size: .9rem;
-    min-height: 65px;
+    flex: 1;
+    min-height: 90px;
   }
 
   @media (min-width: 900px) {

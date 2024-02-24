@@ -26,6 +26,7 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
         </p>
       </div>
     </div>
+
     <div class='company-info'>
       <div class='info-left'>
         <h2 class='info-header'>
@@ -100,8 +101,48 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     </div>
 
     <div class='advantages-section' id='about'>
+      <h2 class='heading'>Co nas wyróżnia na tle konkurencji?</h2>
       <AdvantagesCard />
       <!-- <OfferSection /> -->
+    </div>
+
+    <div class='company-quality'>
+      <div class='quality-up'>
+        <div class='quality-titles-wrapper'>
+          <p class='quality-upper-title'>Profesjonalizm</p>
+          <h2 class='quality-heading'>
+            Zależy nam na Państwa bezpieczeństwu i jakości świadczonych usług
+          </h2>
+        </div>
+        <div class='quality-text-wrapper'>
+          <p class='quality-text'>
+            Nasza firma, MR - POŻ, oddaje się wyzwaniom w dziedzinie ochrony
+            przeciwpożarowej oraz bezpieczeństwa i higieny pracy. Stawiając na
+            pierwszym miejscu bezpieczeństwo naszych klientów oraz niezmiennie
+            wysoką jakość usług, zobowiązujemy się do nieustannego doskonalenia
+            i przekraczania standardów branżowych. Nasz zespół, wyposażony w
+            głęboką wiedzę i zaangażowanie, koncentruje się na dostarczaniu
+            rozwiązań skrojonych na miarę wyzwań, przed którymi stają nasi
+            klienci. To zaangażowanie przekłada się na liczbę przeprowadzonych
+            szkoleń i audytów, które są świadectwem naszego doświadczenia i
+            nieustającej misji zapewnienia spokoju i bezpieczeństwa.
+          </p>
+        </div>
+      </div>
+      <div class='quality-down'>
+        <div class="numbers-wrapper">
+          <p>100%</p>
+          <span>Zadowolonych klientów</span>
+        </div>
+        <div class="numbers-wrapper">
+          <p>100%</p>
+          <span>Wysokiej jakości usług</span>
+        </div>
+        <div class="numbers-wrapper">
+          <p>100%</p>
+          <span>Profesjonalnego doradztwa</span>
+        </div>
+      </div>
     </div>
   </section>
 </Layout>
@@ -136,6 +177,15 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     gap: 30px;
     flex-direction: column;
     width: 100%;
+  }
+  .heading {
+    font-size: clamp(2rem, 2vw, 3rem);
+    color: var(--base-wh);
+    font-family: var(--main-font);
+    margin-top: 70px;
+    padding-bottom: 10px;
+    margin-bottom: 64px;
+    border-bottom: 2px solid var(--line-red);
   }
   .info-left {
     width: 100%;
@@ -241,6 +291,54 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     flex-direction: column;
     align-items: center;
   }
+  .company-quality {
+    margin-top: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .quality-up {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  .quality-upper-title {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+    color: var(--base-gold);
+  }
+  .quality-heading {
+    font-size: clamp(2rem, 2vw, 3rem);
+    color: var(--base-black);
+    font-family: var(--main-font);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .quality-text {
+    font-family: var(--main-font);
+    line-height: 26px;
+  }
+  .quality-down {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .numbers-wrapper {
+    border-left: 2px solid var(--base-red);
+    padding: 10px 40px 10px 10px;
+  }
+  .numbers-wrapper p {
+    font-family: var(--roboto-font);
+    font-size: 3rem;
+  }
+  .numbers-wrapper span {
+    font-family: var(--main-font);
+    font-weight: 700;
+  }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
@@ -253,6 +351,21 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
       flex-direction: row;
       gap: 80px;
       padding: 0px 50px 70px 50px;
+    }
+    .quality-up {
+      padding: 50px 100px 50px 100px;
+      flex-direction: row;
+    }
+    .quality-titles-wrapper {
+      width: 50%;
+    }
+    .quality-text-wrapper {
+      width: 50%;
+    }
+    .quality-down {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 100px 50px 100px;
     }
     .info-left {
       max-width: 50%;
