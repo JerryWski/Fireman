@@ -18,9 +18,10 @@ import advantagesList from '../../utils/advantagesList.json';
 <style>
   .offer-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 1440px;
     margin-bottom: 50px;
   }
   .offer {
@@ -28,32 +29,34 @@ import advantagesList from '../../utils/advantagesList.json';
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: transparent;
     padding: 20px;
     font-family: var(--roboto-font);
     text-align: center;
-    width: 100%;
+    width: 80%;
     border: none;
-    margin-bottom: 20px;
     word-break: break-word;
   }
 
   .offer-title {
     color: var(--base-wh);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    margin-top: 10px;
     margin-bottom: 16px;
   }
   .offer-desc {
     color: var(--base-wh);
     margin-bottom: 32px;
     line-height: 1.5;
-    /* min-height: 70px; */
+    font-size: .9rem;
+    min-height: 65px;
   }
 
   @media (min-width: 900px) {
     .offer {
-      width: calc(25% - 70px);
+      width: calc(35% - 50px);
     }
   }
 </style>

@@ -1,23 +1,42 @@
 [
   {
     "icon": "hydrant",
-    "title": "Nasze atuty",
-    "description": "Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów przeciwpożarowych"
+    "title": "Eksperci w bezpieczeństwie pożarowym",
+    "description": "Jako eksperci w opracowywaniu Instrukcji Bezpieczeństwa Pożarowego, stosujemy najnowsze metody i technologie, zapewniając ochronę przeciwpożarową na najwyższym poziomie."
   },
   {
     "icon": "timer",
-    "title": "Szybka i terminowa realizacja",
-    "description": "Zadbamy o to, aby zlecane nam zadania były wykonane szybko i terminowo"
+    "title": "Ekspresowa realizacja szkoleń przeciwpożarowych",
+    "description": "Wyróżnia nas błyskawiczna organizacja i przeprowadzanie szkoleń z zakresu ochrony przeciwpożarowej, dostosowanych do indywidualnych potrzeb klientów, co gwarantuje ich najwyższą skuteczność."
   },
   {
     "icon": "hands",
-    "title": "Długoterminowa współpraca",
-    "description": "Nasi klienci cenią naszą rzetelność i profesjonalizm, dlatego współpracują z nami przez wiele lat"
+    "title": "Organizacja bezpiecznych imprez masowych",
+    "description": "Nasze unikalne podejście do opracowywania Instrukcji Postępowania w sytuacjach kryzysowych podczas imprez masowych gwarantuje niezrównane standardy bezpieczeństwa."
   },
   {
     "icon": "people",
-    "title": "Innowacyjne rozwiązania ",
-    "description": "Stale poszukujemy nowych rozwiązań i technologii, aby sprostać wymaganiom naszych klientów"
+    "title": "Perfekcjonizm w przygotowaniu do kontroli PSP",
+    "description": "Specjalizujemy się w dokładnym przygotowaniu obiektów do kontroli PSP, co pozwoliło nam osiągnąć rekordową liczbę pozytywnych odbiorów i minimalizację uwag."
+  },
+  {
+    "icon": "extinger2",
+    "title": "Zaawansowana konserwacja systemów przeciwpożarowych",
+    "description": "Nasza oferta obejmuje najbardziej zaawansowane usługi przeglądu i konserwacji systemów przeciwpożarowych, co zapewnia ich niezawodność w każdej sytuacji."
+  },
+  {
+    "icon": "cables",
+    "title": "Profesjonalne zabezpieczenie instalacji",
+    "description": "Jesteśmy ekspertami w wykonaniu zabezpieczeń przeciwpożarowych instalacji, wykorzystując innowacyjne materiały i techniki, które zapewniają najlepszą ochronę."
+  },
+  {
+    "icon": "fire2",
+    "title": "Specjalistyczne oznakowanie ewakuacyjne i przeciwpożarowe",
+    "description": "Oferujemy specjalistyczne oznakowanie obiektów, które łączy w sobie funkcjonalność z estetyką, gwarantując jednocześnie wyjątkową czytelność i zgodność z przepisami."
+  },
+  {
+    "icon": "exit",
+    "title": "Ekspertyza w nadzorze i ewakuacji próbnej",
+    "description": "Nasze doświadczenie w organizacji próbnych ewakuacji i nadzorze bezpieczeństwa pożarowego jest niezrównane, co pozwala naszym klientom czuć się bezpiecznie w każdych warunkach."
   }
-  
 ]
