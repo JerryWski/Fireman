@@ -1,0 +1,23 @@
+[
+  {
+    "icon": "hydrant",
+    "title": "Nasze atuty",
+    "description": "Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów przeciwpożarowych"
+  },
+  {
+    "icon": "timer",
+    "title": "Szybka i terminowa realizacja",
+    "description": "Zadbamy o to, aby zlecane nam zadania były wykonane szybko i terminowo"
+  },
+  {
+    "icon": "hands",
+    "title": "Długoterminowa współpraca",
+    "description": "Nasi klienci cenią naszą rzetelność i profesjonalizm, dlatego współpracują z nami przez wiele lat"
+  },
+  {
+    "icon": "people",
+    "title": "Innowacyjne rozwiązania ",
+    "description": "Stale poszukujemy nowych rozwiązań i technologii, aby sprostać wymaganiom naszych klientów"
+  }
+  
+]

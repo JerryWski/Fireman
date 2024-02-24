@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 ---
 
 <section class='container'>
@@ -13,7 +13,7 @@ import { Icon } from "astro-icon/components"
         Profesjonalne doradztwo i fachowa pomoc w zakresie przepisów
         przeciwpożarowych
       </p>
-      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+      <a class='more-info' href='/company#about'> Dowiedz się więcej<Icon name="double-arrow"/></a>
     </div>
 
     <div class='offer'>
@@ -22,7 +22,7 @@ import { Icon } from "astro-icon/components"
       <p class='offer-desc'>
         Zadbamy o to, aby zlecane nam zadania były wykonane szybko i terminowo
       </p>
-      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+      <a class='more-info' href='/company'> Dowiedz się więcej <Icon name="double-arrow"/></a>
     </div>
 
     <div class='offer'>
@@ -32,7 +32,7 @@ import { Icon } from "astro-icon/components"
         Nasi klienci cenią naszą rzetelność i profesjonalizm, dlatego
         współpracują z nami przez wiele lat
       </p>
-      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+      <a class='more-info' href='/company'> Dowiedz się więcej<Icon name="double-arrow"/></a>
     </div>
 
     <div class='offer'>
@@ -44,7 +44,7 @@ import { Icon } from "astro-icon/components"
         Stale poszukujemy nowych rozwiązań i technologii, aby sprostać
         wymaganiom naszych klientów
       </p>
-      <a class='more-info' href='/'> Dowiedz się więcej ></a>
+      <a class='more-info' href='/company'> Dowiedz się więcej <Icon name="double-arrow"/></a>
     </div>
     <h2 class='heading'>Sprawdź naszą <a href="/">OFERTĘ!</a></h2>
   </div>
@@ -52,7 +52,6 @@ import { Icon } from "astro-icon/components"
 
 <style>
   .container {
-    
     padding: 20px;
     display: flex;
     margin-top: 100px;
@@ -77,7 +76,7 @@ import { Icon } from "astro-icon/components"
   }
   .heading a {
     margin-left: 5px;
-    font-size: clamp(2rem, 2vw, 3rem);;
+    font-size: clamp(2rem, 2vw, 3rem);
     color: var(--base-gold);
     /* border-bottom: 3px solid var(--base-gold); */
     font-weight: 800;
@@ -86,6 +85,7 @@ import { Icon } from "astro-icon/components"
   h2.heading:nth-child(5) {
     border: 3px solid white;
     text-align: center;
+    font-size: clamp(1.8rem, 2vw, 3rem);
     padding: 10px 20px;
   }
   .heading a:hover {
@@ -99,14 +99,19 @@ import { Icon } from "astro-icon/components"
     margin-bottom: 50px;
   }
   .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--base-wh);
     padding: 20px;
     font-family: var(--roboto-font);
     text-align: center;
     width: 100%;
+    border: none;
     margin-bottom: 20px;
     word-break: break-word;
-    /* box-shadow: -1px 3px 13px -3px rgba(0, 0, 0, 1); */
+   
   }
   
   .offer-title {
@@ -119,19 +124,20 @@ import { Icon } from "astro-icon/components"
     color: var(--sub-black);
     margin-bottom: 32px;
     line-height: 1.5;
+    /* min-height: 70px; */
   }
   .more-info {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 2px;
     color: var(--base-gold);
     font-weight: 700;
     cursor: pointer;
+    transition: .2s all ease-in;
   }
-  .more-info img {
-    width: 24px;
-    height: auto;
+  .more-info:hover {
+    gap: 10px;
   }
 
   @media (min-width: 900px) {
@@ -142,5 +148,9 @@ import { Icon } from "astro-icon/components"
     .offer {
       width: calc(25% - 20px);
     }
+    h2.heading:nth-child(5) {
+    
+    padding: 10px 100px;
+  }
   }
 </style>

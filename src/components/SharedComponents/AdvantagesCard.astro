@@ -1,0 +1,59 @@
+---
+import { Icon } from 'astro-icon/components';
+import advantagesList from '../../utils/advantagesList.json';
+---
+
+<div class='offer-section'>
+  {
+    advantagesList.map((advantages) => (
+      <div class='offer'>
+        <Icon name={advantages.icon} width={66} height={66} />
+        <h3 class='offer-title'>{advantages.title}</h3>
+        <p class='offer-desc'>{advantages.description}</p>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .offer-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px;
+    font-family: var(--roboto-font);
+    text-align: center;
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    word-break: break-word;
+  }
+
+  .offer-title {
+    color: var(--base-wh);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .offer-desc {
+    color: var(--base-wh);
+    margin-bottom: 32px;
+    line-height: 1.5;
+    /* min-height: 70px; */
+  }
+
+  @media (min-width: 900px) {
+    .offer {
+      width: calc(25% - 70px);
+    }
+  }
+</style>

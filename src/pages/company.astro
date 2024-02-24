@@ -2,9 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { Icon } from 'astro-icon/components';
 import { Image } from 'astro:assets';
-import fireman from '../assets/fireman3.webp'
+import fireman from '../assets/fireman3.webp';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
+import AdvantagesCard from '../components/SharedComponents/AdvantagesCard.astro';
+import OfferSection from '../components/OfferSection/OfferSection.astro';
 ---
 
 <Layout title='Informacje o naszej firmie'>
@@ -81,26 +83,25 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
               <p>Opracowanie planów ewakuacyjnych</p>
             </div>
           </div>
-          <!-- <div class='info-box'>
-            <p class='text-one'>Ponad</p>
-            <p class='text-two'>30 +</p>
-            <span>Zaufanych Klientów</span>
-          </div> -->
         </div>
       </div>
 
       <div class='info-right'>
-        <Image
-          src={fireman}
-          class='info-img'
-          alt='Firma MR-POŻ symbol'
-        />
+        <Image src={fireman} class='info-img' alt='Firma MR-POŻ symbol' />
         <div class='info-box'>
-          <p class='text-one'> <Icon name="double-arrow" />Sprawdź pozostałe<Icon name="double-arrow-left" /></p>
-          <a href="/" class='text-two'><Icon name="hand"/>Usługi</a>
+          <p class='text-one'>
+            <Icon name='double-arrow' />Sprawdź pozostałe<Icon
+              name='double-arrow-left'
+            />
+          </p>
+          <a href='/' class='text-two'><Icon name='hand' />Usługi</a>
         </div>
       </div>
+    </div>
 
+    <div class='advantages-section' id='about'>
+      <AdvantagesCard />
+      <!-- <OfferSection /> -->
     </div>
   </section>
 </Layout>
@@ -192,7 +193,7 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
     box-shadow: 1px 11px 24px -11px rgba(0, 0, 0, 1);
     left: 10%;
     min-width: 80%;
-    
+
     background-color: rgb(245, 240, 240, 1);
   }
   .info-box a {
@@ -201,7 +202,7 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
     gap: 20px;
     justify-content: center;
     align-items: center;
-    transition: .2s all ease-in;
+    transition: 0.2s all ease-in;
   }
   .info-box a:hover {
     gap: 10px;
@@ -224,7 +225,22 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
     object-fit: contain;
     height: auto;
   }
- 
+  .advantages-section {
+    padding: 20px;
+    display: flex;
+    margin-top: 100px;
+    color: var(--base-gold);
+    background-image: linear-gradient(
+      to right top,
+      #460816,
+      #5d071b,
+      #75051e,
+      #8d0320,
+      #a50321
+    );
+    flex-direction: column;
+    align-items: center;
+  }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
@@ -251,7 +267,7 @@ import HeadersLinks from '../components/SharedComponents/HeadersLinks';
       bottom: -30px;
     }
     .info-img {
-    object-fit: cover;
-  }
+      object-fit: cover;
+    }
   }
 </style>
