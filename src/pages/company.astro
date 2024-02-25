@@ -91,11 +91,9 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
         <Image src={fireman} class='info-img' alt='Firma MR-POŻ symbol' />
         <div class='info-box'>
           <p class='text-one'>
-            <Icon name='double-arrow' />Sprawdź pozostałe<Icon
-              name='double-arrow-left'
-            />
+            Sprawdź pozostałe
           </p>
-          <a href='/' class='text-two'><Icon name='hand' />Usługi</a>
+          <a href='/' class='text-two'><Icon name='double-arrow' />Usługi<Icon name='double-arrow-left' /></a>
         </div>
       </div>
     </div>
@@ -106,14 +104,12 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
       <!-- <OfferSection /> -->
     </div>
 
-    
-
-    <div class="contact-container">
+    <div class='contact-container'>
       <div>
         <p>Jesteśmy dostępni w godzinach 09-18. Zadzwoń!</p>
         <p>666 305 512</p>
       </div>
-      <a href="/">Skontaktuj się z nami</a>
+      <a href='/'>Skontaktuj się z nami</a>
     </div>
 
     <div class='company-quality'>
@@ -140,21 +136,20 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
         </div>
       </div>
       <div class='quality-down'>
-        <div class="numbers-wrapper">
+        <div class='numbers-wrapper'>
           <p>100%</p>
           <span>Zadowolonych klientów</span>
         </div>
-        <div class="numbers-wrapper">
+        <div class='numbers-wrapper'>
           <p>100%</p>
           <span>Wysokiej jakości usług</span>
         </div>
-        <div class="numbers-wrapper">
+        <div class='numbers-wrapper'>
           <p>100%</p>
           <span>Profesjonalnego doradztwa</span>
         </div>
       </div>
     </div>
-
   </section>
 </Layout>
 
@@ -358,7 +353,7 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     background-color: rgb(165, 92, 3);
     background-image: url('/pattern.webp');
     background-position: center -10px;
-    
+
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -369,7 +364,7 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
     font-family: var(--tilium-regular);
     text-transform: uppercase;
     background-color: var(--base-wh);
-    transition: .2s all ease-in;
+    transition: 0.2s all ease-in;
   }
   .contact-container a:hover {
     color: var(--base-wh);
@@ -383,8 +378,8 @@ import OfferSection from '../components/OfferSection/OfferSection.astro';
   .contact-container div p:nth-of-type(2) {
     font-family: var(--tilium-bold);
     letter-spacing: 1px;
-      font-size: 2.5rem;
-    }
+    font-size: 2.5rem;
+  }
   @media (min-width: 900px) {
     .company-welcome {
       flex-direction: row;
