@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeadersLinks from '../components/SharedComponents/HeadersLinks';
+import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+---
+
+<Layout title='Usługi Ochrony Przeciwpożarowej: Szkolenia i Nadzór'>
+  <section>
+    <div class='offer-welcome'>
+      <div>
+        <HeadersLinks
+          href1='/'
+          title1='Strona Główna'
+          href2='/company'
+          title2='Oferta'
+        />
+        <HeadingsForSection heading='Usługi przeciwpożarowe' />
+        <p class='offer-description'>
+          Twoje bezpieczeństwo naszą misją: instrukcje, szkolenia i nadzór
+          pożarowy.
+        </p>
+      </div>
+    </div>
+
+    <div class='offers-container'>
+      <h2 class='offers-header'>Usługi ochrony przeciwpożarowej</h2>
+      <div class='offers-wrapper'></div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .offer-welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('../../src/assets/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .offer-description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  .offers-container {
+    padding: 20px;
+  }
+  .offers-header {
+    font-size: clamp(1.5rem, 1.8vw, 2.8rem);
+    color: var(--base-black);
+    font-family: var(--main-font);
+    margin-bottom: 24px;
+    text-align: center;
+    margin-top: 80px;
+  }
+  @media (min-width: 900px) {
+    .company-welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('../../src/assets/hero-fireman2.webp');
+    }
+  }
+</style>
