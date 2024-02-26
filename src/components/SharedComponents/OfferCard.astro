@@ -1,0 +1,96 @@
+---
+import offersList from '../../utils/offersList.json';
+import { Icon } from 'astro-icon/components';
+---
+
+<div class='offer-wrapper'>
+  {
+    offersList.map((offers) => (
+      <div class='offer'>
+        <img class='offer-img' src={offers.img} alt={'fire services'} />
+        <div class="test">
+            <h3 class='offer-title'>{offers.title}</h3>
+            <p class='offer-text'>{offers.text}</p>
+            <a class='offer-link' href={offers.href}>
+              {offers.link}
+              <Icon name={offers.icon} width={20} height={20}/>
+            </a>
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+    .test {
+        
+        padding: 20px;
+    }
+  .offer-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1440px;
+    margin-bottom: 50px;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    background: #f5f2f2;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-family: var(--main-font);
+    width: 100%;
+    border: none;
+    word-break: break-word;
+  }
+  .offer-img {
+    min-width: 100px;
+    width: 100%;
+  }
+  .offer-title {
+    color: var(--base-black);
+    font-size: 1.1rem;
+    margin-block: 10px;
+    width: 100%;
+    flex: 1;
+  }
+  .offer-text {
+    color: var(--sub-black);
+    line-height: normal;
+    font-size: 0.9rem;
+    flex: 1;
+    /* min-height: 110px; */
+  }
+  .offer-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    gap: 4px;
+    width: 100%;
+    color: var(--base-gold);
+    transition: .2s all ease-in;
+  }
+  .offer-link:hover {
+    gap: 10px;
+    color: var(--base-red);
+  }
+ 
+  @media (min-width: 900px) {
+    .offer {
+      width: calc(25% - 50px);
+      margin-bottom: 100px;
+    }
+    .offer-wrapper {
+        gap: 30px;
+        margin: auto;
+        justify-content: center;
+    }
+    .offer-title {
+      font-size: 1.2rem;
+    }
+    
+  }
+</style>

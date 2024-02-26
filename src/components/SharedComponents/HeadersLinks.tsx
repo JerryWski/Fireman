@@ -8,6 +8,7 @@ interface Props {
   title2: string;
 }
 
+
 const HeadersLinks: React.FC<Props> = ({ href1, href2, title1, title2 }) => {
   return (
     <div className='headers-links'>

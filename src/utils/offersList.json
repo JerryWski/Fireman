@@ -1,86 +1,114 @@
 [
   {
-    "img": "hydrant",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Opracowanie Instrukcji Bezpieczeństwa Pożarowego",
-    "text": "Zakres naszej usługi dotyczącej opracowywania Instrukcji Bezpieczeństwa Pożarowego obejmuje opracowanie dokumentu, a także wsparcie z zakresu skutecznego wdrożenia go",
-    "link": "Dowiedź się więcej"
+    "text": "Zakres naszej usługi dotyczącej opracowywania Instrukcji Bezpieczeństwa Pożarowego obejmuje opracowanie dokumentu...",
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
-    "title": "Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
+    "title": "Opracowanie Instrukcji Postępowania w przypadku powstania pożaru...",
     "text": "Imprezy masowe wymagają opracowania instrukcji postępowania w przypadku powstania pożaru lub innego zagrożenia.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Szkolenia z zakresu ochrony przeciwpożarowej",
     "text": "Celem szkoleń PPOŻ (zgodnych z podstawą prawną) jest zwiększenie bezpieczeństwa użytkowników określonych przestrzeni, obiektów oraz zakładów pracy.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przygotowanie obiektów do odbiorów i kontroli przeprowadzanych przez Państwową Straż Pożarną",
     "text": "Jeżeli przygotowujesz się do zgłoszenia zakończenia inwestycji i zamierzasz przystąpić do użytkowania obiektu, zachęcamy do skontaktowania się z nami",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przegląd i konserwację gaśnic",
     "text": "Zajmujemy się nie tylko przeglądem i konserwacją gaśnic, ale także doradztwem w zakresie doboru gaśnic oraz innych zabezpieczeń przeciwpożarowych",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przegląd i konserwację hydrantów wewnętrznych i węży hydrantowych",
     "text": "Regularna kontrola hydrantów jest obowiązkowa. Ich prawidłowe działanie można sprawdzić, wykonując regularną konserwację. Dlatego zachęcamy do skontaktowania się z naszą firmą,",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego",
     "text": "Przeprowadzamy przeglądy awaryjnego oświetlenia ewakuacyjnego jako część naszych usług przeciwpożarowych.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przegląd i konserwację przeciwpożarowych wyłączników prądu",
     "text": "Wzywamy do partnerstwa zarządców i właścicieli nieruchomości poszukujących solidnych specjalistów w dziedzinie kontroli przeciwpożarowych wyłączników prądu.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przegląd drzwi i bram przeciwpożarowych (wyposażone w system sterowania)",
     "text": "Oprócz oceny ogólnego stanu bramy pod względem mechanicznych uszkodzeń, przegląd uwzględnia także takie aspekty jak stopień zabrudzenia czujników i ich prawidłowe funkcjonowanie.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Oznakowanie obiektów znakami ewakuacyjnymi i przeciwpożarowymi",
     "text": "Działania zabezpieczające przed zagrożeniem pożarowym obejmują m.in. właściwe oznaczenie drogi ewakuacyjnej, oznakowanie wyjść ewakuacyjnych",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Przeprowadzanie próbnych ewakuacji",
     "text": "Oferujemy wsparcie w realizacji wszystkich wymogów prawnych dotyczących ewakuacji budynku.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Opracowanie planów ewakuacyjnych",
     "text": "Plany ewakuacyjne są szczególnie ważne w przypadku publicznych i niepublicznych szkół czy placówek, a także muzeów — co wynika z odrębnych przepisów prawnych.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
-    "title": "Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów instalacyjnych przez ściany i stropy oddzielenia przeciwpożarowego",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
+    "title": "Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów instalacyjnych...",
     "text": "Plany ewakuacyjne są szczególnie ważne w przypadku publicznych i niepublicznych szkół czy placówek, a także muzeów — co wynika z odrębnych przepisów prawnych.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   },
   {
-    "img": "timer",
+    "icon": "double-arrow",
+    "img": "/offer1.webp",
     "title": "Nadzór nad bezpieczeństwem pożarowym",
     "text": "Nadzorowanie bezpieczeństwa przeciwpożarowego obiektu obejmuje kompleksowe zadania związane z ochroną przeciwpożarową.",
-    "link": "Dowiedź się więcej"
+    "link": "Dowiedź się więcej",
+    "href":"instrukcja-bezpieczenstwa-pozarowego"
   }
 ]

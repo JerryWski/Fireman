@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+import OfferCard from '../components/SharedComponents/OfferCard.astro';
 ---
 
 <Layout title='Usługi Ochrony Przeciwpożarowej: Szkolenia i Nadzór'>
@@ -16,15 +17,14 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
         />
         <HeadingsForSection heading='Usługi przeciwpożarowe' />
         <p class='offer-description'>
-          Twoje bezpieczeństwo naszą misją: instrukcje, szkolenia i nadzór
-          pożarowy.
+            Kompleksowe Usługi PPOŻ: Szkolenia, Nadzór, Przeglądy i Zabezpieczenia
         </p>
       </div>
     </div>
 
     <div class='offers-container'>
-      <h2 class='offers-header'>Usługi ochrony przeciwpożarowej</h2>
-      <div class='offers-wrapper'></div>
+      <h2 class='offers-header'>Usługi Ochrony Przeciwpożarowej</h2>
+      <OfferCard />
     </div>
   </section>
 </Layout>
@@ -54,19 +54,26 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     padding: 20px;
   }
   .offers-header {
-    font-size: clamp(1.5rem, 1.8vw, 2.8rem);
+    font-size: clamp(2rem, 2.8vw, 3rem);
     color: var(--base-black);
-    font-family: var(--main-font);
-    margin-bottom: 24px;
-    text-align: center;
+    font-family: var(--roboto-font);
+    margin-bottom: 34px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--base-red);
     margin-top: 80px;
+    font-weight: 900;
   }
   @media (min-width: 900px) {
-    .company-welcome {
+    .offer-welcome {
       flex-direction: row;
       padding: 120px 50px 120px 50px;
       background-position: center -150px;
       background-image: url('../../src/assets/hero-fireman2.webp');
+    }
+    .offers-header {
+        text-align: center;
+        margin: 80px auto 80px auto;
+        width: 70%;
     }
   }
 </style>
