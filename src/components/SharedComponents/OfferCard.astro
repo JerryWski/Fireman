@@ -8,7 +8,7 @@ import { Icon } from 'astro-icon/components';
     offersList.map((offers) => (
       <div class='offer'>
         <img class='offer-img' src={offers.img} alt={'fire services'} />
-        <div class='test'>
+        <div class='wrapper'>
           <h3 class='offer-title'>{offers.title}</h3>
           <p class='offer-text'>{offers.text}</p>
           <a class='offer-link' href={offers.href}>
@@ -22,8 +22,8 @@ import { Icon } from 'astro-icon/components';
 </div>
 
 <style>
-  .test {
-    padding: 10px;
+  .wrapper {
+    padding: 15px;
   }
   .offer-wrapper {
     display: flex;
