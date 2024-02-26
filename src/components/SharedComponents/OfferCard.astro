@@ -8,13 +8,13 @@ import { Icon } from 'astro-icon/components';
     offersList.map((offers) => (
       <div class='offer'>
         <img class='offer-img' src={offers.img} alt={'fire services'} />
-        <div class="test">
-            <h3 class='offer-title'>{offers.title}</h3>
-            <p class='offer-text'>{offers.text}</p>
-            <a class='offer-link' href={offers.href}>
-              {offers.link}
-              <Icon name={offers.icon} width={20} height={20}/>
-            </a>
+        <div class='test'>
+          <h3 class='offer-title'>{offers.title}</h3>
+          <p class='offer-text'>{offers.text}</p>
+          <a class='offer-link' href={offers.href}>
+            {offers.link}
+            <Icon name={offers.icon} width={20} height={20} />
+          </a>
         </div>
       </div>
     ))
@@ -22,13 +22,12 @@ import { Icon } from 'astro-icon/components';
 </div>
 
 <style>
-    .test {
-        
-        padding: 20px;
-    }
+  .test {
+    padding: 10px;
+  }
   .offer-wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 50px;
     max-width: 1440px;
@@ -39,14 +38,15 @@ import { Icon } from 'astro-icon/components';
     flex-direction: column;
     background: #f5f2f2;
     align-items: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     font-family: var(--main-font);
-    width: 100%;
+    width: 300px;
+    /* width: 100%; */
     border: none;
     word-break: break-word;
   }
   .offer-img {
-    min-width: 100px;
     width: 100%;
   }
   .offer-title {
@@ -71,26 +71,36 @@ import { Icon } from 'astro-icon/components';
     gap: 4px;
     width: 100%;
     color: var(--base-gold);
-    transition: .2s all ease-in;
+    transition: 0.2s all ease-in;
   }
   .offer-link:hover {
     gap: 10px;
     color: var(--base-red);
   }
- 
+@media (max-width: 600px) {
+    .offer {
+        width: 100%;
+    }
+}
   @media (min-width: 900px) {
     .offer {
-      width: calc(25% - 50px);
+      width: 300px;
       margin-bottom: 100px;
+      justify-content: flex-start;
     }
     .offer-wrapper {
-        gap: 30px;
-        margin: auto;
-        justify-content: center;
+      gap: 30px;
+      margin: auto;
+      justify-content: center;
     }
     .offer-title {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
-    
+    .offer-link {
+      font-size: 0.7rem;
+    }
+    .offer-text {
+      font-size: 0.8rem;
+    }
   }
 </style>
