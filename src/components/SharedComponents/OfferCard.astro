@@ -23,7 +23,9 @@ import { Icon } from 'astro-icon/components';
 
 <style>
   .wrapper {
-    padding: 15px;
+    padding-block: 15px;
+    display: flex;
+    flex-direction: column;
   }
   .offer-wrapper {
     display: grid;
@@ -37,12 +39,10 @@ import { Icon } from 'astro-icon/components';
   .offer {
     display: flex;
     flex-direction: column;
-    background: #f5f2f2;
+    /* background: #f5f2f2; */
     align-items: flex-start;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     font-family: var(--main-font);
-    /* width: 300px; */
-    /* width: 100%; */
     border: none;
     word-break: break-word;
   }
@@ -52,6 +52,7 @@ import { Icon } from 'astro-icon/components';
   .offer-title {
     color: var(--base-black);
     font-size: 1.1rem;
+    text-transform: uppercase;
     margin-block: 10px;
     width: 100%;
     flex: 1;
@@ -67,7 +68,7 @@ import { Icon } from 'astro-icon/components';
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5px;
+    padding-top: 10px;
     gap: 4px;
     width: 100%;
     margin-bottom: 10px;
@@ -94,6 +95,7 @@ import { Icon } from 'astro-icon/components';
       justify-content: center;
     }
     .wrapper {
+      gap: 10px;
       margin-top: 0;
     }
     .offer-title {
