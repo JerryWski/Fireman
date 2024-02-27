@@ -1,0 +1,84 @@
+---
+import StepsCard from './StepsCard.astro';
+import step1 from '../../assets/step1.webp';
+import step2 from '../../assets/step2.webp';
+import step3 from '../../assets/step3.webp';
+---
+
+<section class='steps-section'>
+  <h3 class='steps-overtext'>Doświadczenie</h3>
+  <h2 class='steps-title'>
+    Współpraca z klientem - od konsultacji do realizacji
+  </h2>
+  <p class='steps-text'>
+    Proces współpracy z naszym klientem rozpoczyna się od momentu pierwszego
+    kontaktu. Zobacz w jaki spsób nasza firma realizuje zadania, aby w pełni
+    spełnić oczekiwania naszych Klientów.
+  </p>
+
+  <div class='cards-wrapper'>
+    <StepsCard
+      title='1. W pierwszym kroku, zachęcamy do kontaktu z naszą firmą,specjalizującą się w bezpieczeństwie pracy i ochronie przeciwpożarowej'
+      description='Nasi eksperci, zawsze gotowi, by odpowiedzieć na Państwa pytania, oferują indywidualne podejście, aby dokładnie zrozumieć potrzeby i wymagania każdego klienta.'
+      imgSrc={step1}
+      alt='contact phone'
+    />
+    <StepsCard
+      title='2. Następnie, przejdziemy do omówienia naszej oferty,która obejmuje szeroki zakres usług  z zakresu bezpieczeństwa pracy i ochrony przeciwpożarowej'
+      description='Dzięki naszemu profesjonalnemu doradztwu, klienci otrzymują nie tylko informacje o dostępnych opcjach, ale także rekomendacje dostosowane do specyfiki ich działalności, co gwarantuje zgodność z obowiązującymi przepisami'
+      imgSrc={step2}
+      alt='engineers papers and pen'
+    />
+    <StepsCard
+      title='3. W końcowym etapie realizujemy usługę, zapewniając wysoką jakość wykonania oraz przestrzeganie wszelkich norm i standardów bezpieczeństwa'
+      description='Nasz zespół ekspertów zrealizuje projekt od A do Z, dbając o każdy, nawet najmniejszy detal, aby zapewnić Państwu spokój i bezpieczeństwo.'
+      imgSrc={step3}
+      alt='planning services with extinguisher'
+    />
+  </div>
+</section>
+
+<style>
+  .steps-section {
+    margin-top: 30px;
+    padding: 20px;
+    padding-top: 60px;
+    background-color: rgb(242, 236, 236);
+  }
+  .steps-overtext {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+    color: var(--base-gold);
+  }
+  .steps-title {
+    font-size: clamp(2rem, 2vw, 3rem);
+    color: var(--base-black);
+    font-family: var(--main-font);
+    margin-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+  .steps-text {
+    font-family: var(--main-font);
+    line-height: 26px;
+    color: var(--sub-text);
+    padding-bottom: 20px;
+  }
+  .cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+  @media(min-width:900px) {
+    .steps-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-wrapper {
+        gap: 20px;
+    }
+  }
+  
+</style>

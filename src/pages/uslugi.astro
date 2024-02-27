@@ -3,10 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
 import OfferCard from '../components/SharedComponents/OfferCard.astro';
+import StepsSection from '../components/OfferSubPage/StepsSection.astro';
 ---
 
 <Layout title='Usługi Ochrony Przeciwpożarowej: Szkolenia i Nadzór'>
-  <section>
+  <main>
     <div class='offer-welcome'>
       <div>
         <HeadersLinks
@@ -15,18 +16,21 @@ import OfferCard from '../components/SharedComponents/OfferCard.astro';
           href2='/company'
           title2='Oferta'
         />
-        <HeadingsForSection heading='Usługi przeciwpożarowe' />
+        <HeadingsForSection heading='Nasza oferta skierowana jest do firm' />
         <p class='offer-description'>
             Kompleksowe Usługi PPOŻ: Szkolenia, Nadzór, Przeglądy i Zabezpieczenia
         </p>
       </div>
     </div>
 
-    <div class='offers-container'>
+    <section class='offers-container'>
       <h2 class='offers-header'>Usługi Ochrony Przeciwpożarowej</h2>
       <OfferCard />
-    </div>
-  </section>
+    </section>
+
+    <StepsSection />
+
+  </main>
 </Layout>
 
 <style>
