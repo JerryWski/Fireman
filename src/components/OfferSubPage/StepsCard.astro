@@ -19,6 +19,7 @@ const { imgSrc, title, description, alt } = Astro.props as Props;
 
 <style>
   .service-card {
+    box-shadow: 0px 4px 19px -17px rgb(136, 135, 135);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -52,6 +53,7 @@ const { imgSrc, title, description, alt } = Astro.props as Props;
   @media (min-width: 900px) {
     .service-card {
       gap: 20px;
+      max-width: 95%;
     }
     .service-img {
       
