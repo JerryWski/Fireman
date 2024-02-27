@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import { Icon } from 'astro-icon/components';
 import logo from '../../assets/logo2.webp';
 import HamburgerBtn from './HamburgerBtn.astro';
+
+const currentPath = Astro.url.pathname
 ---
 
 <header>
@@ -13,10 +15,10 @@ import HamburgerBtn from './HamburgerBtn.astro';
       </div>
     </a>
     <div aria-label='primary nav' class='nav-links'>
-      <a class='link' href='/company'> O firmie</a>
-      <a class='link' href='/offer'> Oferta</a>
-      <a class='link' href='/'> Cennik</a>
-      <a class='link' href='/'> Kontakt</a>
+      <a class={currentPath === '/o-firmie' ? 'active-link' : 'link'} href='/o-firmie'> O firmie</a>
+      <a class={currentPath === '/uslugi' ? 'active-link' : 'link'} href='/uslugi'> Oferta</a>
+      <a class={currentPath === '/cennik' ? 'active-link' : 'link'}  href='/cennik'> Cennik</a>
+      <a class={currentPath === '/kontakt' ? 'active-link' : 'link'}  href='/kontakt'> Kontakt</a>
     </div>
     <div class='contact-wrapper'>
       <a class='contact-icon' href='tel:+48888433188' aria-label='phone-link'>
@@ -35,10 +37,10 @@ import HamburgerBtn from './HamburgerBtn.astro';
     <HamburgerBtn />
     <div class='nav-links-mobile'>
       <ul>
-        <li><a class='link-mobile' href='/company'>O firmie</a></li>
-        <li><a class='link-mobile' href='/offer'> Oferta</a></li>
-        <li><a class='link-mobile' href='/'> Cennik</a></li>
-        <li><a class='link-mobile' href='/'> Kontakt</a></li>
+        <li><a class='link-mobile' href='/o-firmie'>O firmie</a></li>
+        <li><a class='link-mobile' href='/uslugi'> Oferta</a></li>
+        <li><a class='link-mobile' href='/cennik'> Cennik</a></li>
+        <li><a class='link-mobile' href='/kontakt'> Kontakt</a></li>
       </ul>
     </div>
   </nav>
@@ -147,6 +149,7 @@ import HamburgerBtn from './HamburgerBtn.astro';
   .fa-solid {
     margin: 7px;
   }
+  
   .link,
   .link-mobile {
     font-family: var(--roboto-font);

@@ -52,6 +52,18 @@ const {
     --base-gold: rgb(165, 92, 3);
     --line-red: hsl(0, 73%, 61%);
   }
+  .active-link {
+    color: var(--base-gold);
+    font-family: var(--roboto-font);
+    text-align: center;
+    text-decoration: none;
+    min-width: 110px;
+    font-weight: 400;
+    padding: 0 5px;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.1s all ease;
+  }
   html {
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -61,5 +73,13 @@ const {
   }
   .sticky-body {
     overflow: hidden;
+  }
+  @media (max-width: 1300px) {
+    .contact-text {
+      display: none;
+    }
+    .active-link{
+      font-size: clamp(0.9rem, 1vw, 1rem);
+    }
   }
 </style>
