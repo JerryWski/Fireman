@@ -3,29 +3,30 @@
 ---
 
 <section>
-    <div class='contact-container'>
-      <div>
-        <p>Zapraszamy do skontaktowania się w godzinach 09-18. Zadzwoń!</p>
-        <p>666 305 512</p>
-      </div>
-      <a href='/'>Skontaktuj się z nami</a>
+  <div class='contact-container'>
+    <div>
+      <p>Zapraszamy do skontaktowania się w godzinach 09-18. Zadzwoń!</p>
+      <p>666 305 512</p>
     </div>
+    <a href='/'>Skontaktuj się z nami</a>
+  </div>
 </section>
 
-
 <style>
-    .contact-container {
+  .contact-container {
+    position: relative;
+    margin-top: -100px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 80px 20px 80px 20px;
+    padding: 120px 20px 40px 20px;
     background-color: rgb(165, 92, 3);
     background-image: url('/pattern.webp');
     background-position: center -10px;
-
     background-repeat: no-repeat;
     background-size: cover;
   }
+  
   .contact-container a {
     color: var(--sub-black);
     padding: 20px 70px;
@@ -42,23 +43,26 @@
   .contact-container div p {
     font-family: var(--tilium-regular);
     color: var(--base-wh);
-    font-size: 2.3rem;
+    font-size: clamp(1.5rem,2rem, 2rem);
   }
   .contact-container div p:nth-of-type(2) {
     font-family: var(--tilium-bold);
     letter-spacing: 1px;
     font-size: 2.5rem;
   }
-  @media (min-width:900px) {
+  @media (min-width: 900px) {
     .contact-container {
       flex-direction: row;
       gap: 100px;
       justify-content: center;
       align-items: center;
-      padding: 120px 150px 120px 50px;
+      padding: 120px 150px 80px 50px;
     }
     .contact-container div p:nth-of-type(2) {
       font-size: 2.5rem;
     }
+    .contact-container div {
+    padding-top: 40px;
+  }
   }
 </style>

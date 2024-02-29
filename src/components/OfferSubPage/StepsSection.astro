@@ -3,6 +3,7 @@ import StepsCard from './StepsCard.astro';
 import step1 from '../../assets/step1.webp';
 import step2 from '../../assets/step2.webp';
 import step3 from '../../assets/step3.webp';
+import CtaSection from './CtaSection.astro';
 ---
 
 <section class='steps-section'>
@@ -36,6 +37,7 @@ import step3 from '../../assets/step3.webp';
       alt='planning services with extinguisher'
     />
   </div>
+  <CtaSection />
 </section>
 
 <style>
@@ -67,7 +69,9 @@ import step3 from '../../assets/step3.webp';
   }
   .cards-wrapper {
     display: grid;
+    z-index: 10;
     gap: 30px;
+    position: relative;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
   @media(min-width:900px) {
