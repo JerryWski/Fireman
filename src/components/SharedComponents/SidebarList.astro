@@ -10,7 +10,7 @@ console.log(pathname);
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
         <a
-          class={pathname.split('/')[1] === 'instrukcja-bezpieczenstwa-pozarowego'
+          class={pathname.startsWith('/uslugi/instrukcja-bezpieczenstwa-pozarowego')
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
