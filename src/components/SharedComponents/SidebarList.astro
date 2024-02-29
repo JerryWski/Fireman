@@ -19,10 +19,10 @@ const currentPath = Astro.url.pathname;
       </li>
       <li class='sidebar-item'>
         <a
-          class={currentPath === '/'
+          class={currentPath === '/uslugi/instrukcja-w-przypadku-pozaru'
             ? 'sidebar-link-active'
             : 'sidebar-link'}
-          href='/uslugi/instrukcja-postepowania-pozar'
+          href='/uslugi/instrukcja-w-przypadku-pozaru'
           >Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub
           innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej</a
         >
@@ -172,7 +172,6 @@ const currentPath = Astro.url.pathname;
   }
   .sidebar-link {
     color: var(--base-gold);
-    padding: 10px 5px;
   }
   @media (min-width: 900px) {
     .sidebar-item {

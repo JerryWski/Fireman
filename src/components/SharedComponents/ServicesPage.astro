@@ -1,0 +1,135 @@
+---
+import { Image } from 'astro:assets';
+import SidebarList from './SidebarList.astro';
+
+interface ServiceSectionProps {
+  imagePath: ImageMetadata;
+  homeLink: string;
+  servicesLink: string;
+  servicesText: string;
+  heading: string;
+  content: string;
+  legalHeading: string;
+  legalContent: string;
+  legalHeadingTwo: string;
+  legalContentTwo: string;
+  
+}
+
+const {
+  imagePath,
+  homeLink,
+  servicesLink,
+  servicesText,
+  heading,
+  content,
+  legalHeading,
+  legalContent,
+  legalHeadingTwo,
+  legalContentTwo
+} = Astro.props as ServiceSectionProps;
+---
+
+<section class='main-section'>
+  <div class='sidebar-container'>
+    <SidebarList />
+  </div>
+  <div class='service-container'>
+    <Image class='service-img' src={imagePath} alt={'fire services'} />
+    <div class='service-links'>
+      <a aria-label='link to home page' href={homeLink}>Strona Główna /</a>
+      <a aria-label='link to previous page' href={servicesLink}>Usługi /</a>
+      <span>{servicesText}</span>
+    </div>
+    <h2 class='service-heading'>
+      {heading}
+    </h2>
+    <span class='line'></span>
+    <p class='service-text'>
+      {content}
+    </p>
+    <h3 class='service-heading'>{legalHeading}</h3>
+    <span class='line'></span>
+    <p class='service-text'>
+      {legalContent}
+    </p>
+    <h3 class='service-heading'>{legalHeadingTwo}</h3>
+    <span class='line'></span>
+    <p class='service-text'>
+      {legalContentTwo}
+    </p>
+  </div>
+</section>
+
+<style>
+  .main-section {
+    max-width: 1440px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+  .sidebar-container {
+    order: 1;
+  }
+  .service-container {
+    box-shadow: 0px 10px 7px -4px rgba(233, 233, 235, 1);
+  }
+  .service-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .service-links,
+  .service-links a {
+    font-family: var(--main-font);
+    font-size: 0.8rem;
+    color: var(--sub-black);
+  }
+  .service-links span {
+    font-weight: 900;
+  }
+  .service-heading {
+    font-family: var(--main-font);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: var(--base-black);
+    text-transform: uppercase;
+  }
+  .service-text {
+    padding-top: 20px;
+    font-family: var(--roboto-font);
+    line-height: 24px;
+  }
+  .service-list {
+    margin-left: 20px;
+    font-family: var(--roboto-font);
+    font-size: 0.9rem;
+    line-height: 24px;
+    padding-bottom: 30px;
+  }
+  .line {
+    height: 7px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: var(--base-red);
+    width: 15%;
+    display: inline-block;
+  }
+  @media (min-width: 900px) {
+    .main-section {
+      flex-direction: row;
+      margin: auto;
+    }
+    .service-container {
+      padding-left: 50px;
+      max-width: 800px;
+      box-shadow: -25px 0 25px -25px #e9e9eb;
+    }
+    .sidebar-container {
+      order: 0;
+    }
+  }
+</style>

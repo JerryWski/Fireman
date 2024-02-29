@@ -4,6 +4,7 @@
     align-items: center;
 }
 .headers-links a {
+    font-size: .8rem;
     font-family: var(--main-font);
     color: var(--base-wh);
 }

@@ -5,7 +5,6 @@ import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
 import SidebarList from '../../components/SharedComponents/SidebarList.astro';
 import { Image } from 'astro:assets';
 import service1 from '../../assets/service-1-1.webp';
-import BorderLine from '../../components/SharedComponents/BorderLine.astro';
 ---
 
 <Layout title='Instrukcja Bezpieczeństwa Pożarowego'>
@@ -16,9 +15,9 @@ import BorderLine from '../../components/SharedComponents/BorderLine.astro';
           href1='/uslugi'
           title1='Usługi'
           href2='/instrukcja-bezpieczenstwa-pozarowego'
-          title2='Instrukcja Bezpieczeństwa Pożarowego'
+          title2='Opracowanie instrukcji bezpieczeństwa pożarowego'
         />
-        <HeadingsForSection heading='Instrukcja Bezpieczeństwa Pożarowego' />
+        <HeadingsForSection heading='Opracowanie Instrukcji Bezpieczeństwa Pożarowego' />
         <p class='description'>
           Jeśli planujesz zakończyć inwestycję i rozpocząć korzystanie z
           obiektu, zachęcamy do kontaktu z nami.
@@ -113,6 +112,7 @@ import BorderLine from '../../components/SharedComponents/BorderLine.astro';
     color: var(--base-wh);
     font-family: var(--roboto-font);
     line-height: 27px;
+    font-size: clamp(0.7rem,.9rem,1rem);
   }
   .main-section {
     max-width: 1440px;
@@ -159,9 +159,6 @@ import BorderLine from '../../components/SharedComponents/BorderLine.astro';
     font-size: .9rem;
     line-height: 24px;
     padding-bottom: 30px
-  }
-  .service-list li {
-    list-style: ;
   }
   .line {
     height: 7px;
