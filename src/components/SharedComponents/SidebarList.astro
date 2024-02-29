@@ -1,5 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
+// const {pathname} = Astro.url
+// console.log(pathname);
 ---
 
 <aside class='sidebar-section'>
@@ -8,7 +10,7 @@ const currentPath = Astro.url.pathname;
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
         <a
-          class={currentPath === '/uslugi/instrukcja-bezpieczenstwa-pozarowego'
+          class={currentPath.split('/')[1] === 'uslugi/instrukcja-bezpieczenstwa-pozarowego'
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
@@ -173,11 +175,11 @@ const currentPath = Astro.url.pathname;
   .sidebar-link {
     color: var(--base-gold);
   }
-  .sidebar-link-active {
+  /* .sidebar-link-active {
     background-color: var(--base-red);
     line-height: normal;
     color: var(--base-wh);
-  }
+  } */
   @media (min-width: 900px) {
     .sidebar-item {
       text-align: right;
