@@ -1,7 +1,7 @@
 ---
-const currentPath = Astro.url.pathname;
-// const {pathname} = Astro.url
-// console.log(pathname);
+// const currentPath = Astro.url.pathname;
+const {pathname} = Astro.url
+console.log(pathname);
 ---
 
 <aside class='sidebar-section'>
@@ -10,7 +10,7 @@ const currentPath = Astro.url.pathname;
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
         <a
-          class={currentPath.split('/')[1] === 'uslugi/instrukcja-bezpieczenstwa-pozarowego'
+          class={pathname.split('/')[1] === 'instrukcja-bezpieczenstwa-pozarowego'
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
@@ -19,7 +19,7 @@ const currentPath = Astro.url.pathname;
           </a
         >
       </li>
-      <li class='sidebar-item'>
+      <!-- <li class='sidebar-item'>
         <a
           class={currentPath === '/uslugi/instrukcja-w-przypadku-pozaru'
             ? 'sidebar-link-active'
@@ -138,7 +138,7 @@ const currentPath = Astro.url.pathname;
           href='/uslugi/nadzor-bezpieczenstwo-pozarowe'
           >Nadzór nad bezpieczeństwem pożarowym</a
         >
-      </li>
+      </li> -->
     </ul>
   </div>
 </aside>
