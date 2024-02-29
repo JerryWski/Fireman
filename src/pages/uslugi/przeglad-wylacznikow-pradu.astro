@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service8 from '../../assets/service-8.webp';
+---
+
+<Layout title='Szkolenia z ochrony przeciwpożarowej'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/przeglad-wylacznikow-pradu'
+          title2='Przegląd i konserwację przeciwpożarowych wyłączników prądu'
+        />
+        <HeadingsForSection
+          heading='Przegląd i konserwację przeciwpożarowych wyłączników prądu'
+        />
+        <p class='description'>
+          Zapraszamy do partnerstwa zarządców i właścicieli nieruchomości
+          poszukujących solidnych specjalistów w dziedzinie kontroli
+          przeciwpożarowych wyłączników prądu.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service8}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Przegląd i konserwację przeciwpożarowych wyłączników prądu'
+      heading='Przegląd i konserwację przeciwpożarowych wyłączników prądu'
+      content='Przynajmniej raz do roku wymagany jest techniczny przegląd wyłączników prądu o funkcji przeciwpożarowej, przeprowadzany przez osoby posiadające niezbędne uprawnienia i kwalifikacje w zakresie obsługi i naprawy systemów oraz urządzeń elektrycznych. Zapraszamy do nawiązania współpracy wszystkich właścicieli i zarządców nieruchomości poszukujących doświadczonych specjalistów od przeglądów przeciwpożarowych wyłączników prądu.'
+      legalHeading='Jak działa przeciwpożarowy wyłącznik prądu'
+      legalContent='Wyłącznik prądu o funkcji przeciwpożarowej jest urządzeniem zapobiegającym pożarom przez odcięcie zasilania elektrycznego do urządzeń, mając na celu uniknięcie wybuchu pożaru lub zminimalizowanie jego skutków. Powinien on kontrolować wszystkie urządzenia, z wyjątkiem tych, które są niezbędne do funkcjonowania systemów bezpieczeństwa w razie pożaru, takich jak systemy wentylacji przeciwpożarowej, windy czy pompy strażackie. Niezawodny wyłącznik przeciwpożarowy zapewnia ochronę dla wszystkich pracowników. Regularne kontrole tych urządzeń i precyzyjne dokumentowanie inspekcji głównego wyłącznika są kluczowe dla zachowania bezpieczeństwa.'
+      legalHeadingTwo='Podstawa Prawna'
+      legalContentTwo='Warunki jakie muszą być spełnione w przypadku działania przeciwpożarowych wyłączników prądu, określa rozporządzenie Ministra Infrastruktury z 12 kwietnia 2002 roku dotyczącym warunków technicznych, które muszą spełniać budynki i ich lokalizacja (Dz.U. 2002 nr 75 poz. 690), w odniesieniu do instalacji elektrycznych. Istotne jest, by wyłącznik prądu o funkcji przeciwpożarowej był umieszczony blisko głównego wejścia lub punktu złączeniowego budynku oraz była również możliwa właściwa identyfikacja tego urządzenia.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
+</style>

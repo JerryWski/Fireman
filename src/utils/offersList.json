@@ -41,27 +41,27 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
-    "title": "Przegląd i konserwację hydrantów oraz węży hydrantowych",
-    "text": "Regularna kontrola hydrantów jest obowiązkowa. Ich prawidłowe działanie można sprawdzić, wykonując regularną konserwację. Dlatego zachęcamy do skontaktowania się z naszą firmą,",
+    "img": "/service-sm6.webp",
+    "title": "Przegląd i konserwacja hydrantów oraz węży hydrantowych",
+    "text": "Regularna kontrola hydrantów jest obowiązkowa. Ich prawidłowe działanie można sprawdzić, wykonując regularną konserwację. Dlatego zachęcamy do skontaktowania się z naszą firmą",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/kontrola-hydrantow-i-wezy-hydrantowych"
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm7.webp",
     "title": "Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego",
     "text": "Przeprowadzamy przeglądy awaryjnego oświetlenia ewakuacyjnego jako część naszych usług przeciwpożarowych.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/przeglad-oswietlenia-ewakuacyjnego"
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm8.webp",
     "title": "Przegląd i konserwację przeciwpożarowych wyłączników prądu",
-    "text": "Wzywamy do partnerstwa zarządców i właścicieli nieruchomości poszukujących solidnych specjalistów w dziedzinie kontroli przeciwpożarowych wyłączników prądu.",
+    "text": "Zapraszamy do partnerstwa zarządców i właścicieli nieruchomości poszukujących solidnych specjalistów w dziedzinie kontroli przeciwpożarowych wyłączników prądu.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/przeglad-wylacznikow-pradu"
   },
   {
     "icon": "double-arrow",

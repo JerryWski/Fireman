@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service7 from '../../assets/service-7.webp';
+---
+
+<Layout title='Przegląd i konserwacja awaryjnego oświetlenia ewakuacyjnego'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
+          title2='Przegląd i konserwacja awaryjnego oświetlenia ewakuacyjnego'
+        />
+        <HeadingsForSection
+          heading='Przegląd i konserwacja awaryjnego oświetlenia ewakuacyjnego'
+        />
+        <p class='description'>
+          Przeprowadzamy przeglądy awaryjnego oświetlenia ewakuacyjnego jako
+          część naszych usług przeciwpożarowych.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service7}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Przegląd i konserwacja awaryjnego oświetlenia ewakuacyjnego'
+      heading='Przegląd i konserwacja awaryjnego oświetlenia ewakuacyjnego'
+      content='Świadczymy usługi przeglądu oświetlenia ewakuacyjnego i awaryjnego. Dzięki wiedzy, doświadczeniu oraz odpowiednim uprawnieniom naszej ekipy, jesteśmy w stanie efektywnie realizować wymagane pomiary i analizy, wszystko zgodnie z aktualnymi przepisami i normami.'
+      legalHeading='Konserwacja oświetlenia - od strony prawnej'
+      legalContent='Rozporządzenie Ministra Infrastruktury z 12 kwietnia 2002 roku dotyczące warunków technicznych budynków i ich lokalizacji (Dz.U. 2002 nr 75 poz. 690) określa wymogi dotyczące instalacji oświetlenia ewakuacyjnego i awaryjnego. Przepisy te dotyczą głównie miejsc, gdzie brak zasilania może stanowić zagrożenie dla życia lub zdrowia osób, spowodować duże szkody dla środowiska lub pociągnąć za sobą znaczące straty materialne. W takich sytuacjach niezbędne jest zainstalowanie oświetlenia bezpieczeństwa, które musi działać co najmniej godzinę, zależnie od specyficznych warunków danego pomieszczenia.'
+      legalHeadingTwo='Przeglądy oświetlenia ewakuacyjnego'
+      legalContentTwo='W rozporządzeniu Ministra Spraw Wewnętrznych i Administracji z 7 czerwca 2010 roku dotyczącym ochrony przeciwpożarowej budynków, innych obiektów budowlanych i terenów (Dz.U. 2010 nr 109 poz. 719), oświetlenie ewakuacyjne jest klasyfikowane jako urządzenie przeciwpożarowe. Dlatego też, konserwacja oraz przeglądy techniczne tego typu oświetlenia muszą być przeprowadzane zgodnie z zaleceniami producenta, jednak nie rzadziej niż raz na rok. Podczas przeglądu oświetlenia awaryjnego lub ewakuacyjnego niezbędne jest wyłączenie głównego źródła zasilania, aby móc ocenić, czy system awaryjny aktywuje się prawidłowo. Następnie przeprowadza się pomiary, aby sprawdzić, czy natężenie światła spełnia obowiązujące wymogi. Ważne jest również zmierzenie czasu działania oświetlenia na akumulatorach aż do ich całkowitego rozładowania.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
+</style>
