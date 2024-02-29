@@ -1,2 +1,74 @@
 ---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service3 from '../../assets/service-3.webp';
 ---
+
+<Layout title='Instrukcja Postępowania w przypadku pożaru'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/instrukcja-w-przypadku-pozaru'
+          title2='Opracowanie instrukcji postępowania w przypadku pożaru'
+        />
+        <HeadingsForSection
+          heading='Opracowanie instrukcji w przypadku pożaru'
+        />
+        <p class='description'>
+          Imprezy masowe wymagają opracowania instrukcji postępowania w
+          przypadku powstania pożaru lub innego zagrożenia.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service3}
+      homeLink='/'
+      servicesLink='/uslugi'
+      servicesText='Opracowanie Instrukcji Postępowania w przypadku powstania pożaru...'
+      heading='Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej'
+      content='Instrukcja bezpieczeństwa przeciwpożarowego dla imprez masowych, definiująca działania w sytuacji wybuchu pożaru lub innego zagrożenia na miejscu wydarzenia, stanowi kluczowy dokument wymagany od organizatora przy ubieganiu się o pozwolenie na zorganizowanie takiego wydarzenia.'
+      legalHeading='Kompetencje osoby tworzącej instrukcję'
+      legalContent='Osoba odpowiedzialna za przygotowanie niniejszej instrukcji musi dysponować odpowiednimi kwalifikacjami. Zgodnie z art. 4 ustawy o ochronie przeciwpożarowej z 24 sierpnia 1991 roku, wymagane jest co najmniej średnie wykształcenie ogólne lub zawodowe oraz uprawnienia inspektora ochrony przeciwpożarowej lub kwalifikacje technika pożarnictwa. Zlecając opracowanie instrukcji osobie nieposiadającej niezbędnych kompetencji, ryzykują Państwo napotkanie na poważne komplikacje, w tym możliwość otrzymania negatywnej oceny od odpowiedniego komendanta powiatowego (miejskiego) Państwowej Straży Pożarnej, co może wpłynąć na ocenę organizowanej imprezy masowej.'
+      legalHeadingTwo='Co określa zakres instrukcji'
+      legalContentTwo='Rozporządzenie Ministra Spraw Wewnętrznych i Administracji z 13 sierpnia 2009 roku określa, jakie procedury należy stosować w sytuacji wybuchu pożaru lub wystąpienia innego zagrożenia lokalnego podczas imprezy masowej, wskazując zakres wymaganych instrukcji postępowania.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+  }
+</style>
