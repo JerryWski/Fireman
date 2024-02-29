@@ -33,11 +33,11 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm5.webp",
     "title": "Przegląd i konserwację gaśnic",
     "text": "Zajmujemy się nie tylko przeglądem i konserwacją gaśnic, ale także doradztwem w zakresie doboru gaśnic oraz innych zabezpieczeń przeciwpożarowych",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"przeglad-i-konserwacja-gasnic"
   },
   {
     "icon": "double-arrow",

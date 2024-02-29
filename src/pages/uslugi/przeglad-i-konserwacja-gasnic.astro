@@ -1,0 +1,73 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service5 from '../../assets/service-5.webp';
+---
+
+<Layout title='Szkolenia z ochrony przeciwpożarowej'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/przegląd-i-konserwacja-gasnic'
+          title2='Przegląd i konserwacja gaśnic'
+        />
+        <HeadingsForSection heading='Przegląd i konserwacja gaśnic' />
+        <p class='description'>
+          Zajmujemy się nie tylko przeglądem i konserwacją gaśnic, ale także
+          doradztwem w zakresie doboru gaśnic oraz innych zabezpieczeń
+          przeciwpożarowych
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service5}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Przegląd i konserwacja gaśnic'
+      heading='Przegląd i konserwacja gaśnic'
+      content='Dysponujemy specjalistyczną wiedzą i bogatym doświadczeniem w dziedzinie ochrony przeciwpożarowej budynków, umiejętnie przeprowadzając szczegółowe analizy obiektów. Dzięki temu możemy precyzyjnie określić, ile i jakie gaśnice są potrzebne w każdym pomieszczeniu, biorąc pod uwagę potencjalne zagrożenia.'
+      legalHeading='Rodzaje gaśnic i ich przeznaczenie'
+      legalContent='Wybór gaśnic zgodnych z wielkością budynku jest kluczowy. Należy je dobrać tak, by odpowiadały specyfice potencjalnych pożarów, które mogą się pojawić w obiekcie. Odpowiedni rozmiar gaśnicy znacząco wpływa na jej efektywność w walce z ogniem. Aby była w pełni gotowa na ewentualne zagrożenie pożarowe, ważne jest regularne i dokładne sprawdzanie jej stanu.'
+      legalHeadingTwo='Konserwacja gaśnic'
+      legalContentTwo='Gaśnice wymagają rocznych przeglądów, a jeśli producent zaleca, nawet częściej. Podczas tych przeglądów oceniamy kondycję techniczną zbiornika poprzez zewnętrzne oględziny, szukając uszkodzeń, korozji, czy śladów na lakierze. Przegląd obejmuje też sprawdzenie stanu zawleczki i plomby, lokalizacji urządzenia oraz czy jest ono łatwo dostępne. Co pięć lat gaśnice powinny przechodzić konserwację, znacznie bardziej szczegółową niż roczne przeglądy. Remont jest niezbędny również, gdy zauważymy jakiekolwiek uszkodzenia, korozję, lub gdy ciśnienie wskazane na manometrze wykracza poza dopuszczalne normy.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+  }
+</style>
