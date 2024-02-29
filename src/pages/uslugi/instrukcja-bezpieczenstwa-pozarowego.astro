@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import SidebarList from '../../components/SharedComponents/SidebarList.astro';
+import { Image } from 'astro:assets';
+import service1 from '../../assets/service-1-1.webp';
+---
+
+<Layout title='Instrukcja Bezpieczeństwa Pożarowego'>
+  <main>
+    <div class="welcome">
+        <div>
+          <HeadersLinks
+            href1='/uslugi'
+            title1='Usługi'
+            href2='/instrukcja-bezpieczenstwa-pozarowego'
+            title2='Instrukcja Bezpieczeństwa Pożarowego'
+          />
+          <HeadingsForSection heading='Instrukcja Bezpieczeństwa Pożarowego' />
+          <p class='description'>
+            Jeśli planujesz zakończyć inwestycję i rozpocząć korzystanie z obiektu, zachęcamy do kontaktu z nami.
+          </p>
+        </div>
+    </div>
+
+<section class="main-section">
+    <div class="sidebar-container">
+        <SidebarList />
+    </div>
+    <div class="service-container">
+        <Image class='service-img' src={service1} alt={'engineer planning'} />
+        <div class="service-links">
+            <a aria-label="link to home page" href="/">Strona Główna /</a>
+            <a aria-label="link to previus page" href="/uslugi">Usługi /</a>
+            <span>Instrukcja bezpieczeństwa pożarowego</span>
+        </div>
+        <h2 class="service-heading">Opracowanie Instrukcji Bezpieczeństwa Pożarowego</h2>
+    </div>
+</section>
+
+  </main>
+</Layout>
+
+<style>
+    .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('../../src/assets/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  .main-section {
+    max-width: 1440px;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+  }
+  .sidebar-container {
+    order: 1;
+  }
+  .service-container {
+    box-shadow: -25px 0 25px -25px #e9e9eb;
+  }
+  .service-img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .service-links, .service-links a {
+    font-family: var(--main-font);
+    font-size: .8rem;
+    color: var(--sub-black);
+  }
+  .service-links span {
+    font-weight: 900;
+  }
+  .service-heading {
+    margin-top: 30px;
+    text-transform: uppercase;
+  }
+  @media(min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('../../src/assets/hero-fireman2.webp');
+    }
+    .main-section {
+        flex-direction: row;
+    }
+    .service-container {
+        padding-left: 50px;
+    }
+    .sidebar-container {
+    order: 0;
+  }
+  }
+</style>

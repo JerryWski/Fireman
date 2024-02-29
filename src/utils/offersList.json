@@ -1,11 +1,11 @@
 [
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm1.webp",
     "title": "Opracowanie Instrukcji Bezpieczeństwa Pożarowego",
     "text": "Zakres naszej usługi dotyczącej opracowywania Instrukcji Bezpieczeństwa Pożarowego obejmuje opracowanie dokumentu...",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"uslugi/instrukcja-bezpieczenstwa-pozarowego"
   },
   {
     "icon": "double-arrow",
@@ -42,7 +42,7 @@
   {
     "icon": "double-arrow",
     "img": "/offer1.webp",
-    "title": "Przegląd i konserwację hydrantów oraz węży",
+    "title": "Przegląd i konserwację hydrantów oraz węży hydrantowych",
     "text": "Regularna kontrola hydrantów jest obowiązkowa. Ich prawidłowe działanie można sprawdzić, wykonując regularną konserwację. Dlatego zachęcamy do skontaktowania się z naszą firmą,",
     "link": "Dowiedź się więcej",
     "href":"instrukcja-bezpieczenstwa-pozarowego"
