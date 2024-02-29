@@ -1,80 +1,139 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
 
 <aside class='sidebar-section'>
   <div class='sidebar'>
+    <h3>Na skróty:</h3>
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
-        <a href='/uslugi/opracowanie-instrukcji-bezpieczenstwa-pozarowego'
-          >Opracowanie Instrukcji Bezpieczeństwa Pożarowego</a
+        <a
+          class={currentPath === '/uslugi/instrukcja-bezpieczenstwa-pozarowego'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
+          >
+          Opracowanie Instrukcji Bezpieczeństwa Pożarowego
+          </a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/instrukcja-postepowania-pozar'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/instrukcja-postepowania-pozar'
           >Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub
           innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/szkolenia-ochrona-przeciwpozarowa'
+        <a
+          class={currentPath === '/uslugi/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/szkolenia-ochrona-przeciwpozarowa'
           >Szkolenia z zakresu ochrony przeciwpożarowej</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przygotowanie-obiektow-do-odbiorow'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przygotowanie-obiektow-do-odbiorow'
           >Przygotowanie obiektów do odbiorów i kontroli przeprowadzanych przez
           Państwową Straż Pożarną</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przeglad-i-konserwacja-gasnic'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przeglad-i-konserwacja-gasnic'
           >Przegląd i konserwację gaśnic</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przeglad-hydrantow'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przeglad-hydrantow'
           >Przegląd i konserwację hydrantów wewnętrznych i węży hydrantowych</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
           >Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przeglad-wylacznikow-przeciwpozarowych'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przeglad-wylacznikow-przeciwpozarowych'
           >Przegląd i konserwację przeciwpożarowych wyłączników prądu</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/przeglad-drzwi-przeciwpozarowych'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/przeglad-drzwi-przeciwpozarowych'
           >Przegląd drzwi i bram przeciwpożarowych (wyposażone w system
           sterowania)</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/oznakowanie-ewakuacyjne'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/oznakowanie-ewakuacyjne'
           >Oznakowanie obiektów znakami ewakuacyjnymi i przeciwpożarowymi</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/probne-ewakuacje'>Przeprowadzanie próbnych ewakuacji</a
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/probne-ewakuacje'>Przeprowadzanie próbnych ewakuacji</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/opracowanie-planow-ewakuacyjnych'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/opracowanie-planow-ewakuacyjnych'
           >Opracowanie planów ewakuacyjnych</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/zabezpieczenie-przejsc-przepustow'
+        <a
+          class={currentPath === '/'
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/zabezpieczenie-przejsc-przepustow'
           >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
           instalacyjnych przez ściany i stropy oddzielenia przeciwpożarowego</a
         >
       </li>
       <li class='sidebar-item'>
-        <a href='/uslugi/nadzor-bezpieczenstwo-pozarowe'
+        <a
+          class={currentPath === ''
+            ? 'sidebar-link-active'
+            : 'sidebar-link'}
+          href='/uslugi/nadzor-bezpieczenstwo-pozarowe'
           >Nadzór nad bezpieczeństwem pożarowym</a
         >
       </li>
@@ -91,8 +150,17 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-direction: column;
     margin-right: 30px;
     order: 2;
+  }
+  .sidebar h3 {
+    font-family: var(--main-font);
+    color: var(--base-black);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    align-self: flex-start;
   }
   .sidebar-item {
     list-style: none;
@@ -102,12 +170,16 @@
     font-size: 0.8rem;
     font-family: var(--roboto-font);
   }
-  .sidebar-item a {
+  .sidebar-link {
     color: var(--base-gold);
+    padding: 10px 5px;
   }
   @media (min-width: 900px) {
     .sidebar-item {
-        text-align: right;
+      text-align: right;
+    }
+    .sidebar h3 {
+      align-self: flex-end;
     }
   }
 </style>

@@ -5,45 +5,96 @@ import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
 import SidebarList from '../../components/SharedComponents/SidebarList.astro';
 import { Image } from 'astro:assets';
 import service1 from '../../assets/service-1-1.webp';
+import BorderLine from '../../components/SharedComponents/BorderLine.astro';
 ---
 
 <Layout title='Instrukcja Bezpieczeństwa Pożarowego'>
   <main>
-    <div class="welcome">
-        <div>
-          <HeadersLinks
-            href1='/uslugi'
-            title1='Usługi'
-            href2='/instrukcja-bezpieczenstwa-pozarowego'
-            title2='Instrukcja Bezpieczeństwa Pożarowego'
-          />
-          <HeadingsForSection heading='Instrukcja Bezpieczeństwa Pożarowego' />
-          <p class='description'>
-            Jeśli planujesz zakończyć inwestycję i rozpocząć korzystanie z obiektu, zachęcamy do kontaktu z nami.
-          </p>
-        </div>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/instrukcja-bezpieczenstwa-pozarowego'
+          title2='Instrukcja Bezpieczeństwa Pożarowego'
+        />
+        <HeadingsForSection heading='Instrukcja Bezpieczeństwa Pożarowego' />
+        <p class='description'>
+          Jeśli planujesz zakończyć inwestycję i rozpocząć korzystanie z
+          obiektu, zachęcamy do kontaktu z nami.
+        </p>
+      </div>
     </div>
 
-<section class="main-section">
-    <div class="sidebar-container">
+    <section class='main-section'>
+      <div class='sidebar-container'>
         <SidebarList />
-    </div>
-    <div class="service-container">
+      </div>
+      <div class='service-container'>
         <Image class='service-img' src={service1} alt={'engineer planning'} />
-        <div class="service-links">
-            <a aria-label="link to home page" href="/">Strona Główna /</a>
-            <a aria-label="link to previus page" href="/uslugi">Usługi /</a>
-            <span>Instrukcja bezpieczeństwa pożarowego</span>
+        <div class='service-links'>
+          <a aria-label='link to home page' href='/'>Strona Główna /</a>
+          <a aria-label='link to previus page' href='/uslugi'>Usługi /</a>
+          <span>Instrukcja bezpieczeństwa pożarowego</span>
         </div>
-        <h2 class="service-heading">Opracowanie Instrukcji Bezpieczeństwa Pożarowego</h2>
-    </div>
-</section>
-
+        <h2 class='service-heading'>
+          Opracowanie Instrukcji Bezpieczeństwa Pożarowego
+        </h2>
+        <span class='line'></span>
+        <p class='service-text'>
+          W ramach świadczonej usługi, polegającej na przekazaniu lokalu straży
+          pożarnej, przeprowadzamy kompleksową weryfikację stanu technicznego
+          obiektu i związanych z nim dokumentów, aby upewnić się, że spełniają
+          one określone kryteria. Opracowujemy również zawiadomienie, które
+          zostaje przesłane do właściwej jednostki Państwowej Straży Pożarnej.
+        </p>
+        <h3 class='service-heading'>Podstawa Prawna</h3>
+        <span class='line'></span>
+        <p class='service-text'>
+          Zgodnie z art. 56 ustawy z dnia 7 lipca 1994 roku Prawo Budowlane
+          (Dz.U. z 2020 r. poz. 1333) inwestor ubiegający się o pozwolenie na
+          użytkowanie obiektu budowlanego zobowiązany jest do zawiadomienia
+          Państwowej Inspekcji Sanitarnej i Państwowej Straży Pożarnej o
+          zakończeniu obiektu i zamiarze przystąpienia do jego użytkowania.
+          Zadaniem wyznaczonych organów jest zweryfikowanie zgodności wykonania
+          obiektu z projektem budowlanym. Obowiązek ten dotyczy także obiektów,
+          które nie są objęte obowiązkiem uzyskania pozwolenia na użytkowanie,
+          ale wymagają uzgodnienia pod względem ochrony przeciwpożarowej lub
+          wymagań higieniczno-zdrowotnych. Jeżeli w ciągu 14 dni od momentu
+          złożenia zawiadomienia stosowne organy nie zajmą stanowiska w sprawie,
+          jest to równoznaczne z niezgłoszeniem sprzeciwu lub uwag wobec
+          zgłoszenia.
+        </p>
+        <h3 class='service-heading'>Potrzebne Dokumenty</h3>
+        <span class='line'></span>
+        <p class='service-text'>
+          GPT Inwestor ma obowiązek skompletowania niezbędnych dokumentów,
+          potrzebnych zarówno do zgłoszenia zakończenia prac budowlanych, jak i
+          do złożenia wniosku o wydanie pozwolenia na użytkowanie obiektu.
+          Dokumentacja ta obejmuje między innymi
+        </p>
+        <ul class='service-list'>
+          <li>oryginał dziennika budowy,</li>
+          <li>projekt techniczny z uwzględnieniem zmian,</li>
+          <li>oświadczenie kierownika budowy,</li>
+          <li>
+            oświadczenie o właściwym zagospodarowaniu terenów przyległych (gdy
+            eksploatacja wybudowanego obiektu jest od tego uzależniona),
+          </li>
+          <li>protokoły badań i sprawdzeń, w tym przyłączy i instalacji,</li>
+          <li>
+            druki geodezyjne zawierające wyniki geodezyjnej inwentaryzacji
+            powykonawczej, w tym mapę,
+          </li>
+          <li>potwierdzenie odbioru wykonanych przyłączy.</li>
+        </ul>
+      </div>
+    </section>
   </main>
 </Layout>
 
 <style>
-    .welcome {
+  .welcome {
     background-color: rgb(206, 110, 102);
     background-image: url('../../src/assets/hero-fireman2-mb.webp');
     background-blend-mode: multiply;
@@ -76,25 +127,51 @@ import service1 from '../../assets/service-1-1.webp';
     order: 1;
   }
   .service-container {
-    box-shadow: -25px 0 25px -25px #e9e9eb;
+    box-shadow: 0px 10px 7px -4px rgba(233, 233, 235, 1);
   }
   .service-img {
     width: 100%;
     object-fit: cover;
   }
-  .service-links, .service-links a {
+  .service-links,
+  .service-links a {
     font-family: var(--main-font);
-    font-size: .8rem;
+    font-size: 0.8rem;
     color: var(--sub-black);
   }
   .service-links span {
     font-weight: 900;
   }
   .service-heading {
+    font-family: var(--main-font);
     margin-top: 30px;
+    color: var(--base-black);
     text-transform: uppercase;
   }
-  @media(min-width: 900px) {
+  .service-text {
+    padding-top: 20px;
+    font-family: var(--roboto-font);
+    line-height: 24px;
+  }
+  .service-list {
+    margin-left: 20px;
+    font-family: var(--roboto-font);
+    font-size: .9rem;
+    line-height: 24px;
+    padding-bottom: 30px
+  }
+  .service-list li {
+    list-style: ;
+  }
+  .line {
+    height: 7px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: var(--base-red);
+    width: 10%;
+    display: inline-block;
+  }
+  @media (min-width: 900px) {
     .welcome {
       flex-direction: row;
       padding: 120px 50px 120px 50px;
@@ -102,13 +179,16 @@ import service1 from '../../assets/service-1-1.webp';
       background-image: url('../../src/assets/hero-fireman2.webp');
     }
     .main-section {
-        flex-direction: row;
+      flex-direction: row;
+      margin: auto;
     }
     .service-container {
-        padding-left: 50px;
+      padding-left: 50px;
+      max-width: 800px;
+      box-shadow: -25px 0 25px -25px #e9e9eb;
     }
     .sidebar-container {
-    order: 0;
-  }
+      order: 0;
+    }
   }
 </style>
