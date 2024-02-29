@@ -8,7 +8,7 @@ const currentPath = Astro.url.pathname;
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
         <a
-          class={currentPath === 'https://mr-poz.netlify.app/uslugi/instrukcja-bezpieczenstwa-pozarowego'
+          class={currentPath === '/uslugi/instrukcja-bezpieczenstwa-pozarowego'
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
@@ -29,10 +29,10 @@ const currentPath = Astro.url.pathname;
       </li>
       <li class='sidebar-item'>
         <a
-          class={currentPath === '/uslugi/'
+          class={currentPath === '/uslugi/szkolenia-przeciwpozarowe'
             ? 'sidebar-link-active'
             : 'sidebar-link'}
-          href='/uslugi/szkolenia-ochrona-przeciwpozarowa'
+          href='/uslugi/szkolenia-przeciwpozarowe'
           >Szkolenia z zakresu ochrony przeciwpożarowej</a
         >
       </li>
