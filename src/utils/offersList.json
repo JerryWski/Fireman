@@ -25,11 +25,11 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm4.webp",
     "title": "Przygotowanie obiektów do odbiorów i kontroli przez PSP",
     "text": "Jeżeli przygotowujesz się do zgłoszenia zakończenia inwestycji i zamierzasz przystąpić do użytkowania obiektu, zachęcamy do skontaktowania się z nami",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/przygotowanie-obiektow-do-odbioru"
   },
   {
     "icon": "double-arrow",
