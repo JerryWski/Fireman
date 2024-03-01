@@ -1,0 +1,268 @@
+---
+
+---
+
+<div class='wrapper'>
+  <h2>FAQs</h2>
+  <p>Najczęściej zadawane pytania dotyczące naszych usług</p>
+  <div class='accordion'>
+    <div class='accordion-panel'>
+      <h2 id='panel1-title'>
+        <button
+          class='accordion-trigger'
+          aria-expanded='true'
+          aria-controls='accordion1-content'
+        >
+          Jakie są koszty usług?
+        </button>
+      </h2>
+      <div
+        class='accordion-content'
+        role='region'
+        aria-labelledby='panel1-title'
+        aria-hidden='false'
+        id='panel1-content'
+      >
+        <div>
+          <p class='accordion-text'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+            distinctio, accusantium dolorem corrupti quas, ipsum error eveniet
+            quisquam nisi inventore eligendi, consequatur deleniti temporibus?
+            Praesentium, blanditiis cupiditate! Molestiae, animi iure.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='accordion-panel'>
+      <h2 id='panel2-title'>
+        <button
+          class='accordion-trigger'
+          aria-expanded='false'
+          aria-controls='accordion1-content'
+        >
+          Czy oferujecie szkolenia?
+        </button>
+      </h2>
+      <div
+        class='accordion-content'
+        role='region'
+        aria-labelledby='panel2-title'
+        aria-hidden='true'
+        id='panel2-content'
+      >
+        <div>
+          <p class='accordion-text'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
+            harum autem delectus mollitia ab assumenda nemo facilis ea aliquam
+            deleniti earum recusandae, eius, atque explicabo, expedita alias
+            laboriosam labore iste.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='accordion-panel'>
+      <h2 id='panel3-title'>
+        <button
+          class='accordion-trigger'
+          aria-expanded='false'
+          aria-controls='accordion1-content'
+        >
+          Jakie są korzyści z opracowania Instrukcji Bezpieczeństwa Pożarowego?
+        </button>
+      </h2>
+      <div
+        class='accordion-content'
+        role='region'
+        aria-labelledby='panel1-title'
+        aria-hidden='true'
+        class='accordion-content'
+        id='panel3-content'
+      >
+        <div>
+          <p class='accordion-text'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
+            amet!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='accordion-panel'>
+      <h2 id='panel4-title'>
+        <button
+          class='accordion-trigger'
+          aria-expanded='false'
+          aria-controls='accordion1-content'
+        >
+          Czy przeprowadzacie przeglądy gaśnic i hydrantów?
+        </button>
+      </h2>
+      <div
+        class='accordion-content'
+        role='region'
+        aria-labelledby='panel4-title'
+        aria-hidden='true'
+        class='accordion-content'
+        id='panel4-content'
+      >
+        <div>
+          <p class='accordion-text'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nulla
+            possimus obcaecati hic cumque amet totam, labore placeat. Laudantium
+            consequatur expedita nihil ipsam at porro!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class='accordion-panel'>
+      <h2 id='panel5-title'>
+        <button
+          class='accordion-trigger'
+          aria-expanded='false'
+          aria-controls='accordion5-content'
+        >
+          Jak mogę skontaktować się z Państwem?
+        </button>
+      </h2>
+      <div
+        class='accordion-content'
+        role='region'
+        aria-labelledby='panel5-title'
+        aria-hidden='true'
+        class='accordion-content'
+        id='panel3-content'
+      >
+        <div>
+          <p class='accordion-text'>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
+            amet!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+
+  .accordion-content[aria-hidden='false'] {
+    grid-template-rows: 1fr;
+  }
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+  body {
+    font-family: var(--roboto-font);
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
+  .wrapper {
+    margin-top: 60px;
+    width: min(85ch, 100% - 4rem);
+    margin-inline: auto;
+  }
+  .wrapper h2 {
+    color: var(--base-black);
+    font-size: 3rem;
+  }
+  .wrapper p {
+    color: var(--sub-black);
+  }
+
+  .accordion {
+    color: var(--sub-black);
+  }
+
+  .accordion-panel {
+    padding: 1rem 0;
+    border-bottom: 1px solid;
+  }
+
+  .accordion h2 {
+    position: relative;
+  }
+
+  .accordion-trigger {
+    background: transparent;
+    border: 0;
+    font-family: var(--main-font);
+    color: var(--base-red);
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+  }
+  .accordion-text {
+    font-size: 0.9rem;
+    color: var(--sub-black);
+  }
+  @media (min-width: 900px) {
+    .wrapper h2, .wrapper p {
+        text-align: center;
+    }
+  }
+  /* .accordion-trigger::before,
+  .accordion-trigger::after {
+    position: absolute;
+    right: 1em;
+    content: '';
+    display: block;
+    width: 1em;
+    height: 5px;
+    background: currentcolor;
+    transition: transform 500ms;
+  }
+
+  .accordion-trigger::after {
+    rotate: 90deg;
+    translate: 0 -1.5em;
+  }
+
+  .accordion-trigger[aria-expanded='true']::before,
+  .accordion-trigger[aria-expanded='true']::after {
+    transform: rotate(45deg);
+  } */
+</style>
+
+<script>
+  const accordion = document.querySelector('.accordion');
+
+  accordion.addEventListener('click', (e) => {
+    const activePanel = e.target.closest('.accordion-panel');
+    if (!activePanel) return;
+    toggleAccordion(activePanel);
+  });
+
+  function toggleAccordion(panelToActivate) {
+    const activeButton = panelToActivate.querySelector('button');
+    const activePanel = panelToActivate.querySelector('.accordion-content');
+    const activePanelIsOpened = activeButton.getAttribute('aria-expanded');
+
+    if (activePanelIsOpened === 'true') {
+      panelToActivate
+        .querySelector('button')
+        .setAttribute('aria-expanded', false);
+
+      panelToActivate
+        .querySelector('.accordion-content')
+        .setAttribute('aria-hidden', true);
+    } else {
+      panelToActivate
+        .querySelector('button')
+        .setAttribute('aria-expanded', true);
+
+      panelToActivate
+        .querySelector('.accordion-content')
+        .setAttribute('aria-hidden', false);
+    }
+  }
+</script>
