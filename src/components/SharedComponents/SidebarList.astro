@@ -6,153 +6,126 @@ const { pathname } = Astro.url;
 <aside class='sidebar-section'>
   <div class='sidebar'>
     <h3>Na skróty:</h3>
-    <ul class='sidebar-lists'>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.includes(
-            '/uslugi/instrukcja-bezpieczenstwa-pozarowego',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
-        >
-          Opracowanie Instrukcji Bezpieczeństwa Pożarowego
-        </a>
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.includes('/uslugi/instrukcja-w-przypadku-pozaru')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/instrukcja-w-przypadku-pozaru'
-          >Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub
-          innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/szkolenia-przeciwpozarowe')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/szkolenia-przeciwpozarowe'
-          >Szkolenia z zakresu ochrony przeciwpożarowej</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/przygotowanie-obiektow-do-odbioru',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przygotowanie-obiektow-do-odbioru'
-          >Przygotowanie obiektów do odbiorów i kontroli przeprowadzanych przez
-          Państwową Straż Pożarną</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/przeglad-i-konserwacja-gasnic')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przeglad-i-konserwacja-gasnic'
-          >Przegląd i konserwację gaśnic</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/kontrola-hydrantow-i-wezy-hydrantowych',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/kontrola-hydrantow-i-wezy-hydrantowych'
-          >Przegląd i konserwację hydrantów wewnętrznych i węży hydrantowych</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/przeglad-oswietlenia-ewakuacyjnego',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
-          >Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/przeglad-wylacznikow-pradu')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przeglad-wylacznikow-pradu'
-          >Przegląd i konserwację przeciwpożarowych wyłączników prądu</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych'
-          >Przegląd drzwi i bram przeciwpożarowych (wyposażone w system
-          sterowania)</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe'
-          >Oznakowanie obiektów znakami ewakuacyjnymi i przeciwpożarowymi</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/przeprowadzenie-prob-ewakuacji')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/przeprowadzenie-prob-ewakuacji'
-          >Przeprowadzanie próbnych ewakuacji</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/opracowanie-planow-ewakuacyjnych')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/opracowanie-planow-ewakuacyjnych'
-          >Opracowanie planów ewakuacyjnych</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith(
-            '/uslugi/nadzor-nad-bezpieczenstwem-pozarowym',
-          )
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/nadzor-nad-bezpieczenstwem-pozarowym'
-          >Nadzór nad bezpieczeństwem pożarowym o</a
-        >
-      </li>
-      <li class='sidebar-item'>
-        <a
-          class={pathname.startsWith('/uslugi/wykonanie-zabepieczenia-przeciwpozarowego')
-            ? 'sidebar-link-active'
-            : 'sidebar-link'}
-          href='/uslugi/wykonanie-zabepieczenia-przeciwpozarowego'
-          >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
-          instalacyjnych przez ściany i stropy oddzielenia przeciwpożaroweg</a
-        >
-      </li>
-    </ul>
+    <div class='sidebar-lists'>
+      <a
+        class={pathname.includes('/uslugi/instrukcja-bezpieczenstwa-pozarowego')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
+      >
+        Opracowanie Instrukcji Bezpieczeństwa Pożarowego
+      </a>
+
+      <a
+        class={pathname.includes('/uslugi/instrukcja-w-przypadku-pozaru')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/instrukcja-w-przypadku-pozaru'
+        >Opracowanie Instrukcji Postępowania w przypadku powstania pożaru lub
+        innego miejscowego zagrożenia w miejscu i w czasie imprezy masowej
+      </a>
+
+      <a
+        class={pathname.startsWith('/uslugi/szkolenia-przeciwpozarowe')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/szkolenia-przeciwpozarowe'
+        >Szkolenia z zakresu ochrony przeciwpożarowej</a
+      >
+
+      <a
+        class={pathname.startsWith('/uslugi/przygotowanie-obiektow-do-odbioru')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przygotowanie-obiektow-do-odbioru'
+        >Przygotowanie obiektów do odbiorów i kontroli przeprowadzanych przez
+        Państwową Straż Pożarną</a
+      >
+
+      <a
+        class={pathname.startsWith('/uslugi/przeglad-i-konserwacja-gasnic')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeglad-i-konserwacja-gasnic'
+        >Przegląd i konserwację gaśnic</a
+      >
+
+      <a
+        class={pathname.startsWith(
+          '/uslugi/kontrola-hydrantow-i-wezy-hydrantowych',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/kontrola-hydrantow-i-wezy-hydrantowych'
+        >Przegląd i konserwację hydrantów wewnętrznych i węży hydrantowych</a
+      >
+      <a
+        class={pathname.startsWith('/uslugi/przeglad-oswietlenia-ewakuacyjnego')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
+        >Przegląd i konserwację awaryjnego oświetlenia ewakuacyjnego</a
+      >
+      <a
+        class={pathname.startsWith('/uslugi/przeglad-wylacznikow-pradu')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeglad-wylacznikow-pradu'
+        >Przegląd i konserwację przeciwpożarowych wyłączników prądu</a
+      >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych'
+        >Przegląd drzwi i bram przeciwpożarowych (wyposażone w system
+        sterowania)</a
+      >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe'
+        >Oznakowanie obiektów znakami ewakuacyjnymi i przeciwpożarowymi</a
+      >
+      <a
+        class={pathname.startsWith('/uslugi/przeprowadzenie-prob-ewakuacji')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeprowadzenie-prob-ewakuacji'
+        >Przeprowadzanie próbnych ewakuacji</a
+      >
+      <a
+        class={pathname.startsWith('/uslugi/opracowanie-planow-ewakuacyjnych')
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/opracowanie-planow-ewakuacyjnych'
+        >Opracowanie planów ewakuacyjnych</a
+      >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/nadzor-nad-bezpieczenstwem-pozarowym',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/nadzor-nad-bezpieczenstwem-pozarowym'
+        >Nadzór nad bezpieczeństwem pożarowym o</a
+      >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/wykonanie-zabepieczenia-przeciwpozarowego',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/wykonanie-zabepieczenia-przeciwpozarowego'
+        >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
+        instalacyjnych przez ściany i stropy oddzielenia przeciwpożaroweg</a
+      >
+    </div>
   </div>
 </aside>
 
@@ -177,16 +150,19 @@ const { pathname } = Astro.url;
     margin-bottom: 20px;
     align-self: flex-start;
   }
-  .sidebar-item {
-    list-style: none;
-    text-transform: uppercase;
-    padding: 10px 5px;
-    text-align: left;
-    font-size: 0.8rem;
-    font-family: var(--roboto-font);
+
+  .sidebar-lists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
   }
   .sidebar-link {
+    font-family: var(--roboto-font);
     color: var(--base-gold);
+    padding: 10px 10px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
   }
   /* .sidebar-link-active {
     background-color: var(--base-red);
