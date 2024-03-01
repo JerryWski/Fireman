@@ -65,27 +65,27 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm9.webp",
     "title": "Przegląd drzwi i bram przeciwpożarowych",
     "text": "Oprócz oceny ogólnego stanu bramy pod względem mechanicznych uszkodzeń, przegląd uwzględnia także takie aspekty jak stopień zabrudzenia czujników i ich prawidłowe funkcjonowanie.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych"
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
-    "title": "Oznakowanie obiektów znakami ewakuacyjnymi",
+    "img": "/service-sm10.webp",
+    "title": "Oznakowanie obiektów znakami ewakuacyjnymi i ppoż.",
     "text": "Działania zabezpieczające przed zagrożeniem pożarowym obejmują m.in. właściwe oznaczenie drogi ewakuacyjnej, oznakowanie wyjść ewakuacyjnych",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe"
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm11.webp",
     "title": "Przeprowadzanie próbnych ewakuacji",
     "text": "Oferujemy wsparcie w realizacji wszystkich wymogów prawnych dotyczących ewakuacji budynku.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/przeprowadzenie-prob-ewakuacji"
   },
   {
     "icon": "double-arrow",

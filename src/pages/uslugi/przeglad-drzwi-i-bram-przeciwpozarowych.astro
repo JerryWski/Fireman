@@ -1,0 +1,79 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service9 from '../../assets/service-9.webp';
+---
+
+<Layout title='Przegląd i konserwacja hydrantów oraz węży hydrantowych'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych'
+          title2='Przegląd drzwi i bram przeciwpożarowych'
+        />
+        <HeadingsForSection
+          heading='Przegląd drzwi i bram przeciwpożarowych (wyposażone w system sterowania)'
+        />
+        <p class='description'>
+          Drzwi przeciwpożarowe służą jako bariera, chroniąca przed
+          rozprzestrzenianiem się dymu, ognia lub wysokiej temperatury między
+          pomieszczeniami. Aby zapewnić ich stałą efektywność, regularne
+          kontrole są niezbędne.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service9}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Przegląd drzwi i bram przeciwpożarowych'
+      heading='Przegląd drzwi i bram przeciwpożarowych (wyposażone w system sterowania)'
+      content='Eksperci w dziedzinie zabezpieczeń przeciwpożarowych przeprowadzają inspekcje i serwis drzwi oraz bram przeciwpożarowych. Nasza firma również oferuje te usługi, chroniąc budynki prywatne, firmowe i publiczne przed pożarem. Po wykonaniu przeglądu tworzy się protokół, który dokumentuje przeprowadzone działania i ocenia stan techniczny drzwi.'
+      legalHeading='Drzwi ppoż. - według prawa'
+      legalContent='W Rozporządzeniu Ministra Infrastruktury w sprawie warunków technicznych, jakim powinny odpowiadać budynki i ich usytuowanie widnieje informacja, że powierzchnie, które oddzielają pomieszczenia w ramach ochrony ppoż., powinny być wykonane z materiałów niepalnych, a otwory, które się w nich znajdują – zamykane za pomocą drzwi przeciwpożarowych. Konieczność stosowania tego typu elementów w różnych budynkach jest wymagana w świetle prawa, chociaż wiele osób nie zdaje sobie z tego sprawy. Drzwi ppoż. powinny być zamykane w celu zapewnienia wymaganego poziomu ochrony pożarowej danego obiektu. Z kolei w trakcie ewakuacji na wyznaczonej do tego drodze drzwi powinny być otwarte, by zapewnić przebywającym we wnętrzu osobom sprawne i bezpieczne opuszczenie budynku, a straży pożarnej i innym służbom ratunkowym – odpowiednią akcję ratunkowo-gaśniczą. Do ewakuacji zabrania się stosowania drzwi obrotowych i podnoszonych.'
+      legalHeadingTwo='Przegląd bram przeciwpożarowych'
+      legalContentTwo='Bramy przeciwpożarowe dostępne są w różnorodnych konstrukcjach, co wynika z metody ich zamykania i dostępnego miejsca w danym obiekcie. Do rodzajów tych bram należą modele przesuwne, jedno- i wieloskrzydłowe, opuszczane, rozsuwane, kurtyny elastyczne, rolowane oraz segmentowe. W ramach przeglądu sprawdza się nie tylko ogólny stan techniczny bramy pod kątem uszkodzeń mechanicznych, ale również takie aspekty jak: czystość i działanie czujek, efektywność sygnalizatorów optyczno-akustycznych, płynność ruchów bramy, stan elementów jak rolki czy linki naprężające oraz sprawność otwierania drzwi ewakuacyjnych i kondycję uszczelki pęczniejącej. Proces przeglądu obejmuje także testy z użyciem czujki dymu w komorze detekcyjnej, aby upewnić się, że brama prawidłowo reaguje na dym i natychmiast się zamyka.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
+</style>
