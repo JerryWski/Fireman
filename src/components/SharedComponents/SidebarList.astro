@@ -1,6 +1,6 @@
 ---
 // const currentPath = Astro.url.pathname;
-const {pathname} = Astro.url
+const { pathname } = Astro.url;
 ---
 
 <aside class='sidebar-section'>
@@ -9,14 +9,15 @@ const {pathname} = Astro.url
     <ul class='sidebar-lists'>
       <li class='sidebar-item'>
         <a
-          class={pathname.includes('/uslugi/instrukcja-bezpieczenstwa-pozarowego')
+          class={pathname.includes(
+            '/uslugi/instrukcja-bezpieczenstwa-pozarowego',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
-          >
-          Opracowanie Instrukcji Bezpieczeństwa Pożarowego
-          </a
         >
+          Opracowanie Instrukcji Bezpieczeństwa Pożarowego
+        </a>
       </li>
       <li class='sidebar-item'>
         <a
@@ -39,7 +40,9 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/przygotowanie-obiektow-do-odbioru')
+          class={pathname.startsWith(
+            '/uslugi/przygotowanie-obiektow-do-odbioru',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/przygotowanie-obiektow-do-odbioru'
@@ -58,7 +61,9 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/kontrola-hydrantow-i-wezy-hydrantowych')
+          class={pathname.startsWith(
+            '/uslugi/kontrola-hydrantow-i-wezy-hydrantowych',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/kontrola-hydrantow-i-wezy-hydrantowych'
@@ -67,7 +72,9 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/przeglad-oswietlenia-ewakuacyjnego')
+          class={pathname.startsWith(
+            '/uslugi/przeglad-oswietlenia-ewakuacyjnego',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/przeglad-oswietlenia-ewakuacyjnego'
@@ -85,7 +92,9 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych')
+          class={pathname.startsWith(
+            '/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/przeglad-drzwi-i-bram-przeciwpozarowych'
@@ -95,7 +104,9 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe')
+          class={pathname.startsWith(
+            '/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/znaki-ewakuacyjne-i-przeciwpozarowe'
@@ -107,7 +118,8 @@ const {pathname} = Astro.url
           class={pathname.startsWith('/uslugi/przeprowadzenie-prob-ewakuacji')
             ? 'sidebar-link-active'
             : 'sidebar-link'}
-          href='/uslugi/przeprowadzenie-prob-ewakuacji'>Przeprowadzanie próbnych ewakuacji</a
+          href='/uslugi/przeprowadzenie-prob-ewakuacji'
+          >Przeprowadzanie próbnych ewakuacji</a
         >
       </li>
       <li class='sidebar-item'>
@@ -121,12 +133,13 @@ const {pathname} = Astro.url
       </li>
       <li class='sidebar-item'>
         <a
-          class={pathname.startsWith('/uslugi/sdsd')
+          class={pathname.startsWith(
+            '/uslugi/nadzor-nad-bezpieczenstwem-pozarowym',
+          )
             ? 'sidebar-link-active'
             : 'sidebar-link'}
-          href='/uslugi/zabezpieczenie-przejsc-przepustow'
-          >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
-          instalacyjnych przez ściany i stropy oddzielenia przeciwpożarowego</a
+          href='/uslugi/nadzor-bad-bezpieczenstwem-pozarowym'
+          >Nadzór nad bezpieczeństwem pożarowym o</a
         >
       </li>
       <li class='sidebar-item'>
@@ -135,7 +148,8 @@ const {pathname} = Astro.url
             ? 'sidebar-link-active'
             : 'sidebar-link'}
           href='/uslugi/nadzor-bezpieczenstwo-pozarowe'
-          >Nadzór nad bezpieczeństwem pożarowym</a
+          >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
+          instalacyjnych przez ściany i stropy oddzielenia przeciwpożaroweg</a
         >
       </li>
     </ul>

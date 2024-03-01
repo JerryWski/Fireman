@@ -1,0 +1,76 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+import service13 from '../../assets/service-13.webp';
+---
+
+<Layout title='Nadzór nad bezpieczeństwem pożarowym'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/nadzor-nad-bezpieczenstwem-pozarowym'
+          title2='Nadzór nad bezpieczeństwem pożarowym'
+        />
+        <HeadingsForSection
+          heading='Nadzór nad bezpieczeństwem pożarowym'
+        />
+        <p class='description'>
+          Nadzorowanie bezpieczeństwa przeciwpożarowego obiektu obejmuje kompleksowe zadania związane z ochroną przeciwpożarową.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service13}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Nadzór nad bezpieczeństwem pożarowym'
+      heading='Nadzór PPOŻ?'
+      content='Właściciel lub zarządca obiektu jest zobowiązany do przestrzegania norm przeciwpożarowych. Jednakże, działania określone w prawie mogą być realizowane wyłącznie przez osoby posiadające właściwą wiedzę i wymagane kwalifikacje. Nadzór nad przestrzeganiem tych przepisów może być powierzony zewnętrznym specjalistom, zgodnie z odpowiednimi porozumieniami.'
+      legalHeading='Czym jest stały nadzór PPOŻ na obiektem?'
+      legalContent='Zarządzanie bezpieczeństwem przeciwpożarowym obiektu obejmuje kompleksowe zadania związane z ochroną przeciwpożarową. Do tych zadań zalicza się zapewnienie zgodności z obowiązującymi przepisami prawnymi, utrzymanie aktualnej dokumentacji oraz dbałość o bezpieczeństwo osób korzystających z budynku. Działania te są realizowane poprzez przeprowadzanie audytów, organizowanie odpowiednich szkoleń, regularne przeglądy i konserwacje systemów przeciwpożarowych, jak również przez współpracę z odpowiednimi instytucjami.'
+      legalHeadingTwo='Nadzór PPOŻ - Nam możesz zaufać'
+      legalContentTwo='Nasze działania w obszarze nadzoru przeciwpożarowego są realizowane z najwyższą starannością, wyłącznie przez osoby z odpowiednimi kwalifikacjami. W skład naszego zespołu wchodzą aktywni członkowie Państwowej Straży Pożarnej. Zapewniamy stałe wsparcie w zakresie nadzoru przeciwpożarowego, a ponadto oferujemy usługi jednorazowe dotyczące pożarnictwa, bezpieczeństwa oraz higieny pracy. Realizujemy fachowe usługi przeciwpożarowe, w tym przeprowadzanie audytów, tworzenie instrukcji bezpieczeństwa pożarowego oraz dokumentacji operacyjnej. Dodatkowo przygotowujemy obiekty do kontroli przez Państwową Straż Pożarną, opracowujemy plany ewakuacyjne i organizujemy ćwiczenia ewakuacyjne.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
+</style>

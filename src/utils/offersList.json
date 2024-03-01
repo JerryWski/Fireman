@@ -97,18 +97,18 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
-    "title": "Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów instalacyjnych...",
-    "text": "Plany ewakuacyjne są szczególnie ważne w przypadku publicznych i niepublicznych szkół czy placówek, a także muzeów — co wynika z odrębnych przepisów prawnych.",
+    "img": "/service-sm13.webp",
+    "title": "Nadzór nad bezpieczeństwem pożarowym",
+    "text": "Nadzorowanie bezpieczeństwa przeciwpożarowego obiektu obejmuje kompleksowe zadania związane z ochroną przeciwpożarową.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/nadzor-nad-bezpieczenstwem-pozarowym"
   },
   {
     "icon": "double-arrow",
     "img": "/offer1.webp",
-    "title": "Nadzór nad bezpieczeństwem pożarowym",
-    "text": "Nadzorowanie bezpieczeństwa przeciwpożarowego obiektu obejmuje kompleksowe zadania związane z ochroną przeciwpożarową.",
+    "title": "Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów instalacyjnych...",
+    "text": "Plany ewakuacyjne są szczególnie ważne w przypadku publicznych i niepublicznych szkół czy placówek, a także muzeów — co wynika z odrębnych przepisów prawnych.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/nadzor-nad-bezpieczenstwem-pozarowym"
   }
 ]
