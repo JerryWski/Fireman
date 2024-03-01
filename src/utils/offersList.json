@@ -89,11 +89,11 @@
   },
   {
     "icon": "double-arrow",
-    "img": "/offer1.webp",
+    "img": "/service-sm12.webp",
     "title": "Opracowanie planów ewakuacyjnych",
     "text": "Plany ewakuacyjne są szczególnie ważne w przypadku publicznych i niepublicznych szkół czy placówek, a także muzeów — co wynika z odrębnych przepisów prawnych.",
     "link": "Dowiedź się więcej",
-    "href":"instrukcja-bezpieczenstwa-pozarowego"
+    "href":"/uslugi/opracowanie-planow-ewakuacyjnych"
   },
   {
     "icon": "double-arrow",
