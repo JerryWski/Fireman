@@ -7,7 +7,7 @@ import CtaSection from './CtaSection.astro';
 ---
 
 <section class='steps-section'>
-  <h3 class='steps-overtext'>Doświadczenie</h3>
+  <h3 class='steps-overtext'>Jak pracujemy?</h3>
   <h2 class='steps-title'>
     Współpraca z klientem - od konsultacji do realizacji
   </h2>
@@ -19,19 +19,19 @@ import CtaSection from './CtaSection.astro';
 
   <div class='cards-wrapper'>
     <StepsCard
-      title='1. W pierwszym kroku, zachęcamy do kontaktu z naszą firmą,specjalizującą się w bezpieczeństwie pracy i ochronie przeciwpożarowej'
+      title='1. W pierwszym kroku, zachęcamy do kontaktu z naszą firmą'
       description='Jesteśmy zawsze gotowi, by odpowiedzieć na Państwa pytania. Oferujemy indywidualne podejście, aby dokładnie zrozumieć potrzeby i wymagania każdego klienta.'
       imgSrc={step1}
       alt='contact phone'
     />
     <StepsCard
-      title='2. Następnie, przejdziemy do omówienia naszej oferty,która obejmuje szeroki zakres usług  z zakresu bezpieczeństwa pracy i ochrony przeciwpożarowej'
-      description='Dzięki naszemu profesjonalnemu doradztwu, klienci otrzymują nie tylko informacje o dostępnych opcjach, ale także rekomendacje dostosowane do specyfiki ich działalności, co gwarantuje zgodność z obowiązującymi przepisami'
+      title='2. Następnie, przejdziemy do omówienia naszej oferty'
+      description='Klienci otrzymują nie tylko informacje o dostępnych opcjach, ale także rekomendacje dostosowane do specyfiki ich działalności, co gwarantuje zgodność z obowiązującymi przepisami'
       imgSrc={step2}
       alt='engineers papers and pen'
     />
     <StepsCard
-      title='3. W końcowym etapie realizujemy usługę, zapewniając wysoką jakość wykonania oraz przestrzeganie wszelkich norm i standardów bezpieczeństwa'
+      title='3. W końcowym etapie realizujemy usługę, zapewniając wysoką jakość wykonania'
       description='Realizujemy projekt od A do Z, dbając o każdy, nawet najmniejszy detal, aby zapewnić Państwu spokój i bezpieczeństwo.'
       imgSrc={step3}
       alt='planning services with extinguisher'
@@ -54,7 +54,7 @@ import CtaSection from './CtaSection.astro';
     color: var(--base-gold);
   }
   .steps-title {
-    font-size: clamp(2rem, 2vw, 3rem);
+    font-size: clamp(1.5rem, 2vw, 3rem);
     color: var(--base-black);
     font-family: var(--main-font);
     margin-top: 10px;
@@ -65,6 +65,7 @@ import CtaSection from './CtaSection.astro';
   .steps-text {
     font-family: var(--main-font);
     line-height: 26px;
+    font-size: 1rem;
     color: var(--sub-black);
     padding-bottom: 20px;
   }

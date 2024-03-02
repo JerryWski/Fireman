@@ -2,27 +2,41 @@
 import Layout from '../layouts/Layout.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+import { Icon } from 'astro-icon/components';
 ---
 
-<Layout title='Cennik naszych usług przeciwpożarowych' >
+<Layout title='Cennik naszych usług przeciwpożarowych'>
+  <main>
     <div class='prices-welcome'>
-        <div>
-          <HeadersLinks
-            href1='/'
-            title1='Strona Główna'
-            href2='/uslugi'
-            title2='Cennik'
-          />
-          <HeadingsForSection heading='Przygotowaliśmy dla Państwa atrakcyjne ceny' />
-          <p class='prices-description'>
-            Stworzylismy prosty cennik usług przeciwpożarowych, by każdy klient znał koszt ochrony przed ogniem.
-          </p>
-        </div>
+      <div>
+        <HeadersLinks
+          href1='/'
+          title1='Strona Główna'
+          href2='/uslugi'
+          title2='Cennik'
+        />
+        <HeadingsForSection
+          heading='Przygotowaliśmy dla Państwa atrakcyjne ceny'
+        />
+        <p class='prices-description'>
+          Stworzylismy prosty cennik usług przeciwpożarowych, by każdy klient
+          znał koszt ochrony przed ogniem.
+        </p>
       </div>
+    </div>
+
+    <section>
+        <p class='download-text'>
+            <a href="/cennik.pdf" download="/cennik.pdf">(Ściągnij cennik na swój telefon)
+              <Icon name="arrow-down" width={20} />
+            </a>
+          </p>
+    </section>
+  </main>
 </Layout>
 
 <style>
-.prices-welcome {
+  .prices-welcome {
     background-color: rgb(206, 110, 102);
     background-image: url('/hero-fireman2-mb.webp');
     background-blend-mode: multiply;
@@ -41,5 +55,13 @@ import HeadingsForSection from '../layouts/HeadingsForSection.astro';
     color: var(--base-wh);
     font-family: var(--roboto-font);
     line-height: 27px;
+  }
+  @media (min-width: 900px) {
+    .prices-welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url(/hero-fireman2.webp);
+    }
   }
 </style>
