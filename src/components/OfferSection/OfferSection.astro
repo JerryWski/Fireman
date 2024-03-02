@@ -46,7 +46,7 @@ import { Icon } from "astro-icon/components";
       </p>
       <a class='more-info' href='/o-firmie#about'> Dowiedz się więcej <Icon name="double-arrow"/></a>
     </div>
-    <h2 class='heading'>Sprawdź naszą <a href="/uslugi">OFERTĘ!</a></h2>
+    <h2 class='heading two'>Sprawdź naszą <a href="/uslugi">OFERTĘ!</a></h2>
   </div>
 </section>
 
@@ -68,6 +68,7 @@ import { Icon } from "astro-icon/components";
     align-items: center;
   }
   .heading {
+    
     font-size: clamp(2rem, 2vw, 3rem);
     color: var(--base-wh);
     font-family: var(--main-font);
@@ -85,8 +86,10 @@ import { Icon } from "astro-icon/components";
   h2.heading:nth-child(5) {
     border: 3px solid white;
     text-align: center;
+    text-transform: uppercase;
     font-size: clamp(1.8rem, 2vw, 3rem);
-    padding: 10px 20px;
+    padding: 10px 50px;
+    clip-path: polygon(19% 0, 100% 0, 82% 100%, 0 100%);
   }
   .heading a:hover {
     color: var(--base-wh);
