@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
 import { Icon } from 'astro-icon/components';
+import BorderLine from '../components/SharedComponents/BorderLine.astro';
+import PriceListTable from '../components/PriceListSubPage/PriceListTable.astro';
 ---
 
 <Layout title='Cennik naszych usług przeciwpożarowych'>
@@ -15,9 +17,7 @@ import { Icon } from 'astro-icon/components';
           href2='/uslugi'
           title2='Cennik'
         />
-        <HeadingsForSection
-          heading='Przygotowaliśmy dla Państwa atrakcyjne ceny'
-        />
+        <HeadingsForSection heading='Cennik naszych usług' />
         <p class='prices-description'>
           Stworzylismy prosty cennik usług przeciwpożarowych, by każdy klient
           znał koszt ochrony przed ogniem.
@@ -25,12 +25,19 @@ import { Icon } from 'astro-icon/components';
       </div>
     </div>
 
-    <section>
-        <p class='download-text'>
-            <a href="/cennik.pdf" download="/cennik.pdf">(Ściągnij cennik na swój telefon)
-              <Icon name="arrow-down" width={20} />
-            </a>
-          </p>
+    <section class='prices-section'>
+      <div class='border'>
+        <BorderLine />
+      </div>
+      <h2>Przygotowaliśmy dla Państwa Cennik usług firmy MR-POŻ</h2>
+      <p>
+        Poniżej przedstawiamy zakres usług wraz z wyceną. Cennik ma charakter
+        poglądowy, ponieważ na koszt usługi ma wpływ zakres podjętej współpracy.
+      </p>
+      <!-- <h3>Zapraszamy do kontaktu</h3> -->
+
+      <PriceListTable />
+
     </section>
   </main>
 </Layout>
@@ -56,6 +63,19 @@ import { Icon } from 'astro-icon/components';
     font-family: var(--roboto-font);
     line-height: 27px;
   }
+  .border {
+    margin-left: -20px;
+  }
+  .prices-section {
+    padding: 20px;
+  }
+  .prices-section h2,
+  .prices-section p {
+    margin-top: 20px;
+    font-family: var(--main-font);
+  }
+  
+
   @media (min-width: 900px) {
     .prices-welcome {
       flex-direction: row;
@@ -63,5 +83,6 @@ import { Icon } from 'astro-icon/components';
       background-position: center -150px;
       background-image: url(/hero-fireman2.webp);
     }
+    
   }
 </style>
