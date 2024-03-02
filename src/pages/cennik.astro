@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeadersLinks from '../components/SharedComponents/HeadersLinks';
+import HeadingsForSection from '../layouts/HeadingsForSection.astro';
+---
+
+<Layout title='Cennik naszych usług przeciwpożarowych' >
+    <div class='prices-welcome'>
+        <div>
+          <HeadersLinks
+            href1='/'
+            title1='Strona Główna'
+            href2='/uslugi'
+            title2='Cennik'
+          />
+          <HeadingsForSection heading='Przygotowaliśmy dla Państwa atrakcyjne ceny' />
+          <p class='prices-description'>
+            Stworzylismy prosty cennik usług przeciwpożarowych, by każdy klient znał koszt ochrony przed ogniem.
+          </p>
+        </div>
+      </div>
+</Layout>
+
+<style>
+.prices-welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .prices-description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+  }
+</style>

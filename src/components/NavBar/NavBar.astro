@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname
     </a>
     <div aria-label='primary nav' class='nav-links'>
       <a class={currentPath === '/o-firmie' ? 'active-link' : 'link'} href='/o-firmie'> O firmie</a>
-      <a class={currentPath === '/uslugi' ? 'active-link' : 'link'} href='/uslugi'> Oferta</a>
+      <a class={currentPath === '/uslugi' ? 'active-link' : 'link'} href='/uslugi'> Usługi</a>
       <a class={currentPath === '/cennik' ? 'active-link' : 'link'}  href='/cennik'> Cennik</a>
       <a class={currentPath === '/kontakt' ? 'active-link' : 'link'}  href='/kontakt'> Kontakt</a>
     </div>
@@ -38,7 +38,7 @@ const currentPath = Astro.url.pathname
     <div class='nav-links-mobile'>
       <ul>
         <li><a class='link-mobile' href='/o-firmie'>O firmie</a></li>
-        <li><a class='link-mobile' href='/uslugi'> Oferta</a></li>
+        <li><a class='link-mobile' href='/uslugi'> Usługi</a></li>
         <li><a class='link-mobile' href='/cennik'> Cennik</a></li>
         <li><a class='link-mobile' href='/kontakt'> Kontakt</a></li>
       </ul>
@@ -173,6 +173,9 @@ const currentPath = Astro.url.pathname
     margin: auto;
     font-size: 1.2rem;
     color: var(--base-wh);
+    text-transform: uppercase;
+  }
+  .link {
     text-transform: uppercase;
   }
   .link:after,
