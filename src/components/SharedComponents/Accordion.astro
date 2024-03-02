@@ -210,39 +210,23 @@
         text-align: center;
     }
   }
-  /* .accordion-trigger::before,
-  .accordion-trigger::after {
-    position: absolute;
-    right: 1em;
-    content: '';
-    display: block;
-    width: 1em;
-    height: 5px;
-    background: currentcolor;
-    transition: transform 500ms;
-  }
-
-  .accordion-trigger::after {
-    rotate: 90deg;
-    translate: 0 -1.5em;
-  }
-
-  .accordion-trigger[aria-expanded='true']::before,
-  .accordion-trigger[aria-expanded='true']::after {
-    transform: rotate(45deg);
-  } */
 </style>
 
 <script>
   const accordion = document.querySelector('.accordion');
 
-  accordion.addEventListener('click', (e) => {
-    const activePanel = e.target.closest('.accordion-panel');
-    if (!activePanel) return;
-    toggleAccordion(activePanel);
-  });
+  if (accordion) {
+    accordion.addEventListener('click', (e) => {
+      const target = e.target as Element;
+      const activePanel = target.closest('.accordion-panel');
+      if (!activePanel) return;
+      toggleAccordion(activePanel as HTMLElement);
+    });
+  }
 
-  function toggleAccordion(panelToActivate) {
+  function toggleAccordion(panelToActivate: { querySelector: (arg0: string) => {
+getAttribute(arg0: string): unknown; (): any; new(): any; setAttribute: { (arg0: string, arg1: boolean): void; new(): any; }; 
+}; }) {
     const activeButton = panelToActivate.querySelector('button');
     const activePanel = panelToActivate.querySelector('.accordion-content');
     const activePanelIsOpened = activeButton.getAttribute('aria-expanded');
