@@ -1,61 +1,69 @@
 ---
 import StepsCard from './StepsCard.astro';
-import step1 from '../../assets/step1.webp';
+import step1 from '../../assets/step4.webp';
 import step2 from '../../assets/step2.webp';
 import step3 from '../../assets/step3.webp';
 import CtaSection from './CtaSection.astro';
 ---
 
 <section class='steps-section'>
-  <h3 class='steps-overtext'>Jak pracujemy?</h3>
-  <h2 class='steps-title'>
-    Współpraca z klientem - od konsultacji do realizacji
-  </h2>
-  <p class='steps-text'>
-    Proces współpracy z naszym klientem rozpoczyna się od momentu pierwszego
-    kontaktu. Zobacz w jaki spsób nasza firma realizuje zadania, aby w pełni
-    spełnić oczekiwania naszych Klientów.
-  </p>
-
-  <div class='cards-wrapper'>
-    <StepsCard
-      title='1. W pierwszym kroku, zachęcamy do kontaktu z naszą firmą'
-      description='Jesteśmy zawsze gotowi, by odpowiedzieć na Państwa pytania. Oferujemy indywidualne podejście, aby dokładnie zrozumieć potrzeby i wymagania każdego klienta.'
-      imgSrc={step1}
-      alt='contact phone'
-    />
-    <StepsCard
-      title='2. Następnie, przejdziemy do omówienia naszej oferty'
-      description='Klienci otrzymują nie tylko informacje o dostępnych opcjach, ale także rekomendacje dostosowane do specyfiki ich działalności, co gwarantuje zgodność z obowiązującymi przepisami'
-      imgSrc={step2}
-      alt='engineers papers and pen'
-    />
-    <StepsCard
-      title='3. W końcowym etapie realizujemy usługę, zapewniając wysoką jakość wykonania'
-      description='Realizujemy projekt od A do Z, dbając o każdy, nawet najmniejszy detal, aby zapewnić Państwu spokój i bezpieczeństwo.'
-      imgSrc={step3}
-      alt='planning services with extinguisher'
-    />
-  </div>
-  <CtaSection />
+ 
+    <h3 class='steps-overtext'>Jak pracujemy?</h3>
+    <h2 class='steps-title'>
+      Współpraca z klientem - od konsultacji do realizacji
+    </h2>
+    <p class='steps-text'>
+      Proces współpracy z naszym klientem rozpoczyna się od momentu pierwszego
+      kontaktu, a kończy się na zadowoleniu klienta.
+    </p>
+    <div class='cards-wrapper'>
+      <StepsCard
+        title='1. W pierwszym kroku, zachęcamy do kontaktu z naszą firmą'
+        description='Jesteśmy zawsze gotowi, by odpowiedzieć na Państwa pytania. Oferujemy indywidualne podejście, aby dokładnie zrozumieć potrzeby i wymagania każdego klienta.'
+        imgSrc={step1}
+        alt='contact phone'
+      />
+      <StepsCard
+        title='2. Następnie, przejdziemy do omówienia naszej oferty'
+        description='Klienci otrzymują nie tylko informacje o dostępnych opcjach, ale także rekomendacje dostosowane do specyfiki ich działalności, co gwarantuje zgodność z obowiązującymi przepisami'
+        imgSrc={step2}
+        alt='engineers papers and pen'
+      />
+      <StepsCard
+        title='3. W końcowym etapie realizujemy usługę, zapewniając wysoką jakość wykonania'
+        description='Realizujemy projekt od A do Z, dbając o każdy, nawet najmniejszy detal, aby zapewnić Państwu spokój i bezpieczeństwo.'
+        imgSrc={step3}
+        alt='planning services with extinguisher'
+      />
+    </div>
+    <CtaSection />
+  
 </section>
 
 <style>
   .steps-section {
     clip-path: polygon(38% 2%, 100% 0, 100% 100%, 0 100%, 0 0);
     padding: 20px 20px 80px 20px;
-    background-color: rgb(242, 236, 236);
+    background-image: url('/bg-2.jpg');
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-color: rgba(39, 40, 55, 0.9);
   }
+ 
   .steps-overtext {
     font-size: clamp(1rem, 1.5vw, 2rem);
     font-family: var(--main-font);
     letter-spacing: 2px;
     margin-top: 90px;
-    color: var(--base-gold);
+    color: rgb(212, 160, 5);
   }
   .steps-title {
     font-size: clamp(1.5rem, 2vw, 3rem);
-    color: var(--base-black);
+    color: var(--base-wh);
     font-family: var(--main-font);
     margin-top: 10px;
     padding-bottom: 10px;
@@ -66,7 +74,7 @@ import CtaSection from './CtaSection.astro';
     font-family: var(--main-font);
     line-height: 26px;
     font-size: 1rem;
-    color: var(--sub-black);
+    color: rgb(212, 160, 5);
     padding-bottom: 20px;
   }
   .cards-wrapper {
@@ -76,18 +84,17 @@ import CtaSection from './CtaSection.astro';
     position: relative;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
-  @media(min-width:900px) {
+  @media (min-width: 900px) {
     .steps-section {
-        clip-path: polygon(28% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      clip-path: polygon(28% 5%, 100% 0, 100% 100%, 0 100%, 0 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .cards-wrapper {
-        gap: 20px;
-        justify-items: center;
+      gap: 20px;
+      justify-items: center;
     }
   }
-  
 </style>
