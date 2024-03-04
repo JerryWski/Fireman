@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import HeadersLinks from '../components/SharedComponents/HeadersLinks';
 import HeadingsForSection from '../layouts/HeadingsForSection.astro';
 import { Icon } from 'astro-icon/components';
+import { Image } from 'astro:assets';
+import bgImg from '../assets/hero-fireman4.webp';
 ---
 
 <Layout title='Cennik naszych usług przeciwpożarowych'>
@@ -29,39 +31,43 @@ import { Icon } from 'astro-icon/components';
           <h1>Kontakt</h1>
           <h2>Jesteśmy dla Państwa dostępni od pon. do pt. w godzinach 9-18</h2>
           <p>
-            Ze wzlędu na charakter naszej pracy, możemy oddzwonić w późniejszym
-            terminie
+            Ze wzlędu na charakter naszej pracy, możemy odzezwać się w
+            późniejszym terminie
           </p>
           <div class='contact-icons'>
             <a href='mailto:sdsd@wp.pl'>
               <Icon name='mail' width={24} height={24} />
-              mr-poz@wp.pl</a
+              e-mail: mr-poz@wp.pl</a
             >
 
             <a href='tel:+48666305512'>
               <Icon name='phone' width={24} height={24} />
-              666 305 512</a
+              kom: 666 305 512</a
             >
           </div>
 
-          <h3>Dane firmy:</h3>
-          <h4>MR - POŻ Usługi Przeciwpożarowe</h4>
-          <h4>Mateusz Rudaś</h4>
-          <p>10-376 Nikielkowo, ul. Flaminga 28</p>
-          <p>NIP 74417570</p>
-          <p>REGON 521407675</p>
-          <h3>Zapraszamy</h3>
+          <div class='contact-company-info'>
+            <h3>Dane firmy:</h3>
+            <h4>MR - POŻ Usługi Przeciwpożarowe</h4>
+            <h4>Mateusz Rudaś</h4>
+            <p>10-376 Nikielkowo, ul. Flaminga 28</p>
+            <p>NIP 74417570</p>
+            <p>REGON 521407675</p>
+            <h3>Zapraszamy!</h3>
+          </div>
         </div>
-        <div class='contact-right-wrapper'></div>
+        <div class='contact-right-wrapper'>
+          <Image class='contact-img' src={bgImg} alt={'fireman'} />
+        </div>
       </div>
     </section>
   </main>
 </Layout>
 
 <style>
-    main {
-        background-color: #f6f0f0;
-    }
+  main {
+    background-color: #f6f0f0;
+  }
   .contact-welcome {
     background-color: rgb(130, 62, 56);
     background-image: url('/hero-fireman3-mb.webp');
@@ -83,19 +89,17 @@ import { Icon } from 'astro-icon/components';
     line-height: 27px;
   }
   .contact-section {
-    /* background-color: #f6f0f0;
-    background-image: url('/bg-fireman.webp');
-    background-repeat: no-repeat;
-    background-size: cover; */
     padding: 20px;
   }
   .contact-container {
+    display: flex;
+    flex-direction: column;
     margin-top: 60px;
     font-family: var(--roboto-font);
   }
   .contact-left-wrapper h1 {
     font-family: var(--main-font);
-    font-size: 2.5rem;
+    font-size: 4.5rem;
     margin-bottom: 20px;
     color: var(--base-black);
     letter-spacing: 1px;
@@ -103,11 +107,13 @@ import { Icon } from 'astro-icon/components';
   }
   .contact-left-wrapper h2 {
     margin-bottom: 25px;
-    font-size: clamp(1rem, 1.2vw, 1.3rem);
+    font-size: clamp(1.2rem, 1.6vw, 2rem);
     color: var(--base-gold);
   }
   .contact-left-wrapper > p:nth-child(3) {
     margin-bottom: 20px;
+    font-size: clamp(1rem,1.1vw,1.2rem);
+    
     color: var(--sub-black);
   }
   .contact-icons {
@@ -120,7 +126,44 @@ import { Icon } from 'astro-icon/components';
     display: flex;
     color: var(--sub-black);
     align-items: center;
+    font-size: clamp(1rem,1.2vw,1.3rem);
+    
     gap: 15px;
+  }
+  .contact-left-wrapper h3 {
+    margin-bottom: 10px;
+  }
+  .contact-company-info h3 {
+    color: var(--base-red);
+    font-size: clamp(1.2rem,1.5rem,2rem);
+   
+  }
+  .contact-company-info h4 {
+    margin-bottom: 5px;
+    line-height: normal;
+    font-size: clamp(1rem,1.2vw,1.6rem);
+    letter-spacing: 1px;
+  }
+  .contact-company-info p {
+    line-height: 36px;
+    font-size: clamp(1rem, 1vw, 1.3rem);
+    
+    color: var(--sub-black);
+  }
+  .contact-company-info > h3:nth-child(7) {
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .contact-right-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .contact-img {
+    object-fit: contain;
+    height: auto;
+    width: 90%;
   }
   @media (min-width: 900px) {
     .contact-welcome {
@@ -128,6 +171,23 @@ import { Icon } from 'astro-icon/components';
       padding: 120px 50px 120px 50px;
       background-position: center -150px;
       background-image: url('/hero-fireman3.webp');
+    }
+  }
+  @media (min-width: 650px) {
+    .contact-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 60px 40px 0 40px;
+      max-width: 1140px;
+      margin: 50px auto 0 auto;
+    }
+    .contact-left-wrapper {
+      width: 50%;
+    }
+    .contact-right-wrapper {
+      width: 50%;
     }
   }
 </style>
