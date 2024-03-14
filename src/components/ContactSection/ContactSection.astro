@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import FooterSection from '../FooterSection/FooterSection';
-import logo from '../../assets/logo2.webp';
+import logo1 from '../../assets/logo1-1.webp';
 import { Icon } from 'astro-icon/components';
 
 ---
@@ -9,7 +9,7 @@ import { Icon } from 'astro-icon/components';
 <footer class='contact-container'>
   <div>
     <div class="contact-logo">
-      <Image class='logo' src={logo} alt={'logo-icon'}/>
+      <Image class='logo' src={logo1} alt={'logo-icon'}/>
     </div>
     <ul class="contact-links">
       <li><Icon class='icon' name="arrow-right"  width={30} height={30} /><a href="/o-firmie">O firmie</a></li>
@@ -56,12 +56,14 @@ import { Icon } from 'astro-icon/components';
     align-items: center;
   }
   .contact-logo {
+    padding-left: 20px;
     margin-top: 20px;
     width: 200px;
+    margin-bottom: 40px;
   }
   .contact-logo .logo {
     width: 100%;
-    aspect-ratio: 1;
+    height: auto;
     object-fit: contain;
   }
   .contact-links {
@@ -109,8 +111,11 @@ import { Icon } from 'astro-icon/components';
       width: 100%;
     }
     .contact-logo {
-      width: 300px;
       margin-top: 0;
+    }
+    .contact-logo .logo {
+      width: 250px;
+  
     }
     .contact-socials-wrapper {
       margin-top: 0;

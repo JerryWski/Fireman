@@ -125,6 +125,15 @@ const { pathname } = Astro.url;
         >Wykonanie zabezpieczenia przeciwpożarowego przejść i przepustów
         instalacyjnych przez ściany i stropy oddzielenia przeciwpożaroweg</a
       >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/imprezy-masowe',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/imprezy-masowe#service'
+        >Zabezpieczenie imprez masowych</a
+      >
     </div>
   </div>
 </aside>

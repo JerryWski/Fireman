@@ -1,0 +1,62 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import service15 from '../../assets/service-15.webp';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+---
+
+<Layout title='Zabezpieczenie imprez masowych'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/imprezy-masowe'
+          title2='Zabezpieczenie imprez masowych'
+        />
+        <HeadingsForSection heading='Zabezpieczenie imprez masowych' />
+        <p class='description'>
+          Nasza firma oferuje ekspertyzę w planowaniu imprez, doradzając jak
+          spełnić normy przeciwpożarowe.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service15}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Zabezpieczenie imprez masowych'
+      heading='Zabezpieczenie imprez masowych w zakresie PPOŻ i pierwszej pomocy'
+      content='Organizator ma obowiązek zapewnić bezpieczeństwo na masowych wydarzeniach, zgodnie z ustawą i przepisami. Do odpowiedzialności należą również wójt, burmistrz, prezydent miasta, wojewoda, Policja, PSP, jednostki ochrony przeciwpożarowej, służby porządkowe na kolejach, służba zdrowia oraz, w razie potrzeby, inne służby i organy.'
+      legalHeading='Jak wygląda takie zabezpieczenie imprez masowych?'
+      legalContent=' Nasza firma oferuje usługi zabezpieczenia przeciwpożarowego z doświadczonymi strażakami, którzy pomogą dostosować obiekt do norm przeciwpożarowych podczas planowania imprez. Tworzymy także plany ochronne i instrukcje na wypadek pożaru. Zajmujemy się rozmieszczeniem gaśnic i innych środków bezpieczeństwa. Współpracujemy z PSP w celu zapewnienia maksymalnego bezpieczeństwa.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+  }
+</style>
