@@ -18,7 +18,7 @@ const FooterSection: React.FC = () => {
           </a>
           &nbsp; Wszelkie prawa zastrzeżone
         </p>
-        <a aria-label='privacy policy' className='privacy' href="/">Polityka Prywatności</a>
+        <a aria-label='privacy policy' className='privacy' href="/polityka-prywatnosci">Polityka Prywatności</a>
       </div>
     </>
   );
