@@ -25,10 +25,11 @@
       >
         <div>
           <p class='accordion-text'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
-            distinctio, accusantium dolorem corrupti quas, ipsum error eveniet
-            quisquam nisi inventore eligendi, consequatur deleniti temporibus?
-            Praesentium, blanditiis cupiditate! Molestiae, animi iure.
+            Koszty usługi są ustalane indywidualnie i zależą od zakresu
+            współpracy. Ceny zaczynają się od 5 zł za sztukę przy konserwacji
+            gaśnic, aż do większych kwot za bardziej kompleksowe usługi, takie
+            jak szkolenia pracowników czy przeglądy techniczne. Proszę
+            skontaktować się bezpośrednio w celu uzyskania szczegółowego cennika
           </p>
         </div>
       </div>
@@ -53,10 +54,10 @@
       >
         <div>
           <p class='accordion-text'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium
-            harum autem delectus mollitia ab assumenda nemo facilis ea aliquam
-            deleniti earum recusandae, eius, atque explicabo, expedita alias
-            laboriosam labore iste.
+            Tak, oferujemy szkolenia z zakresu ochrony przeciwpożarowej. Nasze
+            programy szkoleniowe są zgodne z obowiązującymi przepisami prawa i
+            mają na celu zwiększenie bezpieczeństwa użytkowników przestrzeni i
+            zakładów pracy
           </p>
         </div>
       </div>
@@ -82,8 +83,15 @@
       >
         <div>
           <p class='accordion-text'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
-            amet!
+            Opracowanie Instrukcji Bezpieczeństwa Pożarowego oferuje kluczowe
+            korzyści: zapewnia zgodność obiektu z wymaganiami ochrony
+            przeciwpożarowej, co jest niezbędne do zawiadomienia Państwowej
+            Straży Pożarnej i uzyskania pozwolenia na użytkowanie budynku.
+            Umożliwia kompleksową weryfikację stanu technicznego obiektu i
+            związanych z nim dokumentów, co gwarantuje bezpieczeństwo
+            użytkowników i ochronę mienia. Proces ten pomaga również uniknąć
+            ewentualnych sprzeciwów ze strony właściwych organów, co może
+            znacznie przyspieszyć proces wdrażania obiektu do użytkowania.
           </p>
         </div>
       </div>
@@ -109,9 +117,14 @@
       >
         <div>
           <p class='accordion-text'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nulla
-            possimus obcaecati hic cumque amet totam, labore placeat. Laudantium
-            consequatur expedita nihil ipsam at porro!
+            GPT Tak, przeprowadzamy roczne przeglądy i konserwacje hydrantów
+            oraz co 5 lat przegląd węży hydrantowych, zgodnie z rozporządzeniem
+            MSWiA. Celem tych działań jest upewnienie się, że hydranty są w
+            pełni funkcjonalne, odpowiednio oznakowane, mają kompletne
+            wyposażenie i że ciśnienie wody jest wystarczające do skutecznego
+            gaszenia pożarów. Ponadto, dokładnie sprawdzamy stan węży
+            hydrantowych, testując je pod maksymalnym ciśnieniem roboczym, co
+            zapewnia ich niezawodność w sytuacji zagrożenia.
           </p>
         </div>
       </div>
@@ -137,8 +150,8 @@
       >
         <div>
           <p class='accordion-text'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto,
-            amet!
+            Jesteśmy dostępni od poniedziałku do piątku w
+            godzinach 9:00-18:00. Zapraszamy do sekcji Kontakt
           </p>
         </div>
       </div>
@@ -206,8 +219,9 @@
     color: var(--sub-black);
   }
   @media (min-width: 900px) {
-    .wrapper h2, .wrapper p {
-        text-align: center;
+    .wrapper h2,
+    .wrapper p {
+      text-align: center;
     }
   }
 </style>
@@ -224,9 +238,14 @@
     });
   }
 
-  function toggleAccordion(panelToActivate: { querySelector: (arg0: string) => {
-getAttribute(arg0: string): unknown; (): any; new(): any; setAttribute: { (arg0: string, arg1: boolean): void; new(): any; }; 
-}; }) {
+  function toggleAccordion(panelToActivate: {
+    querySelector: (arg0: string) => {
+      getAttribute(arg0: string): unknown;
+      (): any;
+      new (): any;
+      setAttribute: { (arg0: string, arg1: boolean): void; new (): any };
+    };
+  }) {
     const activeButton = panelToActivate.querySelector('button');
     const activePanel = panelToActivate.querySelector('.accordion-content');
     const activePanelIsOpened = activeButton.getAttribute('aria-expanded');
