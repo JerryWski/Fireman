@@ -24,21 +24,6 @@ const {
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
-    <!-- Google Tag Manager -->
-    <!-- <script>
-      (function (w, d, s, l: any, i) {
-        w[l] = w[l] || [];
-        
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s) as HTMLScriptElement,
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode?.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-MGQJN2FR');
-    </script> -->
-    <!-- End Google Tag Manager -->
   </head>
   <body>
     <NavBar />
@@ -155,13 +140,20 @@ const {
   }
   .cc-nb-main-container {
     border: 3px solid var(--base-gold);
-    padding: 30px !important;
+    padding: 20px !important;
   }
   .termsfeed-com---nb .cc-nb-title {
     color: var(--base-black) !important;
+    font-size: 1rem !important;
+  }
+  .termsfeed-com---nb .cc-nb-text {
+    font-size: .7rem !important;
   }
   .cc-nb-okagree {
     background-color: var(--base-gold) !important;
+  }
+  .termsfeed-com---nb-simple {
+    max-width: 100% !important;
   }
   html {
     scroll-padding-top: 30px;
@@ -184,5 +176,10 @@ const {
     .active-link {
       font-size: clamp(0.9rem, 1vw, 1rem);
     }
+  }
+  @media (min-width: 900px) {
+    .termsfeed-com---nb-simple {
+    max-width: 50% !important;
+  }
   }
 </style>
