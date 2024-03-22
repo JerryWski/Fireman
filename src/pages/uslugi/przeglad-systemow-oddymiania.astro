@@ -1,0 +1,75 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
+import HeadersLinks from '../../components/SharedComponents/HeadersLinks';
+import service16 from '../../assets/service-16.webp';
+import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
+---
+
+<Layout title='Zabezpieczenie imprez masowych'>
+  <main>
+    <div class='welcome'>
+      <div>
+        <HeadersLinks
+          href1='/uslugi'
+          title1='Usługi'
+          href2='/uslugi/przeglad-systemow-oddymiania'
+          title2='Przegląd systemów oddymiania'
+        />
+        <HeadingsForSection heading='Przegląd systemów oddymiania' />
+        <p class='description'>
+          Przeprowadzamy inspekcje i serwis urządzeń przeciwpożarowych,
+          włączając w to utrzymanie systemów oddymiania.
+        </p>
+      </div>
+    </div>
+
+    <ServicesPage
+      imagePath={service16}
+      homeLink='/'
+      servicesLink='/uslugi/'
+      servicesText='Przegląd systemów oddymiania'
+      heading='Przegląd techniczny i czynności konserwacyjne'
+      content='Zgodnie z § 3 ust. 2 i ust. 3  Rozporządzenia MSWiA z dnia 7 czerwca 2010 r. w sprawie ochrony przeciwpożarowej budynków, innych obiektów budowlanych i terenów system oddymiania powinien być poddawany przeglądom technicznym i czynnościom konserwacyjnym w okresach ustalonych przez producenta, nie rzadziej jednak niż raz w roku.'
+      legalHeading='Urządzenia zapobiegające zadymieniu lub służące do usuwania dymu(system oddymiania)'
+      legalContent=' Zgodnie z § 245 Rozporządzenia Ministra Infrastruktury z dnia 12 kwietnia 2002 r. w sprawie warunków technicznych, jakim powinny odpowiadać budynki i ich usytuowanie klatki schodowe przeznaczone do ewakuacji ze strefy pożarowej: - ZL II w budynku niskim (N), - ZL I, ZL II, ZL III lub ZL V w budynku średniowysokim (SW), - PM o gęstości obciążenia ogniowego powyżej 500 MJ/m2 lub zawierającej pomieszczenie zagrożone wybuchem w budynku niskim (N) bądź średniowysokim (SW), powinny być obudowane i zamykane drzwiami dymoszczelnymi oraz wyposażone w urządzenia zapobiegające zadymieniu lub służące do usuwania dymu, uruchamiane samoczynnie za pomocą systemu wykrywania dymu.'
+      legalHeadingTwo='Prowadzimy przegląd na terenie całego województwa warmińsko-mazurskiego'
+      legalContentTwo='Przeglądy systemów oddymiania — żadna lokalizacja nie jest dla nas problemem. Napisz do nas, aby poznać więcej szczegółów.'
+    />
+  </main>
+</Layout>
+
+<style>
+  .welcome {
+    background-color: rgb(206, 110, 102);
+    background-image: url('/hero-fireman2-mb.webp');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px 70px 20px;
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 91%, 75% 100%, 0 93%);
+    gap: 20px;
+  }
+  .description {
+    color: var(--base-wh);
+    font-family: var(--roboto-font);
+    line-height: 27px;
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
+  }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
+</style>

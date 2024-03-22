@@ -134,6 +134,15 @@ const { pathname } = Astro.url;
         href='/uslugi/imprezy-masowe#service'
         >Zabezpieczenie imprez masowych</a
       >
+      <a
+        class={pathname.startsWith(
+          '/uslugi/przeglad-systemow-oddymiania',
+        )
+          ? 'sidebar-link-active'
+          : 'sidebar-link'}
+        href='/uslugi/przeglad-systemow-oddymiania'
+        >Przegląd systemów oddymiania</a
+      >
     </div>
   </div>
 </aside>

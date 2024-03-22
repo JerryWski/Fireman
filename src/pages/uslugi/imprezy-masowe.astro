@@ -59,4 +59,15 @@ import ServicesPage from '../../components/SharedComponents/ServicesPage.astro';
     line-height: 27px;
     font-size: clamp(0.7rem, 0.9rem, 1rem);
   }
+  @media (min-width: 900px) {
+    .welcome {
+      flex-direction: row;
+      padding: 120px 50px 120px 50px;
+      background-position: center -150px;
+      background-image: url('/hero-fireman2.webp');
+    }
+    .welcome div {
+      max-width: 960px;
+    }
+  }
 </style>

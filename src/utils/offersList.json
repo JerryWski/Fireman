@@ -118,5 +118,13 @@
     "text": "Nasza firma oferuje ekspertyzę w planowaniu imprez, doradzając jak spełnić normy przeciwpożarowe.",
     "link": "Dowiedź się więcej",
     "href": "/uslugi/imprezy-masowe"
+  },
+  {
+    "icon": "double-arrow",
+    "img": "/service-sm16.webp",
+    "title": "Przegląd systemów oddymiania",
+    "text": "Przeprowadzamy inspekcje i serwis urządzeń przeciwpożarowych, włączając w to utrzymanie systemów oddymiania.",
+    "link": "Dowiedź się więcej",
+    "href": "/uslugi/przeglad-systemow-oddymiania"
   }
 ]
