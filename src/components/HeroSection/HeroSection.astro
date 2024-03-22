@@ -4,17 +4,18 @@ import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
 
 <section class='welcome-container'>
   <div class='welcome-header'>
-    <HeadingsForSection heading="Profesjonalne usługi przeciwpożarowe i ochrona obiektów"/>
+    <HeadingsForSection
+      heading='Profesjonalne usługi przeciwpożarowe i ochrona obiektów'
+    />
     <!-- <h1 class='welcome-title'>Profesjonalna ochrona przeciwpożarowa i BHP</h1> -->
     <p class='welcome-description'>
       Zaufaj naszej firmie MR - POŻ i zyskaj fachową pomoc w zakresie ochrony
-      przeciwpożarowej oraz bezpieczeństwa i higieny pracy. Nasze usługi są
-      zgodne z aktualnymi przepisami i gwarantują rzetelność oraz terminowość
-      realizacji.
+      przeciwpożarowej. Nasze usługi są zgodne z aktualnymi przepisami i
+      gwarantują rzetelność oraz terminowość realizacji.
     </p>
     <div class='welcome-navigation'>
-      <a class='link about-us' href="/o-firmie">O Nas</a>
-      <a class='link contact-us' href="/kontakt">Skontaktuj się</a>
+      <a class='link about-us' href='/o-firmie'>O Nas</a>
+      <a class='link contact-us' href='/kontakt'>Skontaktuj się</a>
     </div>
   </div>
 </section>
@@ -67,10 +68,10 @@ import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
   }
 
   .about-us {
-    background-color:var(--base-gold);
+    background-color: var(--base-gold);
     outline: none;
     color: var(--base-wh);
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
   }
   .about-us:hover {
     color: var(--base-black);
@@ -80,10 +81,10 @@ import HeadingsForSection from '../../layouts/HeadingsForSection.astro';
   .contact-us {
     color: var(--base-black);
     background-color: var(--base-wh);
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
   }
   .contact-us:hover {
-    background-color:var(--base-gold);
+    background-color: var(--base-gold);
     color: var(--base-wh);
   }
   .welcome-image {
