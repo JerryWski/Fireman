@@ -17,7 +17,9 @@ import service1 from '../../assets/service-1-1.webp';
           href2='/uslugi/instrukcja-bezpieczenstwa-pozarowego'
           title2='Opracowanie instrukcji bezpieczeństwa pożarowego'
         />
-        <HeadingsForSection heading='Opracowanie Instrukcji Bezpieczeństwa Pożarowego' />
+        <HeadingsForSection
+          heading='Opracowanie Instrukcji Bezpieczeństwa Pożarowego'
+        />
         <p class='description'>
           Jeśli planujesz zakończyć inwestycję i rozpocząć korzystanie z
           obiektu, zachęcamy do kontaktu z nami.
@@ -30,7 +32,12 @@ import service1 from '../../assets/service-1-1.webp';
         <SidebarList />
       </div>
       <div class='service-container'>
-        <Image id="service"  class='service-img' src={service1} alt={'engineer planning'} />
+        <Image
+          id='service'
+          class='service-img'
+          src={service1}
+          alt={'engineer planning'}
+        />
         <div class='service-links'>
           <a aria-label='link to home page' href='/'>Strona Główna /</a>
           <a aria-label='link to previus page' href='/uslugi'>Usługi /</a>
@@ -50,43 +57,31 @@ import service1 from '../../assets/service-1-1.webp';
         <h3 class='service-heading'>Podstawa Prawna</h3>
         <span class='line'></span>
         <p class='service-text'>
-          Zgodnie z art. 56 ustawy z dnia 7 lipca 1994 roku Prawo Budowlane
-          (Dz.U. z 2020 r. poz. 1333) inwestor ubiegający się o pozwolenie na
-          użytkowanie obiektu budowlanego zobowiązany jest do zawiadomienia
-          Państwowej Inspekcji Sanitarnej i Państwowej Straży Pożarnej o
-          zakończeniu obiektu i zamiarze przystąpienia do jego użytkowania.
-          Zadaniem wyznaczonych organów jest zweryfikowanie zgodności wykonania
-          obiektu z projektem budowlanym. Obowiązek ten dotyczy także obiektów,
-          które nie są objęte obowiązkiem uzyskania pozwolenia na użytkowanie,
-          ale wymagają uzgodnienia pod względem ochrony przeciwpożarowej lub
-          wymagań higieniczno-zdrowotnych. Jeżeli w ciągu 14 dni od momentu
-          złożenia zawiadomienia stosowne organy nie zajmą stanowiska w sprawie,
-          jest to równoznaczne z niezgłoszeniem sprzeciwu lub uwag wobec
-          zgłoszenia.
+          Wymóg opracowania Instrukcji Bezpieczeństwa Pożarowego wynika z
+          postanowień § 6 ust. 1 Rozporządzenia Ministra Spraw Wewnętrznych i
+          Administracji z 7 czerwca 2010 r. w sprawie ochrony przeciwpożarowej
+          budynków, innych obiektów budowlanych i terenów (Dz. U. z 2023 r.,
+          poz. 822), zgodnie z którym właściciele, zarządcy lub użytkownicy
+          obiektów bądź ich części stanowiących odrębne strefy pożarowe,
+          przeznaczonych do wykonywania funkcji użyteczności publicznej,
+          zamieszkania zbiorowego, produkcyjnych, magazynowych oraz
+          inwentarskich, zapewniają i wdrażają instrukcję bezpieczeństwa
+          pożarowego.
         </p>
-        <h3 class='service-heading'>Potrzebne Dokumenty</h3>
+        <h3 class='service-heading'>
+          Kiedy jest potrzebna aktualizacja Instrukcji Bezpieczeństwa
+          Pożarowego?
+        </h3>
         <span class='line'></span>
         <p class='service-text'>
-          Inwestor ma obowiązek skompletowania niezbędnych dokumentów,
-          potrzebnych zarówno do zgłoszenia zakończenia prac budowlanych, jak i
-          do złożenia wniosku o wydanie pozwolenia na użytkowanie obiektu.
-          Dokumentacja ta obejmuje między innymi
+          Zgodnie z wymaganiami określonymi odpowiednio w § 6 ust. 7 i 9
+          Rozporządzenia MSWiA z dnia 7 czerwca 2010 r. Instrukcja
+          Bezpieczeństwa Pożarowego: - powinna być poddawana okresowej
+          aktualizacji, co najmniej raz na 2 lata, a także po takich zmianach
+          sposobu użytkowana obiektu lub procesu technologicznego, które
+          wpływają na zmianę warunków ochrony przeciwpożarowej, - powinna się
+          znajdować w miejscach dostępnych dla ekip ratowniczych.
         </p>
-        <ul class='service-list'>
-          <li>oryginał dziennika budowy,</li>
-          <li>projekt techniczny z uwzględnieniem zmian,</li>
-          <li>oświadczenie kierownika budowy,</li>
-          <li>
-            oświadczenie o właściwym zagospodarowaniu terenów przyległych (gdy
-            eksploatacja wybudowanego obiektu jest od tego uzależniona),
-          </li>
-          <li>protokoły badań i sprawdzeń, w tym przyłączy i instalacji,</li>
-          <li>
-            druki geodezyjne zawierające wyniki geodezyjnej inwentaryzacji
-            powykonawczej, w tym mapę,
-          </li>
-          <li>potwierdzenie odbioru wykonanych przyłączy.</li>
-        </ul>
       </div>
     </section>
   </main>
@@ -112,7 +107,7 @@ import service1 from '../../assets/service-1-1.webp';
     color: var(--base-wh);
     font-family: var(--roboto-font);
     line-height: 27px;
-    font-size: clamp(0.7rem,.9rem,1rem);
+    font-size: clamp(0.7rem, 0.9rem, 1rem);
   }
   .main-section {
     max-width: 1440px;
@@ -156,9 +151,9 @@ import service1 from '../../assets/service-1-1.webp';
   .service-list {
     margin-left: 20px;
     font-family: var(--roboto-font);
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 24px;
-    padding-bottom: 30px
+    padding-bottom: 30px;
   }
   .line {
     height: 7px;
