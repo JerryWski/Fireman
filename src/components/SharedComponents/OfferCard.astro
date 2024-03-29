@@ -8,14 +8,14 @@ import { Icon } from 'astro-icon/components';
     offersList.map((offers) => (
       <div class='offer'>
         <img class='offer-img' src={offers.img} alt={'fire services'} />
-        <div class='wrapper'>
+        
           <h3 class='offer-title'>{offers.title}</h3>
           <p class='offer-text'>{offers.text}</p>
           <a class='offer-link' href={offers.href}>
             {offers.link}
             <Icon name={offers.icon} width={20} height={20} />
           </a>
-        </div>
+        
       </div>
     ))
   }
@@ -44,6 +44,7 @@ import { Icon } from 'astro-icon/components';
     align-items: flex-start;
     font-family: var(--main-font);
     border: none;
+    row-gap: 10px;
     word-break: break-word;
   }
   .offer-img {
@@ -97,13 +98,14 @@ import { Icon } from 'astro-icon/components';
     .wrapper {
       gap: 10px;
       margin-top: 0;
+      /* margin-block-start: auto; */
     }
     .offer-title {
       font-size: 1rem;
       margin: 0;
     }
     .offer-link {
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       
     }
     .offer-text {
