@@ -12,7 +12,7 @@ const FooterSection: React.FC = () => {
         ©{currentYear()} &nbsp;
           <a aria-label='link to portfolio site'
             className='footer_link'
-            href='https://jerrywski.github.io/Portfolio-Site/'
+            href='https://jerrywski.dev'
           >
             Jerry_Wski.
           </a>
