@@ -13,7 +13,6 @@ import { Icon } from 'astro-icon/components';
           <p class='offer-text'>{offers.text}</p>
           <a class='offer-link' href={offers.href}>
             {offers.link}
-            <Icon name={offers.icon} width={20} height={20} />
           </a>
         
       </div>
@@ -70,14 +69,14 @@ import { Icon } from 'astro-icon/components';
     justify-content: flex-start;
     align-items: center;
     padding-top: 10px;
-    gap: 4px;
     width: 100%;
-    margin-bottom: 10px;
+    font-size: clamp(1rem, 1rem + 3vw, 1.1rem);
+    font-weight: 900;
+    margin-bottom: 15px;
     color: var(--base-gold);
     transition: 0.2s all ease-in;
   }
   .offer-link:hover {
-    gap: 10px;
     color: var(--base-red);
   }
   @media (max-width: 600px) {
@@ -103,10 +102,6 @@ import { Icon } from 'astro-icon/components';
     .offer-title {
       font-size: 1rem;
       margin: 0;
-    }
-    .offer-link {
-      font-size: 0.9rem;
-      
     }
     .offer-text {
       font-size: 0.8rem;

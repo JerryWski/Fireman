@@ -26,22 +26,22 @@ const { imgSrc, title, description, alt } = Astro.props as Props;
     font-family: var(--main-font);
     margin-top: 15px;
     border: none;
+    width: 100%;
     word-break: break-word;
     background-color: var(--base-wh);
   }
   .service-title {
-    padding: 20px 20px 10px 20px;
-  }
-  
-  .service-title {
+    padding: 10px 10px 10px 10px;
     color: var(--base-red);
-    font-size: clamp(0.7rem, 1.2rem, 1.3rem);
+    font-size: clamp(0.7rem, .7rem + 1vw, 1rem);
+    text-wrap: balance;
+    text-transform: uppercase;
   }
   .service-text {
     color: var(--sub-black);
-    font-size: clamp(0.6rem, 0.8rem, 1rem);
+    font-size: clamp(0.6rem, 0.8rem, .8rem);
     line-height: 24px;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 10px 10px 10px;
   }
   .service-img {
     width: 100%;
@@ -50,11 +50,8 @@ const { imgSrc, title, description, alt } = Astro.props as Props;
   }
   @media (min-width: 900px) {
     .service-card {
-      gap: 20px;
+      gap: 10px;
       max-width: 95%;
-    }
-    .service-title {
-      padding: 10px 20px 0px 20px;
     }
   }
 </style>
